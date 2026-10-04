@@ -78,11 +78,15 @@ impl Default for ServiceTimeModel {
 impl LatencyEstimator for ServiceTimeModel {
     fn record(&self, rif_at_arrival: u32, latency_us: u64, _: u64) {
         let service = latency_us as f64 / self.contention(f64::from(rif_at_arrival));
-        let _ = self.ewma_bits.fetch_update(Ordering::Relaxed, Ordering::Relaxed, |bits| {
+        let mut bits = self.ewma_bits.load(Ordering::Relaxed);
+        loop {
             let prev = f64::from_bits(bits);
             let next = if prev.is_nan() { service } else { prev + self.alpha * (service - prev) };
-            Some(next.to_bits())
-        });
+            match self.ewma_bits.compare_exchange_weak(bits, next.to_bits(), Ordering::Relaxed, Ordering::Relaxed) {
+                Ok(_) => break,
+                Err(seen) => bits = seen,
+            }
+        }
     }
 
     fn estimate(&self, rif: u32, _: u64) -> u64 {

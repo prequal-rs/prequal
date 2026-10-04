@@ -38,13 +38,18 @@ impl Lease {
     /// Takes `n` more units, or none if that would exceed the quota.
     pub fn grow(&mut self, n: usize) -> bool {
         let quota = &self.quota;
-        let taken = quota.used.fetch_update(Ordering::AcqRel, Ordering::Relaxed, |used| {
-            used.checked_add(n).filter(|&total| total <= quota.max)
-        });
-        if taken.is_ok() {
-            self.held += n;
+        let mut used = quota.used.load(Ordering::Relaxed);
+        loop {
+            let Some(total) = used.checked_add(n).filter(|&total| total <= quota.max) else {
+                return false;
+            };
+            match quota.used.compare_exchange_weak(used, total, Ordering::AcqRel, Ordering::Relaxed) {
+                Ok(_) => break,
+                Err(seen) => used = seen,
+            }
         }
-        taken.is_ok()
+        self.held += n;
+        true
     }
 
     pub fn release(&mut self) {
