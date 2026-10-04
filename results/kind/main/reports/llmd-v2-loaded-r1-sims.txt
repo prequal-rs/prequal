@@ -1,0 +1,11 @@
+10.244.0.41 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 748
+10.244.0.47 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 760
+10.244.0.46 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 752
+10.244.0.49 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 764
+10.244.0.48 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 740
+10.244.0.44 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 747
+10.244.0.40 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 748
+10.244.0.45 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 744
+10.244.0.43 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 741
+10.244.0.42 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 756
+pod "curl-12850" deleted from bench namespace

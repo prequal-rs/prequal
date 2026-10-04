@@ -1,0 +1,63 @@
+conversation.jsonl cap 9600 blocks: pooled LRU 20.27%
+  scratch 0.1 ghost 60s: 11.97% (probation 86.5% of requests)
+  scratch 0.1 ghost 300s: 18.76% (probation 68.2% of requests)
+  scratch 0.1 ghost 1200s: 19.16% (probation 61.9% of requests)
+  scratch 0.1 ghost 1000000000s: 19.05% (probation 61.3% of requests)
+  scratch 0.2 ghost 60s: 11.99% (probation 86.8% of requests)
+  scratch 0.2 ghost 300s: 18.47% (probation 68.7% of requests)
+  scratch 0.2 ghost 1200s: 19.12% (probation 61.9% of requests)
+  scratch 0.2 ghost 1000000000s: 18.94% (probation 61.3% of requests)
+  scratch 0.3 ghost 60s: 11.80% (probation 87.8% of requests)
+  scratch 0.3 ghost 300s: 18.85% (probation 69.0% of requests)
+  scratch 0.3 ghost 1200s: 19.40% (probation 61.9% of requests)
+  scratch 0.3 ghost 1000000000s: 19.44% (probation 61.3% of requests)
+  scratch 0.5 ghost 60s: 11.04% (probation 90.4% of requests)
+  scratch 0.5 ghost 300s: 20.41% (probation 69.3% of requests)
+  scratch 0.5 ghost 1200s: 20.62% (probation 61.9% of requests)
+  scratch 0.5 ghost 1000000000s: 20.48% (probation 61.3% of requests)
+toolagent.jsonl cap 9600 blocks: pooled LRU 45.54%
+  scratch 0.1 ghost 60s: 39.35% (probation 39.5% of requests)
+  scratch 0.1 ghost 300s: 44.15% (probation 30.3% of requests)
+  scratch 0.1 ghost 1200s: 44.72% (probation 27.8% of requests)
+  scratch 0.1 ghost 1000000000s: 44.77% (probation 27.8% of requests)
+  scratch 0.2 ghost 60s: 39.38% (probation 39.7% of requests)
+  scratch 0.2 ghost 300s: 44.04% (probation 30.5% of requests)
+  scratch 0.2 ghost 1200s: 44.67% (probation 27.8% of requests)
+  scratch 0.2 ghost 1000000000s: 44.71% (probation 27.8% of requests)
+  scratch 0.3 ghost 60s: 39.32% (probation 40.2% of requests)
+  scratch 0.3 ghost 300s: 44.23% (probation 30.7% of requests)
+  scratch 0.3 ghost 1200s: 44.99% (probation 27.8% of requests)
+  scratch 0.3 ghost 1000000000s: 45.03% (probation 27.8% of requests)
+  scratch 0.5 ghost 60s: 38.75% (probation 41.5% of requests)
+  scratch 0.5 ghost 300s: 45.58% (probation 30.8% of requests)
+  scratch 0.5 ghost 1200s: 45.83% (probation 27.8% of requests)
+  scratch 0.5 ghost 1000000000s: 45.83% (probation 27.8% of requests)
+synthetic.jsonl cap 9600 blocks: pooled LRU 41.62%
+  scratch 0.1 ghost 60s: 32.14% (probation 71.1% of requests)
+  scratch 0.1 ghost 300s: 40.20% (probation 58.8% of requests)
+  scratch 0.1 ghost 1200s: 41.25% (probation 55.4% of requests)
+  scratch 0.1 ghost 1000000000s: 41.25% (probation 55.4% of requests)
+  scratch 0.2 ghost 60s: 32.58% (probation 72.3% of requests)
+  scratch 0.2 ghost 300s: 40.12% (probation 58.9% of requests)
+  scratch 0.2 ghost 1200s: 40.52% (probation 55.4% of requests)
+  scratch 0.2 ghost 1000000000s: 40.52% (probation 55.4% of requests)
+  scratch 0.3 ghost 60s: 32.60% (probation 73.4% of requests)
+  scratch 0.3 ghost 300s: 40.17% (probation 58.9% of requests)
+  scratch 0.3 ghost 1200s: 39.35% (probation 55.4% of requests)
+  scratch 0.3 ghost 1000000000s: 39.35% (probation 55.4% of requests)
+  scratch 0.5 ghost 60s: 31.93% (probation 75.2% of requests)
+  scratch 0.5 ghost 300s: 40.09% (probation 59.0% of requests)
+  scratch 0.5 ghost 1200s: 38.50% (probation 55.4% of requests)
+  scratch 0.5 ghost 1000000000s: 38.50% (probation 55.4% of requests)
+target/mooncake-traces/conversation.jsonl: 12031 reqs over 3537 s (3.40/s)
+  in/out mean 12035/343 tokens; distinct blocks 182790 = 93.6M tokens
+  infinite-cache prefix hit (blocks) 0.366; block reuse gap p10/p50/p90 0.0/114.0/519.0 s
+  distinct 2-block heads 7373; top head counts 43 27 25 22 21
+target/mooncake-traces/toolagent.jsonl: 23608 reqs over 3537 s (6.67/s)
+  in/out mean 8596/182 tokens; distinct blocks 183300 = 93.8M tokens
+  infinite-cache prefix hit (blocks) 0.553; block reuse gap p10/p50/p90 0.0/0.0/243.0 s
+  distinct 2-block heads 6554; top head counts 9203 3449 43 27 25
+target/mooncake-traces/synthetic.jsonl: 3993 reqs over 1022 s (3.91/s)
+  in/out mean 15325/149 tokens; distinct blocks 43924 = 22.5M tokens
+  infinite-cache prefix hit (blocks) 0.640; block reuse gap p10/p50/p90 4.8/59.4/281.8 s
+  distinct 2-block heads 2224; top head counts 24 24 21 20 20

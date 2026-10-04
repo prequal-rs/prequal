@@ -1,0 +1,99 @@
+# prequal-epp as the endpoint picker for an InferencePool (GIE v1). Apply in the pool's namespace:
+#   kubectl apply -n inference -f deploy/epp/prequal-epp.yaml
+# Then attach the pool to a GIE gateway (tested: agentgateway; not Istio, see docs/conformance.md) with an
+# HTTPRoute whose backendRef is `kind: InferencePool, group: inference.networking.k8s.io, name: vllm-pool`.
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: prequal-epp
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: prequal-epp
+rules:
+  - apiGroups: ["inference.networking.k8s.io"]
+    resources: ["inferencepools"]
+    verbs: ["get"]
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["list"]
+  # Optional: request priorities (x-llm-d-inference-objective); without it every request has priority 0.
+  - apiGroups: ["llm-d.ai", "inference.networking.x-k8s.io"]
+    resources: ["inferenceobjectives"]
+    verbs: ["list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: prequal-epp
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: prequal-epp
+subjects:
+  - kind: ServiceAccount
+    name: prequal-epp
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prequal-epp
+spec:
+  replicas: 1   # all replicas serve (no leader election); one gets the best cache hit rate, see docs/configuration.md
+  selector:
+    matchLabels: {app: prequal-epp}
+  template:
+    metadata:
+      labels: {app: prequal-epp}
+    spec:
+      serviceAccountName: prequal-epp
+      containers:
+        - name: epp
+          image: ghcr.io/prequal-rs/prequal-epp:0.1.0
+          args:
+            - --pool-name=vllm-pool
+            - --pool-namespace=$(POD_NAMESPACE)
+            - --engine=vllm
+          env:
+            - name: POD_NAMESPACE
+              valueFrom: {fieldRef: {fieldPath: metadata.namespace}}
+          ports:
+            - {name: grpc, containerPort: 9002}
+            - {name: grpc-health, containerPort: 9003}
+            - {name: metrics, containerPort: 9090}
+          readinessProbe:
+            grpc: {port: 9003, service: readiness}
+            periodSeconds: 2
+          livenessProbe:
+            grpc: {port: 9003, service: liveness}
+            periodSeconds: 10
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            capabilities: {drop: [ALL]}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: prequal-epp
+spec:
+  selector: {app: prequal-epp}
+  ports:
+    - {name: grpc-ext-proc, port: 9002, targetPort: grpc, appProtocol: http2}
+    - {name: http-metrics, port: 9090, targetPort: metrics}
+---
+apiVersion: inference.networking.k8s.io/v1
+kind: InferencePool
+metadata:
+  name: vllm-pool
+spec:
+  selector:
+    matchLabels: {app: vllm}
+  targetPorts:
+    - number: 8000
+  endpointPickerRef:
+    name: prequal-epp
+    port: {number: 9002}
+    failureMode: FailClose

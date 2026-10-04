@@ -1,0 +1,16 @@
+2026-10-01T22:16:21+00:00 prequal: agentgateway v1.5.0, gie v1.6.2,  22:16:21 up 5 days,  8:31, 2000 users,  load average: 2.49, 1.71, 1.98
+    --- PASS: TestConformance/EppUnAvailableFailOpen (2.39s)
+    --- PASS: TestConformance/GatewayDestinationEndpointServed (0.53s)
+    --- PASS: TestConformance/GatewayFollowingEPPRouting (0.41s)
+    --- PASS: TestConformance/GatewayFollowingEPPRoutingWithDataParallelism (0.51s)
+    --- PASS: TestConformance/GatewayWeightedAcrossTwoInferencePools (196.79s)
+    --- PASS: TestConformance/HTTPRouteInvalidInferencePoolRef (0.40s)
+    --- PASS: TestConformance/HTTPRouteMultipleGatewaysDifferentPools (0.44s)
+    --- PASS: TestConformance/InferencePoolAccepted (1.16s)
+    --- PASS: TestConformance/InferencePoolAppProtocol (0.91s)
+    --- PASS: TestConformance/InferencePoolHTTPRoutePortValidation (0.81s)
+    --- PASS: TestConformance/InferencePoolInvalidEPPService (0.75s)
+    --- PASS: TestConformance/InferencePoolMissingEPPRef (0.61s)
+    --- PASS: TestConformance/HTTPRouteMultipleRulesDifferentPools (0.36s)
+    --- PASS: TestConformance/InferencePoolResolvedRefsCondition (10.58s)
+ok  	sigs.k8s.io/gateway-api-inference-extension/conformance	269.323s

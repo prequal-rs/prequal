@@ -1,0 +1,10 @@
+policy,via,estimator,q_rif,probes_per_query,piggyback,failing_servers,cpu_work,servers,clients,load,completed,errors,mean_ms,p50_ms,p90_ms,p99_ms,p999_ms,client_cpu_us_per_req,client_peak_mb,server_cpu_us_per_req,server_peak_mb,probes_sent,probes_answered,probes_timed_out,probes_failed,probes_skipped
+P2cEwma,direct,Rif,0.6,3,false,2,false,20,20,0.8,14522,3599,75.8,41.5,176.8,520.6,1080.4,430.7,25.4,251.1,22.6,0,0,0,0,0
+Prequal,direct,Rif,0.6,0.5,true,2,false,20,20,0.8,17577,545,64.4,38.1,145.5,400.5,881.1,147.4,39.5,77.1,37.5,10845,10845,0,0,0
+Prequal,direct,Rif,0.6,0.5,true,2,false,20,20,0.8,17185,934,62.8,37.9,141.9,411.9,816.1,572.9,38.6,333.7,36.2,10845,10844,0,0,0
+P2cEwma,direct,Rif,0.6,3,false,2,false,20,20,0.8,14769,3495,50.3,32.5,114.1,275.4,484.7,102.7,23.0,55.1,20.0,0,0,0,0,0
+Prequal,direct,Rif,0.6,0.5,true,2,false,20,20,0.8,17726,536,49.1,31.7,111.1,260.0,465.7,601.4,37.9,355.5,35.4,10946,10945,0,0,0
+Prequal,direct,Rif,0.6,0.5,true,2,false,20,20,0.8,17332,933,48.1,31.1,109.1,256.0,471.6,643.6,37.1,392.0,34.6,10946,10945,0,0,0
+P2cEwma,direct,Rif,0.6,3,false,2,false,20,20,0.8,14681,3568,53.0,32.7,117.5,336.1,688.6,490.2,24.0,296.2,20.9,0,0,0,0,0
+Prequal,direct,Rif,0.6,0.5,true,2,false,20,20,0.8,17718,531,52.3,31.3,114.7,328.0,744.8,180.4,37.9,97.8,35.8,10915,10915,0,0,0
+Prequal,direct,Rif,0.6,0.5,true,2,false,20,20,0.8,17309,940,51.5,30.4,116.1,335.6,696.3,146.1,38.1,76.0,35.6,10915,10914,0,0,0

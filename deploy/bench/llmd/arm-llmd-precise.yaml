@@ -1,0 +1,62 @@
+# llm-d precise prefix-cache routing: llm-d-router v0.11.0 test/perf/config/router-configs/precise-prefix.yaml (its
+# nightly precise config for these sims) with two changes. The EPP renders prompts through the sims' own
+# /v1/completions/render, so its token IDs are the sims' dummy-tokenizer IDs that their KV events carry; and it binds
+# one ZMQ listener that the sims dial (sim v0.10.2 only dials), keyed by the topic's `<ip>:8000` (tools/kind-cache.sh).
+router:
+  extraServicePorts:
+  - {name: http, port: 80, protocol: TCP, targetPort: 8081}
+  - {name: zmq, port: 5557, protocol: TCP, targetPort: 5557}
+  epp:
+    # The tag is the chart release (LLMD_VERSION in tools/kind-llmd.sh).
+    image: {registry: ghcr.io/llm-d, repository: llm-d-router-endpoint-picker, pullPolicy: IfNotPresent}
+    flags: {v: 4, enable-pprof: "true", tracing: "false"}
+    extraContainerPorts: [{containerPort: 5557, name: zmq, protocol: TCP}]
+    pluginsConfigFile: precise-plugins.yaml
+    pluginsCustomConfig:
+      precise-plugins.yaml: |
+        apiVersion: llm-d.ai/v1alpha1
+        kind: EndpointPickerConfig
+        plugins:
+          - type: token-producer
+            parameters:
+              modelName: Qwen/Qwen3-8B
+              vllm:
+                endpointDiscovery: {}
+          - type: endpoint-notification-source
+          - type: precise-prefix-cache-producer
+            parameters:
+              tokenProcessorConfig:
+                blockSizeTokens: 16
+              speculativeIndexing: true
+              indexerConfig:
+                kvBlockIndexConfig:
+                  enableMetrics: true
+              kvEventsConfig:
+                zmqEndpoint: tcp://0.0.0.0:5557
+                topicFilter: "kv@"
+                concurrency: 32
+                discoverPods: false
+          - type: prefix-cache-scorer
+            parameters:
+              prefixMatchInfoProducerName: precise-prefix-cache-producer
+          - type: kv-cache-utilization-scorer
+          - type: active-request-scorer
+          - type: no-hit-lru-scorer
+            parameters:
+              prefixMatchInfoProducerName: precise-prefix-cache-producer
+        dataLayer:
+          sources:
+            - pluginRef: endpoint-notification-source
+              extractors:
+                - pluginRef: precise-prefix-cache-producer
+        schedulingProfiles:
+          - name: default
+            plugins:
+              - pluginRef: active-request-scorer
+                weight: 4
+              - pluginRef: kv-cache-utilization-scorer
+                weight: 2
+              - pluginRef: prefix-cache-scorer
+                weight: 2
+              - pluginRef: no-hit-lru-scorer
+                weight: 2

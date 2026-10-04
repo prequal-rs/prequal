@@ -1,0 +1,206 @@
+load 6.87 20.88 22.61 1791064138
+router-epp-5d95c984b5-tvmhv   envoy-proxy   21m    21Mi     
+router-epp-5d95c984b5-tvmhv   epp           189m   79Mi     
+load 6.12 20.26 22.39 1791064148
+inference-perf-cf4x6          inference-perf   452m   67Mi     
+router-epp-5d95c984b5-tvmhv   envoy-proxy      16m    21Mi     
+router-epp-5d95c984b5-tvmhv   epp              99m    79Mi     
+load 5.34 19.63 22.16 1791064158
+inference-perf-cf4x6          inference-perf   452m   67Mi     
+router-epp-5d95c984b5-tvmhv   envoy-proxy      16m    21Mi     
+router-epp-5d95c984b5-tvmhv   epp              99m    79Mi     
+load 4.74 19.03 21.94 1791064168
+inference-perf-cf4x6          inference-perf   407m   164Mi    
+router-epp-5d95c984b5-tvmhv   envoy-proxy      13m    21Mi     
+router-epp-5d95c984b5-tvmhv   epp              78m    79Mi     
+load 4.17 18.43 21.71 1791064179
+inference-perf-cf4x6          inference-perf   734m   241Mi    
+router-epp-5d95c984b5-tvmhv   envoy-proxy      13m    22Mi     
+router-epp-5d95c984b5-tvmhv   epp              80m    79Mi     
+load 4.08 17.94 21.52 1791064189
+inference-perf-cf4x6          inference-perf   734m   241Mi    
+router-epp-5d95c984b5-tvmhv   envoy-proxy      13m    22Mi     
+router-epp-5d95c984b5-tvmhv   epp              80m    79Mi     
+load 3.68 17.40 21.30 1791064199
+inference-perf-cf4x6          inference-perf   998m   301Mi    
+router-epp-5d95c984b5-tvmhv   envoy-proxy      6m     22Mi     
+router-epp-5d95c984b5-tvmhv   epp              44m    79Mi     
+load 3.59 16.93 21.11 1791064209
+inference-perf-cf4x6          inference-perf   998m   381Mi    
+router-epp-5d95c984b5-tvmhv   envoy-proxy      6m     22Mi     
+router-epp-5d95c984b5-tvmhv   epp              45m    79Mi     
+load 3.74 16.52 20.93 1791064219
+inference-perf-cf4x6          inference-perf   998m   381Mi    
+router-epp-5d95c984b5-tvmhv   envoy-proxy      6m     22Mi     
+router-epp-5d95c984b5-tvmhv   epp              45m    79Mi     
+load 4.44 16.24 20.79 1791064229
+inference-perf-cf4x6          inference-perf   1144m   642Mi    
+router-epp-5d95c984b5-tvmhv   envoy-proxy      549m    35Mi     
+router-epp-5d95c984b5-tvmhv   epp              838m    99Mi     
+load 4.30 15.82 20.60 1791064239
+inference-perf-cf4x6          inference-perf   1144m   642Mi    
+router-epp-5d95c984b5-tvmhv   envoy-proxy      749m    37Mi     
+router-epp-5d95c984b5-tvmhv   epp              1113m   133Mi    
+load 4.45 15.48 20.44 1791064249
+inference-perf-cf4x6          inference-perf   1144m   642Mi    
+router-epp-5d95c984b5-tvmhv   envoy-proxy      749m    37Mi     
+router-epp-5d95c984b5-tvmhv   epp              1113m   133Mi    
+load 4.22 15.06 20.25 1791064259
+inference-perf-cf4x6          inference-perf   1355m   700Mi    
+router-epp-5d95c984b5-tvmhv   envoy-proxy      618m    39Mi     
+router-epp-5d95c984b5-tvmhv   epp              883m    115Mi    
+load 4.58 14.78 20.11 1791064269
+inference-perf-cf4x6          inference-perf   1093m   746Mi    
+router-epp-5d95c984b5-tvmhv   envoy-proxy      675m    40Mi     
+router-epp-5d95c984b5-tvmhv   epp              963m    133Mi    
+load 9.13 15.40 20.25 1791064279
+inference-perf-cf4x6          inference-perf   1093m   746Mi    
+router-epp-5d95c984b5-tvmhv   envoy-proxy      675m    40Mi     
+router-epp-5d95c984b5-tvmhv   epp              963m    133Mi    
+load 10.97 15.59 20.26 1791064289
+inference-perf-cf4x6          inference-perf   2145m   914Mi    
+router-epp-5d95c984b5-tvmhv   envoy-proxy      885m    48Mi     
+router-epp-5d95c984b5-tvmhv   epp              1331m   163Mi    
+load 14.75 16.23 20.42 1791064299
+inference-perf-cf4x6          inference-perf   3241m   1031Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1763m   52Mi     
+router-epp-5d95c984b5-tvmhv   epp              1551m   161Mi    
+load 17.87 16.85 20.58 1791064309
+inference-perf-cf4x6          inference-perf   3241m   1031Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1763m   52Mi     
+router-epp-5d95c984b5-tvmhv   epp              1551m   161Mi    
+load 21.43 17.63 20.79 1791064320
+inference-perf-cf4x6          inference-perf   3241m   1031Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1662m   54Mi     
+router-epp-5d95c984b5-tvmhv   epp              1551m   161Mi    
+load 22.34 17.96 20.86 1791064330
+inference-perf-cf4x6          inference-perf   3380m   1202Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1710m   58Mi     
+router-epp-5d95c984b5-tvmhv   epp              1604m   172Mi    
+load 23.56 18.37 20.97 1791064340
+inference-perf-cf4x6          inference-perf   3380m   1202Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1710m   58Mi     
+router-epp-5d95c984b5-tvmhv   epp              1604m   172Mi    
+load 24.61 18.78 21.07 1791064350
+inference-perf-cf4x6          inference-perf   3583m   1348Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1785m   60Mi     
+router-epp-5d95c984b5-tvmhv   epp              1604m   172Mi    
+load 24.85 19.04 21.13 1791064360
+inference-perf-cf4x6          inference-perf   3399m   1478Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1807m   62Mi     
+router-epp-5d95c984b5-tvmhv   epp              1649m   171Mi    
+load 27.84 19.86 21.38 1791064370
+inference-perf-cf4x6          inference-perf   3557m   1736Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1807m   62Mi     
+router-epp-5d95c984b5-tvmhv   epp              1655m   177Mi    
+load 29.28 20.44 21.55 1791064380
+inference-perf-cf4x6          inference-perf   3557m   1736Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1807m   62Mi     
+router-epp-5d95c984b5-tvmhv   epp              1655m   177Mi    
+load 30.95 21.08 21.75 1791064390
+inference-perf-cf4x6          inference-perf   3638m   1874Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1802m   62Mi     
+router-epp-5d95c984b5-tvmhv   epp              1664m   175Mi    
+load 29.71 21.15 21.76 1791064400
+inference-perf-cf4x6          inference-perf   3519m   1969Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1825m   64Mi     
+router-epp-5d95c984b5-tvmhv   epp              1654m   166Mi    
+load 31.20 21.74 21.95 1791064410
+inference-perf-cf4x6          inference-perf   3519m   1969Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1825m   64Mi     
+router-epp-5d95c984b5-tvmhv   epp              1654m   166Mi    
+load 32.37 22.31 22.13 1791064420
+inference-perf-cf4x6          inference-perf   3383m   2138Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1825m   64Mi     
+router-epp-5d95c984b5-tvmhv   epp              1689m   185Mi    
+load 34.87 23.17 22.41 1791064431
+inference-perf-cf4x6          inference-perf   3451m   2306Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1722m   65Mi     
+router-epp-5d95c984b5-tvmhv   epp              1575m   196Mi    
+load 33.44 23.25 22.45 1791064441
+inference-perf-cf4x6          inference-perf   3451m   2306Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1722m   65Mi     
+router-epp-5d95c984b5-tvmhv   epp              1575m   196Mi    
+load 31.20 23.11 22.41 1791064451
+inference-perf-cf4x6          inference-perf   3451m   2306Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1806m   65Mi     
+router-epp-5d95c984b5-tvmhv   epp              1576m   166Mi    
+load 34.81 24.13 22.75 1791064461
+inference-perf-cf4x6          inference-perf   3460m   2451Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1373m   67Mi     
+router-epp-5d95c984b5-tvmhv   epp              1414m   145Mi    
+load 38.38 25.24 23.13 1791064471
+inference-perf-cf4x6          inference-perf   3460m   2451Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1373m   67Mi     
+router-epp-5d95c984b5-tvmhv   epp              1414m   145Mi    
+load 42.22 26.50 23.56 1791064481
+inference-perf-cf4x6          inference-perf   2934m   2674Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1724m   68Mi     
+router-epp-5d95c984b5-tvmhv   epp              1599m   217Mi    
+load 45.50 27.72 23.99 1791064491
+inference-perf-cf4x6          inference-perf   3851m   2885Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1728m   70Mi     
+router-epp-5d95c984b5-tvmhv   epp              1574m   213Mi    
+load 45.24 28.26 24.20 1791064501
+inference-perf-cf4x6          inference-perf   3851m   2885Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1728m   70Mi     
+router-epp-5d95c984b5-tvmhv   epp              1574m   213Mi    
+load 46.37 29.07 24.51 1791064511
+inference-perf-cf4x6          inference-perf   3882m   3182Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1752m   71Mi     
+router-epp-5d95c984b5-tvmhv   epp              1600m   218Mi    
+load 47.61 29.91 24.83 1791064522
+inference-perf-cf4x6          inference-perf   3896m   3387Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1737m   72Mi     
+router-epp-5d95c984b5-tvmhv   epp              1572m   211Mi    
+load 49.14 30.80 25.18 1791064532
+inference-perf-cf4x6          inference-perf   3896m   3387Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1737m   72Mi     
+router-epp-5d95c984b5-tvmhv   epp              1572m   211Mi    
+load 49.53 31.49 25.46 1791064542
+inference-perf-cf4x6          inference-perf   3853m   3667Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1723m   73Mi     
+router-epp-5d95c984b5-tvmhv   epp              1611m   217Mi    
+load 50.87 32.63 25.93 1791064552
+inference-perf-cf4x6          inference-perf   3395m   3873Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1721m   78Mi     
+router-epp-5d95c984b5-tvmhv   epp              1547m   319Mi    
+load 51.98 33.47 26.27 1791064562
+inference-perf-cf4x6          inference-perf   3395m   3873Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1721m   78Mi     
+router-epp-5d95c984b5-tvmhv   epp              1547m   319Mi    
+load 53.76 34.46 26.67 1791064572
+inference-perf-cf4x6          inference-perf   3289m   4041Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1679m   79Mi     
+router-epp-5d95c984b5-tvmhv   epp              1531m   311Mi    
+load 54.39 35.22 27.00 1791064582
+inference-perf-cf4x6          inference-perf   4141m   4312Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1692m   81Mi     
+router-epp-5d95c984b5-tvmhv   epp              1531m   311Mi    
+load 54.14 35.79 27.28 1791064592
+inference-perf-cf4x6          inference-perf   4141m   4312Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1692m   81Mi     
+router-epp-5d95c984b5-tvmhv   epp              1531m   311Mi    
+load 55.71 36.73 27.68 1791064602
+inference-perf-cf4x6          inference-perf   3864m   4702Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1710m   81Mi     
+router-epp-5d95c984b5-tvmhv   epp              1584m   257Mi    
+load 55.24 37.26 27.94 1791064613
+inference-perf-cf4x6          inference-perf   3864m   4702Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1719m   82Mi     
+router-epp-5d95c984b5-tvmhv   epp              1588m   243Mi    
+load 54.40 37.66 28.17 1791064623
+inference-perf-cf4x6          inference-perf   3864m   4702Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1719m   82Mi     
+router-epp-5d95c984b5-tvmhv   epp              1588m   243Mi    
+load 53.15 37.95 28.37 1791064633
+inference-perf-cf4x6          inference-perf   3894m   5150Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1744m   82Mi     
+router-epp-5d95c984b5-tvmhv   epp              1604m   214Mi    
+load 45.21 36.75 28.08 1791064643
+inference-perf-cf4x6          inference-perf   3894m   5150Mi   
+router-epp-5d95c984b5-tvmhv   envoy-proxy      1744m   82Mi     
+router-epp-5d95c984b5-tvmhv   epp              1452m   145Mi    
+load 38.57 35.61 27.80 1791064653
+router-epp-5d95c984b5-tvmhv   envoy-proxy    1744m   82Mi     
+router-epp-5d95c984b5-tvmhv   epp            1452m   145Mi    

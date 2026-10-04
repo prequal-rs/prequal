@@ -1,0 +1,132 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CARGO_TERM_COLOR: always
+  RUSTFLAGS: -D warnings
+
+jobs:
+  fmt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt
+      - run: cargo fmt --all --check
+
+  clippy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+      - uses: lukka/get-cmake@latest
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo clippy --workspace --all-targets --all-features -- -D warnings
+
+  doc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: lukka/get-cmake@latest
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo doc --workspace --no-deps --all-features
+        env:
+          RUSTDOCFLAGS: -D warnings
+
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      # pingora-core's zlib-ng builds with cmake.
+      - uses: lukka/get-cmake@latest
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo test --workspace --all-features
+        env:
+          PROPTEST_CASES: "1000"
+
+  msrv:
+    name: msrv (${{ matrix.rust }})
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - rust: "1.85"
+            packages: -p prequal-core -p prequal-server -p prequal-tower -p prequal-pingora -p prequal-llm
+          - rust: "1.89"
+            packages: -p prequal-epp -p prequal-router -p prequal-pingora --all-features
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: ${{ matrix.rust }}
+      - uses: lukka/get-cmake@latest
+      - uses: Swatinem/rust-cache@v2
+        with:
+          key: msrv-${{ matrix.rust }}
+      - run: cargo check --locked --all-targets ${{ matrix.packages }}
+
+  docker:
+    strategy:
+      fail-fast: false
+      matrix:
+        image:
+          - { name: prequal-epp, file: deploy/epp.Dockerfile }
+          - { name: prequal-router, file: deploy/Dockerfile }
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ${{ matrix.image.file }}
+          tags: ${{ matrix.image.name }}:ci
+          push: false
+          cache-from: type=gha,scope=${{ matrix.image.name }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.image.name }}
+
+  helm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: azure/setup-helm@v4
+      - run: helm lint deploy/helm/prequal-router
+      - run: helm template demo deploy/helm/prequal-router --namespace inference > /dev/null
+
+  bench-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo build --release -p prequal-testbed -p prequal-router
+      - run: |
+          for policy in p2c-ewma prequal; do
+            target/release/prequal-testbed --policy "$policy" --piggyback --probes-per-query 0.5 \
+              --servers 6 --clients 4 --load 0.8 --duration-s 4 --warmup-s 1 | tail -1
+          done
+          for policy in round-robin prequal; do
+            target/release/llm-bench --router-bin target/release/prequal-router --policy "$policy" \
+              --engines 4 --load 0.8 --duration-s 6 --warmup-s 1 | tail -1
+          done

@@ -1,0 +1,25 @@
+10.244.0.51 vllm:prefix_cache_hits{model_name="Qwen/Qwen3-8B"} 5.366224e+06
+10.244.0.51 vllm:prefix_cache_queries{model_name="Qwen/Qwen3-8B"} 5.50449e+06
+10.244.0.51 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 747
+10.244.0.52 vllm:prefix_cache_hits{model_name="Qwen/Qwen3-8B"} 5.409872e+06
+10.244.0.52 vllm:prefix_cache_queries{model_name="Qwen/Qwen3-8B"} 5.549872e+06
+10.244.0.52 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 744
+10.244.0.53 vllm:prefix_cache_hits{model_name="Qwen/Qwen3-8B"} 5.420944e+06
+10.244.0.53 vllm:prefix_cache_queries{model_name="Qwen/Qwen3-8B"} 5.559508e+06
+10.244.0.53 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 748
+10.244.0.54 vllm:prefix_cache_hits{model_name="Qwen/Qwen3-8B"} 5.498048e+06
+10.244.0.54 vllm:prefix_cache_queries{model_name="Qwen/Qwen3-8B"} 5.638589e+06
+10.244.0.54 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 758
+10.244.0.55 vllm:prefix_cache_hits{model_name="Qwen/Qwen3-8B"} 5.416496e+06
+10.244.0.55 vllm:prefix_cache_queries{model_name="Qwen/Qwen3-8B"} 5.556543e+06
+10.244.0.55 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 746
+10.244.0.56 vllm:prefix_cache_hits{model_name="Qwen/Qwen3-8B"} 5.41048e+06
+10.244.0.56 vllm:prefix_cache_queries{model_name="Qwen/Qwen3-8B"} 5.548915e+06
+10.244.0.56 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 755
+10.244.0.57 vllm:prefix_cache_hits{model_name="Qwen/Qwen3-8B"} 5.341424e+06
+10.244.0.57 vllm:prefix_cache_queries{model_name="Qwen/Qwen3-8B"} 5.478224e+06
+10.244.0.57 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 744
+10.244.0.58 vllm:prefix_cache_hits{model_name="Qwen/Qwen3-8B"} 5.777088e+06
+10.244.0.58 vllm:prefix_cache_queries{model_name="Qwen/Qwen3-8B"} 5.924817e+06
+10.244.0.58 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 802
+pod "curl-31022" deleted from bench namespace

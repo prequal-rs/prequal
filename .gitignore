@@ -1,0 +1,3 @@
+target/
+/out/
+results/vsim-collapse/*.part

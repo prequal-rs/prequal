@@ -1,0 +1,15 @@
+22:20:49.670 start llmd v0.11.0 load 11.66 9.20 9.45
+22:22:38.501 rollout ready after 9s
+22:22:45.559 load started
+22:23:32.450 metrics-1: 19 llm_d_epp lines;  llm_d_epp_ready_endpoints{name="router"} 10 
+22:23:57.497 metrics-2: 19 llm_d_epp lines;  llm_d_epp_ready_endpoints{name="router"} 10 
+22:23:58.500 delete pod/router-epp-5d95c984b5-lp92h
+22:24:30.672 pod gone after 32.166754900s
+2026-10-02T22:23:58Z   FailedPreStopHook   PreStopHook failed
+envoy-proxy exit=0 reason=Completed finished=2026-10-02T22:23:58Z
+epp exit=0 reason=Completed finished=2026-10-02T22:24:28Z
+deletionTimestamp 2026-10-02T22:24:30Z
+deletionTimestamp 2026-10-02T22:26:08Z
+22:24:33.566 replacement ready 35.062366986s after delete
+22:26:44.269 load result: 
+22:26:45.861 done load 8.56 10.60 10.30

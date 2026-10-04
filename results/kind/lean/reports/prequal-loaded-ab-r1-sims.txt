@@ -1,0 +1,25 @@
+10.244.0.137 vllm:prefix_cache_hits{model_name="Qwen/Qwen3-8B"} 5.455856e+06
+10.244.0.137 vllm:prefix_cache_queries{model_name="Qwen/Qwen3-8B"} 5.59571e+06
+10.244.0.137 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 747
+10.244.0.138 vllm:prefix_cache_hits{model_name="Qwen/Qwen3-8B"} 5.331648e+06
+10.244.0.138 vllm:prefix_cache_queries{model_name="Qwen/Qwen3-8B"} 5.470188e+06
+10.244.0.138 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 741
+10.244.0.139 vllm:prefix_cache_hits{model_name="Qwen/Qwen3-8B"} 5.372048e+06
+10.244.0.139 vllm:prefix_cache_queries{model_name="Qwen/Qwen3-8B"} 5.509913e+06
+10.244.0.139 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 750
+10.244.0.140 vllm:prefix_cache_hits{model_name="Qwen/Qwen3-8B"} 5.480656e+06
+10.244.0.140 vllm:prefix_cache_queries{model_name="Qwen/Qwen3-8B"} 5.62058e+06
+10.244.0.140 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 759
+10.244.0.141 vllm:prefix_cache_hits{model_name="Qwen/Qwen3-8B"} 5.514784e+06
+10.244.0.141 vllm:prefix_cache_queries{model_name="Qwen/Qwen3-8B"} 5.65329e+06
+10.244.0.141 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 769
+10.244.0.142 vllm:prefix_cache_hits{model_name="Qwen/Qwen3-8B"} 5.296672e+06
+10.244.0.142 vllm:prefix_cache_queries{model_name="Qwen/Qwen3-8B"} 5.434822e+06
+10.244.0.142 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 742
+10.244.0.143 vllm:prefix_cache_hits{model_name="Qwen/Qwen3-8B"} 5.296208e+06
+10.244.0.143 vllm:prefix_cache_queries{model_name="Qwen/Qwen3-8B"} 5.433984e+06
+10.244.0.143 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 740
+10.244.0.144 vllm:prefix_cache_hits{model_name="Qwen/Qwen3-8B"} 5.440192e+06
+10.244.0.144 vllm:prefix_cache_queries{model_name="Qwen/Qwen3-8B"} 5.57856e+06
+10.244.0.144 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 753
+pod "curl-15388" deleted from bench namespace

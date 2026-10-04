@@ -1,0 +1,2 @@
+{"run":"check-llmd","stage":"stage_0","ok":1368,"fail":132,"ttft_p50":0.030069769476540387,"ttft_p90":7.3135079552535895,"ttft_p99":20.053929684259927,"out_tok_s":9412.004372190711,"prefix_hit":null}
+{"run":"check-prequal","stage":"stage_0","ok":1465,"fail":35,"ttft_p50":0.02409813809208572,"ttft_p90":0.09454778879880936,"ttft_p99":7.255338625181466,"out_tok_s":10095.257773404433,"prefix_hit":null}

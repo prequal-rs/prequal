@@ -1,0 +1,6 @@
+llmd-default                 x3.2  collapsed 20/20  median p50/p90/p99 22858/70412/83615 ms
+llmd-default                 x3.4  collapsed 20/20  median p50/p90/p99 27852/75144/89890 ms
+llmd-optimized               x3.2  collapsed  0/20  median p50/p90/p99 8/12/17 ms
+llmd-optimized               x3.4  collapsed  2/20  median p50/p90/p99 10/16/20 ms
+prequal                      x3.2  collapsed  0/20  median p50/p90/p99 8/12/17 ms
+prequal                      x3.4  collapsed  2/20  median p50/p90/p99 10/16/20 ms

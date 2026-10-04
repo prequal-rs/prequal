@@ -1,0 +1,202 @@
+load 8.38 15.36 10.73 1790986774
+router-epp-5d95c984b5-k95wf   envoy-proxy   20m    18Mi   
+router-epp-5d95c984b5-k95wf   epp           163m   22Mi   
+load 7.33 14.91 10.63 1790986784
+inference-perf-gps4v          inference-perf   478m   78Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      16m    18Mi   
+router-epp-5d95c984b5-k95wf   epp              110m   22Mi   
+load 6.43 14.46 10.53 1790986794
+inference-perf-gps4v          inference-perf   478m   78Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      16m    18Mi   
+router-epp-5d95c984b5-k95wf   epp              110m   22Mi   
+load 5.59 14.02 10.43 1790986804
+inference-perf-gps4v          inference-perf   623m   201Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      10m    18Mi    
+router-epp-5d95c984b5-k95wf   epp              74m    22Mi    
+load 5.11 13.64 10.34 1790986814
+inference-perf-gps4v          inference-perf   998m   252Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      10m    18Mi    
+router-epp-5d95c984b5-k95wf   epp              54m    22Mi    
+load 5.10 13.36 10.29 1790986824
+inference-perf-gps4v          inference-perf   998m   252Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      10m    18Mi    
+router-epp-5d95c984b5-k95wf   epp              54m    22Mi    
+load 5.08 13.08 10.23 1790986834
+inference-perf-gps4v          inference-perf   998m   321Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      7m     18Mi    
+router-epp-5d95c984b5-k95wf   epp              46m    22Mi    
+load 5.78 12.96 10.22 1790986844
+inference-perf-gps4v          inference-perf   978m   580Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      385m   27Mi    
+router-epp-5d95c984b5-k95wf   epp              640m   54Mi    
+load 6.03 12.78 10.19 1790986854
+inference-perf-gps4v          inference-perf   978m   580Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      385m   27Mi    
+router-epp-5d95c984b5-k95wf   epp              640m   54Mi    
+load 5.80 12.51 10.13 1790986864
+inference-perf-gps4v          inference-perf   1762m   639Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      385m    27Mi    
+router-epp-5d95c984b5-k95wf   epp              1167m   64Mi    
+load 6.18 12.37 10.11 1790986874
+inference-perf-gps4v          inference-perf   1282m   685Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      814m    38Mi    
+router-epp-5d95c984b5-k95wf   epp              1167m   64Mi    
+load 6.05 12.15 10.06 1790986884
+inference-perf-gps4v          inference-perf   1282m   685Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      814m    38Mi    
+router-epp-5d95c984b5-k95wf   epp              1167m   64Mi    
+load 5.51 11.83 9.98 1790986894
+inference-perf-gps4v          inference-perf   1267m   733Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      564m    40Mi    
+router-epp-5d95c984b5-k95wf   epp              979m    77Mi    
+load 11.19 12.83 10.33 1790986904
+inference-perf-gps4v          inference-perf   1203m   819Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      787m    43Mi    
+router-epp-5d95c984b5-k95wf   epp              841m    70Mi    
+load 13.37 13.23 10.48 1790986914
+inference-perf-gps4v          inference-perf   1203m   819Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      787m    43Mi    
+router-epp-5d95c984b5-k95wf   epp              841m    70Mi    
+load 15.67 13.72 10.67 1790986924
+inference-perf-gps4v          inference-perf   3814m   993Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      1927m   48Mi    
+router-epp-5d95c984b5-k95wf   epp              1563m   98Mi    
+load 17.55 14.19 10.86 1790986935
+inference-perf-gps4v          inference-perf   3814m   993Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      1942m   49Mi    
+router-epp-5d95c984b5-k95wf   epp              1749m   110Mi   
+load 18.41 14.49 10.99 1790986945
+inference-perf-gps4v          inference-perf   3814m   993Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      1942m   49Mi    
+router-epp-5d95c984b5-k95wf   epp              1749m   110Mi   
+load 20.79 15.12 11.24 1790986955
+inference-perf-gps4v          inference-perf   3821m   1169Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      1961m   50Mi     
+router-epp-5d95c984b5-k95wf   epp              1741m   118Mi    
+load 21.42 15.45 11.38 1790986965
+inference-perf-gps4v          inference-perf   3824m   1321Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      1900m   51Mi     
+router-epp-5d95c984b5-k95wf   epp              1769m   116Mi    
+load 22.55 15.88 11.57 1790986975
+inference-perf-gps4v          inference-perf   3824m   1321Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      1900m   51Mi     
+router-epp-5d95c984b5-k95wf   epp              1769m   116Mi    
+load 23.40 16.29 11.75 1790986985
+inference-perf-gps4v          inference-perf   3664m   1440Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2003m   53Mi     
+router-epp-5d95c984b5-k95wf   epp              1769m   116Mi    
+load 24.13 16.68 11.92 1790986995
+inference-perf-gps4v          inference-perf   4137m   1592Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2038m   53Mi     
+router-epp-5d95c984b5-k95wf   epp              1845m   120Mi    
+load 23.71 16.84 12.03 1790987005
+inference-perf-gps4v          inference-perf   4137m   1592Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2038m   53Mi     
+router-epp-5d95c984b5-k95wf   epp              1845m   120Mi    
+load 24.61 17.26 12.21 1790987015
+inference-perf-gps4v          inference-perf   4020m   1837Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2060m   54Mi     
+router-epp-5d95c984b5-k95wf   epp              1846m   121Mi    
+load 23.92 17.36 12.30 1790987025
+inference-perf-gps4v          inference-perf   4020m   1837Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2036m   54Mi     
+router-epp-5d95c984b5-k95wf   epp              1795m   101Mi    
+load 24.25 17.66 12.45 1790987035
+inference-perf-gps4v          inference-perf   4020m   1837Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2036m   54Mi     
+router-epp-5d95c984b5-k95wf   epp              1795m   101Mi    
+load 26.24 18.30 12.72 1790987046
+inference-perf-gps4v          inference-perf   3595m   2082Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      1774m   55Mi     
+router-epp-5d95c984b5-k95wf   epp              1783m   119Mi    
+load 25.56 18.40 12.81 1790987056
+inference-perf-gps4v          inference-perf   3891m   2197Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2088m   55Mi     
+router-epp-5d95c984b5-k95wf   epp              1828m   115Mi    
+load 23.25 18.14 12.79 1790987066
+inference-perf-gps4v          inference-perf   3891m   2197Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2088m   55Mi     
+router-epp-5d95c984b5-k95wf   epp              1828m   115Mi    
+load 24.92 18.68 13.02 1790987076
+inference-perf-gps4v          inference-perf   3907m   2314Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      1979m   55Mi     
+router-epp-5d95c984b5-k95wf   epp              1836m   113Mi    
+load 25.93 19.08 13.21 1790987086
+inference-perf-gps4v          inference-perf   3634m   2447Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      1868m   57Mi     
+router-epp-5d95c984b5-k95wf   epp              1643m   81Mi     
+load 27.85 19.71 13.48 1790987096
+inference-perf-gps4v          inference-perf   3634m   2447Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      1868m   57Mi     
+router-epp-5d95c984b5-k95wf   epp              1643m   81Mi     
+load 30.50 20.55 13.82 1790987106
+inference-perf-gps4v          inference-perf   3207m   2625Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      1599m   63Mi     
+router-epp-5d95c984b5-k95wf   epp              1614m   147Mi    
+load 32.21 21.23 14.11 1790987116
+inference-perf-gps4v          inference-perf   4589m   2911Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2099m   64Mi     
+router-epp-5d95c984b5-k95wf   epp              1841m   137Mi    
+load 37.26 22.87 14.76 1790987126
+inference-perf-gps4v          inference-perf   4589m   2911Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2099m   64Mi     
+router-epp-5d95c984b5-k95wf   epp              1841m   137Mi    
+load 38.30 23.56 15.08 1790987137
+inference-perf-gps4v          inference-perf   4553m   3207Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2103m   64Mi     
+router-epp-5d95c984b5-k95wf   epp              1858m   145Mi    
+load 39.85 24.39 15.43 1790987147
+inference-perf-gps4v          inference-perf   4555m   3480Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2144m   65Mi     
+router-epp-5d95c984b5-k95wf   epp              1858m   145Mi    
+load 40.33 24.99 15.72 1790987157
+inference-perf-gps4v          inference-perf   4555m   3480Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2144m   65Mi     
+router-epp-5d95c984b5-k95wf   epp              1858m   145Mi    
+load 40.84 25.60 16.02 1790987167
+inference-perf-gps4v          inference-perf   4572m   3655Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2131m   67Mi     
+router-epp-5d95c984b5-k95wf   epp              1867m   153Mi    
+load 43.03 26.57 16.44 1790987177
+inference-perf-gps4v          inference-perf   4452m   3792Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2161m   67Mi     
+router-epp-5d95c984b5-k95wf   epp              1880m   152Mi    
+load 46.21 27.77 16.94 1790987187
+inference-perf-gps4v          inference-perf   4546m   3983Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2161m   67Mi     
+router-epp-5d95c984b5-k95wf   epp              1867m   159Mi    
+load 47.50 28.66 17.35 1790987197
+inference-perf-gps4v          inference-perf   4546m   3983Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2161m   67Mi     
+router-epp-5d95c984b5-k95wf   epp              1867m   159Mi    
+load 47.61 29.32 17.68 1790987207
+inference-perf-gps4v          inference-perf   4377m   4273Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2071m   68Mi     
+router-epp-5d95c984b5-k95wf   epp              1788m   152Mi    
+load 46.32 29.64 17.91 1790987217
+inference-perf-gps4v          inference-perf   4327m   4449Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2071m   68Mi     
+router-epp-5d95c984b5-k95wf   epp              1808m   147Mi    
+load 46.71 30.27 18.24 1790987227
+inference-perf-gps4v          inference-perf   4327m   4449Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2071m   68Mi     
+router-epp-5d95c984b5-k95wf   epp              1808m   147Mi    
+load 45.83 30.63 18.49 1790987238
+inference-perf-gps4v          inference-perf   4523m   4708Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2107m   70Mi     
+router-epp-5d95c984b5-k95wf   epp              1870m   145Mi    
+load 46.33 31.23 18.82 1790987248
+inference-perf-gps4v          inference-perf   4532m   5057Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2185m   70Mi     
+router-epp-5d95c984b5-k95wf   epp              1888m   150Mi    
+load 47.90 32.07 19.22 1790987258
+inference-perf-gps4v          inference-perf   4532m   5057Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2185m   70Mi     
+router-epp-5d95c984b5-k95wf   epp              1888m   150Mi    
+load 42.29 31.37 19.13 1790987268
+inference-perf-gps4v          inference-perf   4532m   5057Mi   
+router-epp-5d95c984b5-k95wf   envoy-proxy      2159m   71Mi     
+router-epp-5d95c984b5-k95wf   epp              1805m   89Mi     
+load 37.57 30.72 19.05 1790987278
+router-epp-5d95c984b5-k95wf   envoy-proxy    1388m   70Mi     
+router-epp-5d95c984b5-k95wf   epp            339m    83Mi     

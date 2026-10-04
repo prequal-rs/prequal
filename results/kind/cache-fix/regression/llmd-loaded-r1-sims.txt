@@ -1,0 +1,7 @@
+10.244.0.55 vllm:prefix_cache_hits{model_name="Qwen/Qwen3-8B"} 5.297584e+06
+10.244.0.55 vllm:prefix_cache_queries{model_name="Qwen/Qwen3-8B"} 5.533404e+06
+10.244.0.55 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 743
+10.244.0.57 vllm:prefix_cache_hits{model_name="Qwen/Qwen3-8B"} 5.254512e+06
+10.244.0.57 vllm:prefix_cache_queries{model_name="Qwen/Qwen3-8B"} 5.503983e+06
+10.244.0.57 vllm:request_success_total{finish_reason="length",model_name="Qwen/Qwen3-8B"} 742
+pod "curl-4377" deleted from bench namespace

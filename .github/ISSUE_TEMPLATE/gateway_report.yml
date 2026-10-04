@@ -1,0 +1,52 @@
+name: Gateway report
+description: prequal-epp works or doesn't work behind a gateway
+labels: [gateway]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gateways tested so far are listed in [docs/conformance.md](https://github.com/prequal-rs/prequal/blob/main/docs/conformance.md).
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Outcome
+      options:
+        - Works
+        - Works with changes
+        - Doesn't work
+    validations:
+      required: true
+  - type: input
+    id: gateway
+    attributes:
+      label: Gateway and version
+      placeholder: agentgateway v1.5.0
+    validations:
+      required: true
+  - type: input
+    id: gie
+    attributes:
+      label: Gateway API Inference Extension version
+      placeholder: v1.6.2
+    validations:
+      required: true
+  - type: input
+    id: epp
+    attributes:
+      label: prequal-epp version
+      placeholder: 0.1.0 (prequal-epp --version, or the image tag)
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you deployed, what you sent, and what came back. Include any changes you needed to make it work.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: prequal-epp and gateway logs around the failure.
+      render: text

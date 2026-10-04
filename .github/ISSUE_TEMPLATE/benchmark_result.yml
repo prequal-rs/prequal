@@ -1,0 +1,77 @@
+name: Benchmark result
+description: Results from your own hardware, especially real GPUs
+labels: [benchmark]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        All published results so far come from simulated engines, so numbers from real fleets are welcome, good or bad.
+        Reproduction commands are in [docs/benchmarks.md](https://github.com/prequal-rs/prequal/blob/main/docs/benchmarks.md).
+  - type: input
+    id: hardware
+    attributes:
+      label: Hardware
+      placeholder: 4 × A100 80GB, one GPU per replica; 32-core host
+    validations:
+      required: true
+  - type: input
+    id: engine
+    attributes:
+      label: Engine and version
+      placeholder: vLLM 0.x or SGLang 0.x
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model
+    validations:
+      required: true
+  - type: input
+    id: replicas
+    attributes:
+      label: Number of replicas
+    validations:
+      required: true
+  - type: input
+    id: gateway
+    attributes:
+      label: Gateway
+      description: Gateway and version, or "none" for the standalone router.
+      placeholder: agentgateway v1.5.0 with prequal-epp 0.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: workload
+    attributes:
+      label: Workload
+      description: Load generator, QPS, duration, prompt shape (shared prefixes, lengths), streaming or not.
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command used
+      render: sh
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Result table
+      description: TTFT percentiles, throughput, prefix-cache hit rate, failures. Paste the raw output if unsure.
+    validations:
+      required: true
+  - type: input
+    id: baseline
+    attributes:
+      label: Comparison baseline
+      description: What prequal was compared against, with its version and config.
+      placeholder: llm-d v0.11 picker, default config
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Anything that might explain the numbers, such as noisy neighbours or non-default flags.

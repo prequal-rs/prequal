@@ -1,0 +1,40 @@
+# inference-perf against the router Service; JOB_NAME, IP_CPU, RUN_LABEL, LOAD_STAGES and DATA_CONFIG are substituted
+# by the driver.
+apiVersion: v1
+kind: ConfigMap
+metadata: {name: JOB_NAME-config, namespace: bench}
+data:
+  config.yml: |
+    load:
+      type: constant
+      stages: LOAD_STAGES
+      num_workers: 10
+      worker_max_concurrency: 100
+      worker_max_tcp_connections: 2500
+    api: {type: completion, streaming: true}
+    server: {type: vllm, model_name: Qwen/Qwen3-8B, base_url: "http://router-epp:80", ignore_eos: true}
+    data: DATA_CONFIG
+    # per_request off: its report OOM-kills the 4 Gi load generator on the `loaded` workload (7,500 requests).
+    report: {request_lifecycle: {summary: true, per_stage: true, per_request: false}}
+    storage: {local_storage: {path: "/reports/RUN_LABEL-{timestamp}"}}
+---
+apiVersion: batch/v1
+kind: Job
+metadata: {name: JOB_NAME, namespace: bench}
+spec:
+  backoffLimit: 0
+  template:
+    metadata: {labels: {app: inference-perf}}
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: inference-perf
+        image: quay.io/inference-perf/inference-perf:v0.6.0
+        command: [inference-perf]
+        args: [--config_file, /cfg/config.yml, --log-level, INFO]
+        env: [{name: HF_TOKEN, valueFrom: {secretKeyRef: {name: hf-secret, key: token, optional: true}}}]
+        resources: {requests: {cpu: "IP_CPU", memory: 4Gi}}
+        volumeMounts: [{name: cfg, mountPath: /cfg}, {name: reports, mountPath: /reports}]
+      volumes:
+      - {name: cfg, configMap: {name: JOB_NAME-config}}
+      - {name: reports, hostPath: {path: /reports, type: Directory}}

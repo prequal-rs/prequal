@@ -1,0 +1,22 @@
+2026-10-01T08:42:20+00:00 prequal-zipf-r1:  08:42:20 up 4 days, 18:57, 878 users,  load average: 2.00, 3.39, 4.38 17G available
+2026-10-01T09:53:13+00:00 prequal-zipf-r1:  09:53:13 up 4 days, 20:08, 970 users,  load average: 5.06, 232.41, 370.70 26G available
+2026-10-01T10:06:53+00:00 llmd-zipf-r1:  10:06:53 up 4 days, 20:21, 988 users,  load average: 7.92, 24.89, 159.69 25G available
+2026-10-01T11:19:50+00:00 prequal-two-epp-r1:  11:19:50 up 4 days, 21:34, 1071 users,  load average: 1.33, 1.92, 3.42 27G available
+2026-10-01T12:01:59+00:00 llmd-two-epp-r1:  12:01:59 up 4 days, 22:17, 1099 users,  load average: 3.70, 3.39, 4.71 26G available
+2026-10-01T12:20:02+00:00 prequal-two-epp-r2:  12:20:02 up 4 days, 22:35, 1112 users,  load average: 4.31, 15.62, 15.55 26G available
+2026-10-01T13:10:21+00:00 llmd-two-epp-r2:  13:10:21 up 4 days, 23:25, 1300 users,  load average: 3.28, 3.73, 5.05 27G available
+2026-10-01T13:42:45+00:00 prequal-burst-r1:  13:42:45 up 4 days, 23:57, 1415 users,  load average: 3.14, 10.80, 12.63 26G available
+2026-10-01T13:52:07+00:00 llmd-burst-r1:  13:52:07 up 5 days, 7 min, 1432 users,  load average: 2.47, 5.13, 9.06 26G available
+2026-10-01T13:56:39+00:00 prequal-burst-r2:  13:56:39 up 5 days, 11 min, 1432 users,  load average: 14.67, 9.17, 9.57 20G available
+2026-10-01T14:01:12+00:00 llmd-burst-r2:  14:01:12 up 5 days, 16 min, 1432 users,  load average: 12.17, 9.79, 9.60 18G available
+2026-10-01T14:06:58+00:00 llmd-zipf-r1:  14:06:58 up 5 days, 22 min, 1432 users,  load average: 14.43, 10.09, 9.43 26G available
+2026-10-01T14:16:52+00:00 prequal-zipf-r2:  14:16:52 up 5 days, 31 min, 1432 users,  load average: 20.71, 21.08, 14.58 16G available
+2026-10-01T14:31:01+00:00 llmd-zipf-r2:  14:31:01 up 5 days, 46 min, 1445 users,  load average: 3.66, 9.39, 11.95 26G available
+2026-10-02T08:17:33+00:00 prequal-job1-v2-r1:  08:17:33 up 5 days, 18:32, 2018 users,  load average: 7.89, 4.19, 1.71 20G available
+2026-10-02T08:53:59+00:00 llmd-job1-v2-r1:  08:53:59 up 5 days, 19:09, 2117 users,  load average: 5.42, 4.52, 4.40 27G available
+2026-10-02T10:06:48+00:00 prequal-job1-v2-r2:  10:06:48 up 5 days, 20:21, 2271 users,  load average: 8.87, 4.86, 4.49 27G available
+2026-10-02T10:16:49+00:00 llmd-job1-v2-r2:  10:16:49 up 5 days, 20:31, 2288 users,  load average: 1.93, 4.28, 4.50 27G available
+2026-10-02T13:17:14+00:00 prequal-lean-loaded-ab-r1:  13:17:14 up 5 days, 23:32, 2305 users,  load average: 0.96, 0.52, 0.51 27G available
+2026-10-02T13:26:38+00:00 prequal-loaded-ab-r1:  13:26:38 up 5 days, 23:41, 2323 users,  load average: 15.18, 10.66, 5.09 16G available
+2026-10-02T13:37:28+00:00 prequal-lean-loaded-ab-r2:  13:37:28 up 5 days, 23:52, 2337 users,  load average: 15.50, 13.40, 8.18 16G available
+2026-10-02T13:52:17+00:00 prequal-loaded-ab-r2:  13:52:17 up 6 days, 7 min, 2408 users,  load average: 3.60, 7.64, 8.21 27G available

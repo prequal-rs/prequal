@@ -1,0 +1,44 @@
+# prequal-router vs round-robin on two identical simulated vLLM fleets. From the repository root:
+#   docker compose -f deploy/demo/compose.yaml up --build --abort-on-container-exit --exit-code-from bench
+# Each fleet is one service scaled to 4 containers; the router resolves its name to all of them.
+
+x-replicas: &replicas 4
+
+x-sim: &sim
+  image: ghcr.io/llm-d/llm-d-inference-sim:v0.10.2
+  # 50 µs/token prefill (~20k tok/s, an 8B model on one GPU) so cache misses cost visible TTFT.
+  # 800 blocks × 16 tokens holds ~6 of the 16 shared prefixes: one replica can't hold them all, the fleet can.
+  command: [--model, Qwen/Qwen3-8B, --port, "8000", --max-model-len, "32768", --inter-token-latency, 1ms,
+            --prefill-time-per-token, 50us, --prefill-overhead, 5ms, --enable-kvcache, --kv-cache-size, "800",
+            --block-size, "16", --force-dummy-tokenizer]
+  # The sim refuses to start with --enable-kvcache unless POD_IP is set; it only labels KV events with it.
+  environment: {POD_IP: 0.0.0.0}
+  deploy: {replicas: *replicas}
+
+x-router: &router
+  build: {context: ../.., dockerfile: deploy/Dockerfile}
+  image: prequal-router:demo
+
+services:
+  sim-prequal: *sim
+  sim-round-robin: *sim
+
+  router-prequal:
+    <<: *router
+    command: [--listen, 0.0.0.0:8000, --admin-listen, 0.0.0.0:8081, --policy, prequal, sim-prequal:8000]
+    ports: ["8000:8000"]
+
+  router-round-robin:
+    <<: *router
+    command: [--listen, 0.0.0.0:8000, --admin-listen, 0.0.0.0:8081, --policy, round-robin, sim-round-robin:8000]
+
+  bench:
+    image: quay.io/inference-perf/inference-perf:v0.6.0
+    entrypoint: [python, /demo/bench.py]
+    command: [prequal, round-robin]
+    environment: {RATE: "${RATE:-10}", DURATION: "${DURATION:-60}", REPLICAS: *replicas}
+    volumes: ["./bench.py:/demo/bench.py:ro", "hf-cache:/root/.cache/huggingface"]
+    depends_on: [router-prequal, router-round-robin, sim-prequal, sim-round-robin]
+
+volumes:
+  hf-cache:

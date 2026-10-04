@@ -1,0 +1,168 @@
+name: Release
+
+# Pushing a tag vX.Y.Z publishes the images and Helm chart to ghcr.io/<owner> and drafts a GitHub release with
+# prebuilt binaries attached.
+# crates.io publishing stays manual (see CONTRIBUTING.md).
+on:
+  push:
+    tags: ["v*.*.*"]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.v.outputs.version }}
+      registry: ${{ steps.v.outputs.registry }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: v
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          crate=$(grep -m1 '^version' Cargo.toml | cut -d'"' -f2)
+          chart=$(grep '^version:' deploy/helm/prequal-router/Chart.yaml | awk '{print $2}')
+          app=$(grep '^appVersion:' deploy/helm/prequal-router/Chart.yaml | cut -d'"' -f2)
+          for v in "$crate" "$chart" "$app"; do
+            [ "$v" = "$version" ] || { echo "::error::tag $GITHUB_REF_NAME but Cargo.toml=$crate Chart.yaml=$chart/$app"; exit 1; }
+          done
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          # ghcr.io rejects uppercase in image names.
+          echo "registry=ghcr.io/${GITHUB_REPOSITORY_OWNER,,}" >> "$GITHUB_OUTPUT"
+
+  image:
+    needs: check
+    strategy:
+      fail-fast: false
+      matrix:
+        image:
+          - { name: prequal-epp, file: deploy/epp.Dockerfile }
+          - { name: prequal-router, file: deploy/Dockerfile }
+        arch:
+          - { platform: linux/amd64, runner: ubuntu-latest, suffix: amd64 }
+          - { platform: linux/arm64, runner: ubuntu-24.04-arm, suffix: arm64 }
+    runs-on: ${{ matrix.arch.runner }}
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ${{ matrix.image.file }}
+          platforms: ${{ matrix.arch.platform }}
+          push: true
+          tags: ${{ needs.check.outputs.registry }}/${{ matrix.image.name }}:${{ needs.check.outputs.version }}-${{ matrix.arch.suffix }}
+          labels: |
+            org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }}
+            org.opencontainers.image.version=${{ needs.check.outputs.version }}
+            org.opencontainers.image.licenses=MIT OR Apache-2.0
+          cache-from: type=gha,scope=${{ matrix.image.name }}-${{ matrix.arch.suffix }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.image.name }}-${{ matrix.arch.suffix }}
+
+  manifest:
+    needs: [check, image]
+    strategy:
+      matrix:
+        name: [prequal-epp, prequal-router]
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+    steps:
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - env:
+          IMAGE: ${{ needs.check.outputs.registry }}/${{ matrix.name }}
+          VERSION: ${{ needs.check.outputs.version }}
+        run: |
+          docker buildx imagetools create -t "$IMAGE:$VERSION" -t "$IMAGE:latest" \
+            "$IMAGE:$VERSION-amd64" "$IMAGE:$VERSION-arm64"
+
+  chart:
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: azure/setup-helm@v4
+      - env:
+          REGISTRY: ${{ needs.check.outputs.registry }}
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | helm registry login ghcr.io -u "${{ github.actor }}" --password-stdin
+          helm package deploy/helm/prequal-router
+          helm push prequal-router-*.tgz "oci://$REGISTRY/charts"
+
+  binaries:
+    name: binaries (${{ matrix.target }})
+    needs: check
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { target: x86_64-unknown-linux-musl, runner: ubuntu-latest, bins: prequal-router prequal-epp }
+          - { target: aarch64-unknown-linux-musl, runner: ubuntu-24.04-arm, bins: prequal-router prequal-epp }
+          - { target: aarch64-apple-darwin, runner: macos-latest, bins: prequal-router }
+    runs-on: ${{ matrix.runner }}
+    env:
+      TARGET: ${{ matrix.target }}
+      BINS: ${{ matrix.bins }}
+      VERSION: ${{ needs.check.outputs.version }}
+      # ring compiles C and assembly; without these cc looks for <arch>-linux-musl-gcc, which musl-tools doesn't ship.
+      CC_x86_64_unknown_linux_musl: musl-gcc
+      CC_aarch64_unknown_linux_musl: musl-gcc
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target }}
+      - if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y musl-tools
+      - uses: Swatinem/rust-cache@v2
+        with:
+          key: release-${{ matrix.target }}
+      - run: cargo build --release --locked --target "$TARGET" $(printf ' -p %s' $BINS)
+      - run: |
+          dir="prequal-$VERSION-$TARGET"
+          mkdir "$dir"
+          for bin in $BINS; do cp "target/$TARGET/release/$bin" "$dir/"; done
+          cp LICENSE-APACHE LICENSE-MIT README.md "$dir/"
+          tar -czf "$dir.tar.gz" "$dir"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: prequal-${{ matrix.target }}
+          path: prequal-*.tar.gz
+          if-no-files-found: error
+
+  release:
+    needs: [manifest, chart, binaries]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: prequal-*
+          path: dist
+          merge-multiple: true
+      - run: sha256sum *.tar.gz > SHA256SUMS
+        working-directory: dist
+      - env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" --draft --verify-tag --generate-notes --title "$GITHUB_REF_NAME" \
+            dist/*.tar.gz dist/SHA256SUMS

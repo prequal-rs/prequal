@@ -1,0 +1,7 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc ab882facc315b5b94d507e6cf647e901fdb3391f1deebfc06a391f9a84eddb9d # shrinks to config = Config { probes_per_query: 0.0, pool_capacity: 1, max_age_us: 1000000, removes_per_query: 0.0, reuse_delta: 1.0, max_reuse: 16, q_rif: 0.0, rif_history: 64, eject_after_failures: 1, base_ejection_us: 1000000, max_ejection_us: 30000000, max_ejected_fraction: 0.5 }, start = 3, ops = [Remove(0), Add, Remove(0), Probe { replica: 0, rif: 0, latency_us: 0 }, Add, Add, Add, Probe { replica: 0, rif: 0, latency_us: 0 }, Remove(0), Add, Remove(0), Add, Remove(0), Fail(38647052805543065), Remove(7952229682759148543), Remove(553995608743178320), Fail(176042188912474022), Remove(2007780500830582551), Select], seed = 17390226738213986640

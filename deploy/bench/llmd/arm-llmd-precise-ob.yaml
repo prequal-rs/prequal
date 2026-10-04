@@ -1,0 +1,60 @@
+# arm-llmd-precise.yaml's KV-event prefix index under optimized-baseline.yaml's scorers and weights (queue 2,
+# kv-cache-utilization 2, prefix 3, no-hit-lru 2): isolates precise vs approximate prefix state from llm-d's precise
+# perf profile, which also re-weights toward load (active-request 4, prefix 2).
+router:
+  extraServicePorts:
+  - {name: http, port: 80, protocol: TCP, targetPort: 8081}
+  - {name: zmq, port: 5557, protocol: TCP, targetPort: 5557}
+  epp:
+    image: {registry: ghcr.io/llm-d, repository: llm-d-router-endpoint-picker, pullPolicy: IfNotPresent}
+    flags: {v: 4, enable-pprof: "true", tracing: "false"}
+    extraContainerPorts: [{containerPort: 5557, name: zmq, protocol: TCP}]
+    pluginsConfigFile: precise-ob-plugins.yaml
+    pluginsCustomConfig:
+      precise-ob-plugins.yaml: |
+        apiVersion: llm-d.ai/v1alpha1
+        kind: EndpointPickerConfig
+        plugins:
+          - type: token-producer
+            parameters:
+              modelName: Qwen/Qwen3-8B
+              vllm:
+                endpointDiscovery: {}
+          - type: endpoint-notification-source
+          - type: precise-prefix-cache-producer
+            parameters:
+              tokenProcessorConfig:
+                blockSizeTokens: 16
+              speculativeIndexing: true
+              indexerConfig:
+                kvBlockIndexConfig:
+                  enableMetrics: true
+              kvEventsConfig:
+                zmqEndpoint: tcp://0.0.0.0:5557
+                topicFilter: "kv@"
+                concurrency: 32
+                discoverPods: false
+          - type: queue-scorer
+          - type: kv-cache-utilization-scorer
+          - type: prefix-cache-scorer
+            parameters:
+              prefixMatchInfoProducerName: precise-prefix-cache-producer
+          - type: no-hit-lru-scorer
+            parameters:
+              prefixMatchInfoProducerName: precise-prefix-cache-producer
+        dataLayer:
+          sources:
+            - pluginRef: endpoint-notification-source
+              extractors:
+                - pluginRef: precise-prefix-cache-producer
+        schedulingProfiles:
+          - name: default
+            plugins:
+              - pluginRef: queue-scorer
+                weight: 2
+              - pluginRef: kv-cache-utilization-scorer
+                weight: 2
+              - pluginRef: prefix-cache-scorer
+                weight: 3
+              - pluginRef: no-hit-lru-scorer
+                weight: 2

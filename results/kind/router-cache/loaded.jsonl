@@ -1,0 +1,10 @@
+{"run":"llmd-loaded-r1","stage":"stage_0","ok":300,"fail":0,"ttft_p50":0.03182934800861403,"ttft_p90":0.06097077246522531,"ttft_p99":0.11834845689940263,"out_tok_s":5111.6183591631625,"prefix_hit":0.541}
+{"run":"llmd-loaded-r1","stage":"stage_1","ok":2700,"fail":0,"ttft_p50":0.04786822001915425,"ttft_p90":0.10197844577487555,"ttft_p99":0.21000477935071046,"out_tok_s":15485.975359307657,"prefix_hit":0.985}
+{"run":"llmd-loaded-r1","stage":"stage_2","ok":4500,"fail":0,"ttft_p50":0.1907578610116616,"ttft_p90":0.39867658087750896,"ttft_p99":0.6588769719027932,"out_tok_s":25717.6780810291,"prefix_hit":0.999}
+{"run":"llmd-loaded-r1","prefix_hit_rate":0.975}
+{"run":"llmd-loaded-r1","peak_load1":55.71,"epp_mcpu":1689,"epp_mib":319,"envoy-proxy_mcpu":1825,"envoy-proxy_mib":82,"inference-perf_mcpu":4141,"inference-perf_mib":5150}
+{"run":"prequal-loaded-r1","stage":"stage_0","ok":300,"fail":0,"ttft_p50":0.02928841346874833,"ttft_p90":0.05510545766446741,"ttft_p99":0.09466699867043643,"out_tok_s":5106.20054238923,"prefix_hit":0.525}
+{"run":"prequal-loaded-r1","stage":"stage_1","ok":2700,"fail":0,"ttft_p50":0.025679523474536836,"ttft_p90":0.03540216092951595,"ttft_p99":0.11726790841086757,"out_tok_s":15508.399462598743,"prefix_hit":0.987}
+{"run":"prequal-loaded-r1","stage":"stage_2","ok":4500,"fail":0,"ttft_p50":0.08542310795746744,"ttft_p90":0.2615852437797002,"ttft_p99":0.5501301817758945,"out_tok_s":25788.238330646527,"prefix_hit":0.999}
+{"run":"prequal-loaded-r1","prefix_hit_rate":0.975}
+{"run":"prequal-loaded-r1","peak_load1":51.42,"epp_mcpu":584,"epp_mib":26,"envoy-proxy_mcpu":2385,"envoy-proxy_mib":73,"inference-perf_mcpu":5198,"inference-perf_mib":5205}

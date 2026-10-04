@@ -1,0 +1,197 @@
+load 5.67 7.87 5.86 1790876053
+load 4.95 7.64 5.81 1790876063
+inference-perf-p6m97          inference-perf   647m   110Mi    
+router-epp-6fc4687944-j7bcm   envoy-proxy      4m     61Mi     
+router-epp-6fc4687944-j7bcm   epp              131m   77Mi     
+load 4.49 7.45 5.77 1790876073
+inference-perf-p6m97          inference-perf   647m   110Mi    
+router-epp-6fc4687944-j7bcm   envoy-proxy      4m     61Mi     
+router-epp-6fc4687944-j7bcm   epp              131m   77Mi     
+load 4.11 7.27 5.73 1790876083
+inference-perf-p6m97          inference-perf   653m   140Mi    
+router-epp-6fc4687944-j7bcm   envoy-proxy      4m     61Mi     
+router-epp-6fc4687944-j7bcm   epp              89m    78Mi     
+load 3.70 7.08 5.68 1790876093
+inference-perf-p6m97          inference-perf   746m   239Mi    
+router-epp-6fc4687944-j7bcm   envoy-proxy      4m     61Mi     
+router-epp-6fc4687944-j7bcm   epp              71m    78Mi     
+load 3.45 6.91 5.64 1790876103
+inference-perf-p6m97          inference-perf   746m   239Mi    
+router-epp-6fc4687944-j7bcm   envoy-proxy      4m     61Mi     
+router-epp-6fc4687944-j7bcm   epp              71m    78Mi     
+load 3.47 6.80 5.62 1790876113
+inference-perf-p6m97          inference-perf   998m   328Mi    
+router-epp-6fc4687944-j7bcm   envoy-proxy      3m     62Mi     
+router-epp-6fc4687944-j7bcm   epp              47m    78Mi     
+load 3.16 6.63 5.58 1790876123
+inference-perf-p6m97          inference-perf   961m   559Mi    
+router-epp-6fc4687944-j7bcm   envoy-proxy      3m     62Mi     
+router-epp-6fc4687944-j7bcm   epp              482m   103Mi    
+load 3.59 6.60 5.58 1790876133
+inference-perf-p6m97          inference-perf   1263m   677Mi    
+router-epp-6fc4687944-j7bcm   envoy-proxy      570m    69Mi     
+router-epp-6fc4687944-j7bcm   epp              957m    113Mi    
+load 3.33 6.45 5.54 1790876143
+inference-perf-p6m97          inference-perf   1263m   677Mi    
+router-epp-6fc4687944-j7bcm   envoy-proxy      570m    69Mi     
+router-epp-6fc4687944-j7bcm   epp              957m    113Mi    
+load 3.21 6.32 5.51 1790876154
+inference-perf-p6m97          inference-perf   1251m   718Mi    
+router-epp-6fc4687944-j7bcm   envoy-proxy      622m    72Mi     
+router-epp-6fc4687944-j7bcm   epp              905m    121Mi    
+load 2.79 6.13 5.45 1790876164
+inference-perf-p6m97          inference-perf   1258m   751Mi    
+router-epp-6fc4687944-j7bcm   envoy-proxy      622m    72Mi     
+router-epp-6fc4687944-j7bcm   epp              1033m   129Mi    
+load 3.76 6.22 5.49 1790876174
+inference-perf-p6m97          inference-perf   1258m   751Mi    
+router-epp-6fc4687944-j7bcm   envoy-proxy      622m    72Mi     
+router-epp-6fc4687944-j7bcm   epp              1033m   129Mi    
+load 5.72 6.56 5.61 1790876184
+inference-perf-p6m97          inference-perf   1021m   803Mi    
+router-epp-6fc4687944-j7bcm   envoy-proxy      609m    72Mi     
+router-epp-6fc4687944-j7bcm   epp              1071m   143Mi    
+load 9.64 7.38 5.89 1790876194
+inference-perf-p6m97          inference-perf   3746m   935Mi    
+router-epp-6fc4687944-j7bcm   envoy-proxy      1284m   76Mi     
+router-epp-6fc4687944-j7bcm   epp              1680m   158Mi    
+load 9.81 7.49 5.94 1790876204
+inference-perf-p6m97          inference-perf   3746m   935Mi    
+router-epp-6fc4687944-j7bcm   envoy-proxy      1284m   76Mi     
+router-epp-6fc4687944-j7bcm   epp              1680m   158Mi    
+load 11.45 7.92 6.09 1790876214
+inference-perf-p6m97          inference-perf   3824m   1039Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1701m   77Mi     
+router-epp-6fc4687944-j7bcm   epp              1680m   158Mi    
+load 12.51 8.26 6.23 1790876224
+inference-perf-p6m97          inference-perf   3744m   1196Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1686m   77Mi     
+router-epp-6fc4687944-j7bcm   epp              1669m   161Mi    
+load 13.35 8.59 6.35 1790876234
+inference-perf-p6m97          inference-perf   3744m   1196Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1686m   77Mi     
+router-epp-6fc4687944-j7bcm   epp              1669m   161Mi    
+load 17.04 9.62 6.73 1790876244
+inference-perf-p6m97          inference-perf   3698m   1371Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1672m   77Mi     
+router-epp-6fc4687944-j7bcm   epp              1674m   153Mi    
+load 18.13 10.11 6.92 1790876254
+inference-perf-p6m97          inference-perf   3932m   1524Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1746m   78Mi     
+router-epp-6fc4687944-j7bcm   epp              1742m   167Mi    
+load 17.22 10.17 6.97 1790876264
+inference-perf-p6m97          inference-perf   3932m   1524Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1746m   78Mi     
+router-epp-6fc4687944-j7bcm   epp              1742m   167Mi    
+load 17.87 10.55 7.13 1790876275
+inference-perf-p6m97          inference-perf   3932m   1524Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1710m   78Mi     
+router-epp-6fc4687944-j7bcm   epp              1702m   160Mi    
+load 18.41 10.91 7.28 1790876285
+inference-perf-p6m97          inference-perf   3979m   1704Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1708m   79Mi     
+router-epp-6fc4687944-j7bcm   epp              1720m   163Mi    
+load 19.37 11.36 7.47 1790876295
+inference-perf-p6m97          inference-perf   3979m   1704Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1708m   79Mi     
+router-epp-6fc4687944-j7bcm   epp              1720m   163Mi    
+load 21.26 12.03 7.73 1790876305
+inference-perf-p6m97          inference-perf   3916m   1883Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1807m   78Mi     
+router-epp-6fc4687944-j7bcm   epp              1706m   164Mi    
+load 21.88 12.46 7.92 1790876315
+inference-perf-p6m97          inference-perf   3860m   2064Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1690m   78Mi     
+router-epp-6fc4687944-j7bcm   epp              1773m   167Mi    
+load 22.19 12.84 8.09 1790876325
+inference-perf-p6m97          inference-perf   3860m   2064Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1690m   78Mi     
+router-epp-6fc4687944-j7bcm   epp              1773m   167Mi    
+load 23.23 13.38 8.31 1790876335
+inference-perf-p6m97          inference-perf   4209m   2221Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1829m   78Mi     
+router-epp-6fc4687944-j7bcm   epp              1757m   154Mi    
+load 22.69 13.58 8.44 1790876345
+inference-perf-p6m97          inference-perf   3983m   2323Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1792m   79Mi     
+router-epp-6fc4687944-j7bcm   epp              1757m   154Mi    
+load 22.14 13.77 8.55 1790876355
+inference-perf-p6m97          inference-perf   3983m   2323Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1792m   79Mi     
+router-epp-6fc4687944-j7bcm   epp              1757m   154Mi    
+load 23.46 14.33 8.79 1790876365
+inference-perf-p6m97          inference-perf   3962m   2439Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1792m   79Mi     
+router-epp-6fc4687944-j7bcm   epp              1761m   171Mi    
+load 25.84 15.12 9.11 1790876375
+inference-perf-p6m97          inference-perf   3937m   2717Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1445m   80Mi     
+router-epp-6fc4687944-j7bcm   epp              1576m   175Mi    
+load 27.91 15.91 9.43 1790876385
+inference-perf-p6m97          inference-perf   3937m   2717Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1445m   80Mi     
+router-epp-6fc4687944-j7bcm   epp              1576m   175Mi    
+load 29.40 16.62 9.73 1790876396
+inference-perf-p6m97          inference-perf   4611m   2890Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1701m   83Mi     
+router-epp-6fc4687944-j7bcm   epp              1692m   187Mi    
+load 30.09 17.20 9.99 1790876406
+inference-perf-p6m97          inference-perf   4656m   3141Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1730m   82Mi     
+router-epp-6fc4687944-j7bcm   epp              1713m   193Mi    
+load 31.36 17.88 10.29 1790876416
+inference-perf-p6m97          inference-perf   4656m   3141Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1730m   82Mi     
+router-epp-6fc4687944-j7bcm   epp              1713m   193Mi    
+load 31.38 18.33 10.52 1790876426
+inference-perf-p6m97          inference-perf   5002m   3354Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1798m   84Mi     
+router-epp-6fc4687944-j7bcm   epp              1771m   201Mi    
+load 31.91 18.88 10.78 1790876436
+inference-perf-p6m97          inference-perf   4920m   3732Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1813m   84Mi     
+router-epp-6fc4687944-j7bcm   epp              1785m   188Mi    
+load 31.87 19.30 11.01 1790876446
+inference-perf-p6m97          inference-perf   4920m   3732Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1813m   84Mi     
+router-epp-6fc4687944-j7bcm   epp              1785m   188Mi    
+load 31.11 19.55 11.18 1790876456
+inference-perf-p6m97          inference-perf   4920m   3732Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1845m   84Mi     
+router-epp-6fc4687944-j7bcm   epp              1794m   190Mi    
+load 31.62 20.04 11.43 1790876466
+inference-perf-p6m97          inference-perf   4832m   4019Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1855m   84Mi     
+router-epp-6fc4687944-j7bcm   epp              1797m   183Mi    
+load 32.97 20.72 11.74 1790876476
+inference-perf-p6m97          inference-perf   4832m   4019Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1855m   84Mi     
+router-epp-6fc4687944-j7bcm   epp              1797m   183Mi    
+load 32.44 21.01 11.93 1790876486
+inference-perf-p6m97          inference-perf   4885m   4294Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1840m   84Mi     
+router-epp-6fc4687944-j7bcm   epp              1783m   191Mi    
+load 34.12 21.73 12.26 1790876497
+inference-perf-p6m97          inference-perf   4778m   4556Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1840m   84Mi     
+router-epp-6fc4687944-j7bcm   epp              1795m   185Mi    
+load 35.33 22.40 12.58 1790876507
+inference-perf-p6m97          inference-perf   4778m   4556Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1840m   84Mi     
+router-epp-6fc4687944-j7bcm   epp              1795m   185Mi    
+load 35.53 22.88 12.84 1790876517
+inference-perf-p6m97          inference-perf   4649m   4837Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1772m   85Mi     
+router-epp-6fc4687944-j7bcm   epp              1733m   203Mi    
+load 35.36 23.26 13.08 1790876527
+inference-perf-p6m97          inference-perf   4667m   5006Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1710m   85Mi     
+router-epp-6fc4687944-j7bcm   epp              1748m   197Mi    
+load 36.27 23.85 13.38 1790876537
+inference-perf-p6m97          inference-perf   4667m   5006Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1710m   85Mi     
+router-epp-6fc4687944-j7bcm   epp              1748m   197Mi    
+load 30.85 23.10 13.24 1790876547
+inference-perf-p6m97          inference-perf   4780m   5271Mi   
+router-epp-6fc4687944-j7bcm   envoy-proxy      1732m   85Mi     
+router-epp-6fc4687944-j7bcm   epp              1776m   185Mi    

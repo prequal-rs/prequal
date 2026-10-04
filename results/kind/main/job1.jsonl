@@ -1,0 +1,16 @@
+{"run":"llmd-job1-v2-r1","stage":"stage_0","ok":15,"fail":0,"ttft_p50":0.06529655604390427,"ttft_p90":0.09755628664279356,"ttft_p99":0.10424946309183723,"out_tok_s":1054.5147847452781,"prefix_hit":0.459}
+{"run":"llmd-job1-v2-r1","stage":"stage_1","ok":3000,"fail":0,"ttft_p50":0.02775137801654637,"ttft_p90":0.04552181226899847,"ttft_p99":0.11886696789704708,"out_tok_s":10375.448473172886,"prefix_hit":0.944}
+{"run":"llmd-job1-v2-r1","prefix_hit_rate":0.939}
+{"run":"llmd-job1-v2-r1","peak_load1":13.69,"epp_mcpu":1653,"epp_mib":155,"envoy-proxy_mcpu":1446,"envoy-proxy_mib":41,"inference-perf_mcpu":3003,"inference-perf_mib":2368}
+{"run":"llmd-job1-v2-r2","stage":"stage_0","ok":15,"fail":0,"ttft_p50":0.05806351499632001,"ttft_p90":0.08818059636978431,"ttft_p99":0.1135302061936818,"out_tok_s":1067.7358968991525,"prefix_hit":0.363}
+{"run":"llmd-job1-v2-r2","stage":"stage_1","ok":3000,"fail":0,"ttft_p50":0.02733884850749746,"ttft_p90":0.03755729217664338,"ttft_p99":0.11644344737695045,"out_tok_s":10365.986494067267,"prefix_hit":0.943}
+{"run":"llmd-job1-v2-r2","prefix_hit_rate":0.939}
+{"run":"llmd-job1-v2-r2","peak_load1":13.86,"epp_mcpu":1601,"epp_mib":101,"envoy-proxy_mcpu":1456,"envoy-proxy_mib":31,"inference-perf_mcpu":2945,"inference-perf_mib":2421}
+{"run":"prequal-job1-v2-r1","stage":"stage_0","ok":15,"fail":0,"ttft_p50":0.057395440991967916,"ttft_p90":0.0911226559896022,"ttft_p99":0.12061186800361609,"out_tok_s":1088.766407115008,"prefix_hit":0.320}
+{"run":"prequal-job1-v2-r1","stage":"stage_1","ok":3000,"fail":0,"ttft_p50":0.02182119997451082,"ttft_p90":0.025801014469470827,"ttft_p99":0.09533895381435267,"out_tok_s":10374.322450603257,"prefix_hit":0.943}
+{"run":"prequal-job1-v2-r1","prefix_hit_rate":0.939}
+{"run":"prequal-job1-v2-r1","peak_load1":41.95,"epp_mcpu":310,"epp_mib":14,"envoy-proxy_mcpu":1143,"envoy-proxy_mib":73,"inference-perf_mcpu":2861,"inference-perf_mib":2396}
+{"run":"prequal-job1-v2-r2","stage":"stage_0","ok":15,"fail":0,"ttft_p50":0.06737145001534373,"ttft_p90":0.0935180295840837,"ttft_p99":0.09859943309333175,"out_tok_s":998.2255068181398,"prefix_hit":0.347}
+{"run":"prequal-job1-v2-r2","stage":"stage_1","ok":3000,"fail":0,"ttft_p50":0.021897034981520846,"ttft_p90":0.03155537136481135,"ttft_p99":0.12178624539053971,"out_tok_s":10366.756004462683,"prefix_hit":0.942}
+{"run":"prequal-job1-v2-r2","prefix_hit_rate":0.937}
+{"run":"prequal-job1-v2-r2","peak_load1":11.18,"epp_mcpu":312,"epp_mib":15,"envoy-proxy_mcpu":1076,"envoy-proxy_mib":29,"inference-perf_mcpu":2732,"inference-perf_mib":2453}

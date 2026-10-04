@@ -1,0 +1,20 @@
+diagnose: per tier, requests then to-holder / spread / forgotten / cold / stale-belief / believed-fresh
+diagnose: tier 0: 2610 / 0.995 / 0.001 / 0.000 / 0.003 / 0.000 / 0.002
+diagnose: tier 1: 3686 / 0.757 / 0.001 / 0.002 / 0.239 / 0.023 / 0.003
+diagnose: tier 2: 2755 / 0.311 / 0.000 / 0.002 / 0.687 / 0.019 / 0.003
+engines: 67882500 prompt tokens, 45871136 cached (67.6%); per engine prompt/hit: 7297k/70% 9165k/76% 6915k/68% 4912k/55% 7395k/70% 5242k/58% 7500k/71% 5340k/59% 8145k/74% 5970k/62%
+stage 1 (4.0 rps x 120s): 471 ok / 0 err, ttft p50/p90/p99 2/30/32 ms, e2e p50/p99 1001/1419 ms, 3925 out tok/s, prefix hit 69.2%
+stage 2 (6.0 rps x 120s): 705 ok / 0 err, ttft p50/p90/p99 2/30/32 ms, e2e p50/p99 1002/1599 ms, 5875 out tok/s, prefix hit 67.7%
+stage 3 (8.0 rps x 120s): 961 ok / 0 err, ttft p50/p90/p99 2/31/32 ms, e2e p50/p99 1025/1832 ms, 8008 out tok/s, prefix hit 68.1%
+stage 4 (10.0 rps x 120s): 1236 ok / 0 err, ttft p50/p90/p99 2/31/32 ms, e2e p50/p99 1029/2493 ms, 10300 out tok/s, prefix hit 70.5%
+stage 5 (12.0 rps x 120s): 1417 ok / 0 err, ttft p50/p90/p99 3/31/33 ms, e2e p50/p99 1030/3180 ms, 11808 out tok/s, prefix hit 67.8%
+stage 6 (14.0 rps x 120s): 1630 ok / 0 err, ttft p50/p90/p99 3/32/707 ms, e2e p50/p99 1032/4219 ms, 13583 out tok/s, prefix hit 67.6%
+stage 7 (16.0 rps x 120s): 1898 ok / 0 err, ttft p50/p90/p99 3/32/806 ms, e2e p50/p99 1065/4163 ms, 15817 out tok/s, prefix hit 68.6%
+policy,routers,engines,load,rps,completed,errors,ttft_p50_ms,ttft_p99_ms,e2e_p50_ms,e2e_p99_ms,tokens_per_s,workload,stage,stage_rate,concurrency,ttft_p90_ms,prefix_hit_rate
+llmd-optimized,1,10,0.200,4.0,471,0,2,32,1001,1419,3925,shared-prefix,1,4.00,0,30,0.6916
+llmd-optimized,1,10,0.300,6.0,705,0,2,32,1002,1599,5875,shared-prefix,2,6.00,0,30,0.6773
+llmd-optimized,1,10,0.400,8.0,961,0,2,32,1025,1832,8008,shared-prefix,3,8.00,0,31,0.6814
+llmd-optimized,1,10,0.500,10.0,1236,0,2,32,1029,2493,10300,shared-prefix,4,10.00,0,31,0.7053
+llmd-optimized,1,10,0.600,12.0,1417,0,3,33,1030,3180,11808,shared-prefix,5,12.00,0,31,0.6777
+llmd-optimized,1,10,0.700,14.0,1630,0,3,707,1032,4219,13583,shared-prefix,6,14.00,0,32,0.6764
+llmd-optimized,1,10,0.800,16.0,1898,0,3,806,1065,4163,15817,shared-prefix,7,16.00,0,32,0.6856

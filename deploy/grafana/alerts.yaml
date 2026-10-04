@@ -1,0 +1,47 @@
+groups:
+  - name: prequal-epp
+    rules:
+      - alert: PrequalEppNotScraped
+        expr: absent(llm_d_epp_info)
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: Prometheus has no prequal-epp target reporting llm_d_epp_info.
+
+      - alert: PrequalEppNoReadyEndpoints
+        expr: max by (name) (llm_d_epp_ready_endpoints) == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: Pool {{ $labels.name }} has no endpoint with a fresh model-server scrape.
+
+      # request_total counts scheduled requests only, so rejections are in the numerator alone and the ratio can exceed 1.
+      - alert: PrequalEppErrorRatioHigh
+        expr: |
+          sum(rate(llm_d_epp_request_error_total[5m]))
+            / sum(rate(llm_d_epp_request_total[5m])) > 0.05
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: More than 5% of prequal-epp requests ended in an error over 10 minutes.
+
+      # Saturation sheds (429) are not counted as rejected picks; these are requests with no endpoint to route to.
+      - alert: PrequalEppPicksRejected
+        expr: sum(rate(prequal_epp_picks_total{result="rejected"}[5m])) > 0
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: prequal-epp has been rejecting picks for 5 minutes.
+
+      # 16000 is 80% of the default --max-concurrent-streams (20000); change it if you set the flag.
+      - alert: PrequalEppStreamsNearLimit
+        expr: llm_d_epp_extproc_streams_inflight > 16000
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: prequal-epp {{ $labels.instance }} has more than 16000 ext_proc streams open (limit 20000 by default).

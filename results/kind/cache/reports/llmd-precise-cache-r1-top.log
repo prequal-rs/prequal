@@ -1,0 +1,651 @@
+load 6.62 22.40 18.76 1791021986
+router-epp-6db5568fd9-w86s2   envoy-proxy   22m    19Mi   
+router-epp-6db5568fd9-w86s2   epp           188m   23Mi   
+load 7.67 22.09 18.70 1791021996
+router-epp-6db5568fd9-w86s2   envoy-proxy   22m    19Mi   
+router-epp-6db5568fd9-w86s2   epp           188m   23Mi   
+load 6.87 21.44 18.53 1791022006
+inference-perf-6rv8t          inference-perf   821m   151Mi   
+inference-perf-cold-66nl5     inference-perf   668m   258Mi   
+inference-perf-hot-6k5c7      inference-perf   785m   149Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      7m     19Mi    
+router-epp-6db5568fd9-w86s2   epp              83m    23Mi    
+load 6.12 20.80 18.35 1791022016
+inference-perf-6rv8t          inference-perf   731m   234Mi   
+inference-perf-cold-66nl5     inference-perf   990m   253Mi   
+inference-perf-hot-6k5c7      inference-perf   249m   282Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      10m    20Mi    
+router-epp-6db5568fd9-w86s2   epp              75m    24Mi    
+load 5.57 20.20 18.18 1791022026
+inference-perf-6rv8t          inference-perf   731m   234Mi   
+inference-perf-cold-66nl5     inference-perf   990m   253Mi   
+inference-perf-hot-6k5c7      inference-perf   249m   282Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      10m    20Mi    
+router-epp-6db5568fd9-w86s2   epp              75m    24Mi    
+load 4.87 19.57 17.99 1791022036
+inference-perf-6rv8t          inference-perf   556m   356Mi   
+inference-perf-cold-66nl5     inference-perf   990m   253Mi   
+inference-perf-hot-6k5c7      inference-perf   12m    283Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      6m     20Mi    
+router-epp-6db5568fd9-w86s2   epp              46m    24Mi    
+load 4.35 18.97 17.82 1791022046
+inference-perf-6rv8t          inference-perf   12m    356Mi   
+inference-perf-cold-66nl5     inference-perf   997m   338Mi   
+inference-perf-hot-6k5c7      inference-perf   12m    285Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      6m     20Mi    
+router-epp-6db5568fd9-w86s2   epp              44m    24Mi    
+load 3.84 18.38 17.64 1791022056
+inference-perf-6rv8t          inference-perf   12m    356Mi   
+inference-perf-cold-66nl5     inference-perf   997m   338Mi   
+inference-perf-hot-6k5c7      inference-perf   12m    285Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      6m     20Mi    
+router-epp-6db5568fd9-w86s2   epp              44m    24Mi    
+load 3.70 17.87 17.48 1791022066
+inference-perf-6rv8t          inference-perf   12m    359Mi   
+inference-perf-cold-66nl5     inference-perf   997m   409Mi   
+inference-perf-hot-6k5c7      inference-perf   12m    286Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      6m     20Mi    
+router-epp-6db5568fd9-w86s2   epp              45m    24Mi    
+load 3.69 17.40 17.33 1791022076
+inference-perf-6rv8t          inference-perf   339m   474Mi   
+inference-perf-cold-66nl5     inference-perf   722m   652Mi   
+inference-perf-hot-6k5c7      inference-perf   12m    286Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      505m   35Mi    
+router-epp-6db5568fd9-w86s2   epp              626m   53Mi    
+load 3.35 16.87 17.16 1791022086
+inference-perf-6rv8t          inference-perf   339m   474Mi   
+inference-perf-cold-66nl5     inference-perf   722m   652Mi   
+inference-perf-hot-6k5c7      inference-perf   12m    286Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      505m   35Mi    
+router-epp-6db5568fd9-w86s2   epp              626m   53Mi    
+load 3.58 16.48 17.03 1791022096
+inference-perf-6rv8t          inference-perf   510m    497Mi   
+inference-perf-cold-66nl5     inference-perf   498m    676Mi   
+inference-perf-hot-6k5c7      inference-perf   359m    403Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      718m    37Mi    
+router-epp-6db5568fd9-w86s2   epp              1125m   88Mi    
+load 4.34 16.22 16.94 1791022107
+inference-perf-6rv8t          inference-perf   646m    529Mi   
+inference-perf-cold-66nl5     inference-perf   456m    698Mi   
+inference-perf-hot-6k5c7      inference-perf   429m    441Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      797m    40Mi    
+router-epp-6db5568fd9-w86s2   epp              1314m   90Mi    
+load 4.28 15.82 16.80 1791022117
+inference-perf-6rv8t          inference-perf   646m    529Mi   
+inference-perf-cold-66nl5     inference-perf   456m    698Mi   
+inference-perf-hot-6k5c7      inference-perf   429m    441Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      797m    40Mi    
+router-epp-6db5568fd9-w86s2   epp              1314m   90Mi    
+load 4.32 15.44 16.66 1791022127
+inference-perf-6rv8t          inference-perf   679m    554Mi   
+inference-perf-cold-66nl5     inference-perf   363m    709Mi   
+inference-perf-hot-6k5c7      inference-perf   349m    459Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      835m    41Mi    
+router-epp-6db5568fd9-w86s2   epp              1085m   100Mi   
+load 5.25 15.28 16.60 1791022137
+inference-perf-6rv8t          inference-perf   476m    574Mi   
+inference-perf-cold-66nl5     inference-perf   497m    729Mi   
+inference-perf-hot-6k5c7      inference-perf   571m    477Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      784m    43Mi    
+router-epp-6db5568fd9-w86s2   epp              1311m   108Mi   
+load 6.10 15.14 16.54 1791022147
+inference-perf-6rv8t          inference-perf   973m    616Mi   
+inference-perf-cold-66nl5     inference-perf   455m    748Mi   
+inference-perf-hot-6k5c7      inference-perf   720m    501Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1123m   44Mi    
+router-epp-6db5568fd9-w86s2   epp              1311m   108Mi   
+load 6.26 14.87 16.43 1791022157
+inference-perf-6rv8t          inference-perf   973m    616Mi   
+inference-perf-cold-66nl5     inference-perf   455m    748Mi   
+inference-perf-hot-6k5c7      inference-perf   720m    501Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1123m   44Mi    
+router-epp-6db5568fd9-w86s2   epp              1311m   108Mi   
+load 6.98 14.74 16.38 1791022167
+inference-perf-6rv8t          inference-perf   973m    616Mi   
+inference-perf-cold-66nl5     inference-perf   543m    778Mi   
+inference-perf-hot-6k5c7      inference-perf   471m    516Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      923m    45Mi    
+router-epp-6db5568fd9-w86s2   epp              1374m   114Mi   
+load 6.51 14.39 16.24 1791022177
+inference-perf-6rv8t          inference-perf   634m    641Mi   
+inference-perf-cold-66nl5     inference-perf   562m    791Mi   
+inference-perf-hot-6k5c7      inference-perf   475m    529Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      955m    46Mi    
+router-epp-6db5568fd9-w86s2   epp              1374m   114Mi   
+load 5.83 13.98 16.09 1791022187
+inference-perf-6rv8t          inference-perf   634m    641Mi   
+inference-perf-cold-66nl5     inference-perf   562m    791Mi   
+inference-perf-hot-6k5c7      inference-perf   475m    529Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      955m    46Mi    
+router-epp-6db5568fd9-w86s2   epp              1374m   114Mi   
+load 6.25 13.80 16.01 1791022197
+inference-perf-6rv8t          inference-perf   489m    671Mi   
+inference-perf-cold-66nl5     inference-perf   211m    797Mi   
+inference-perf-hot-6k5c7      inference-perf   442m    553Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      510m    46Mi    
+router-epp-6db5568fd9-w86s2   epp              1215m   96Mi    
+load 5.61 13.41 15.86 1791022207
+inference-perf-6rv8t          inference-perf   464m   682Mi   
+inference-perf-cold-66nl5     inference-perf   282m   810Mi   
+inference-perf-hot-6k5c7      inference-perf   266m   562Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      618m   49Mi    
+router-epp-6db5568fd9-w86s2   epp              951m   102Mi   
+load 5.57 13.15 15.75 1791022217
+inference-perf-6rv8t          inference-perf   464m   682Mi   
+inference-perf-cold-66nl5     inference-perf   282m   810Mi   
+inference-perf-hot-6k5c7      inference-perf   266m   562Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      618m   49Mi    
+router-epp-6db5568fd9-w86s2   epp              951m   102Mi   
+load 5.47 12.88 15.63 1791022227
+inference-perf-6rv8t          inference-perf   495m    702Mi   
+inference-perf-cold-66nl5     inference-perf   282m    810Mi   
+inference-perf-hot-6k5c7      inference-perf   213m    569Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      618m    49Mi    
+router-epp-6db5568fd9-w86s2   epp              1055m   110Mi   
+load 4.94 12.52 15.48 1791022237
+inference-perf-6rv8t          inference-perf   348m   713Mi   
+inference-perf-cold-66nl5     inference-perf   339m   835Mi   
+inference-perf-hot-6k5c7      inference-perf   317m   579Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      541m   52Mi    
+router-epp-6db5568fd9-w86s2   epp              985m   115Mi   
+load 5.72 12.44 15.42 1791022247
+inference-perf-6rv8t          inference-perf   348m   713Mi   
+inference-perf-cold-66nl5     inference-perf   339m   835Mi   
+inference-perf-hot-6k5c7      inference-perf   317m   579Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      541m   52Mi    
+router-epp-6db5568fd9-w86s2   epp              985m   115Mi   
+load 7.48 12.59 15.44 1791022258
+inference-perf-6rv8t          inference-perf   247m   724Mi   
+inference-perf-cold-66nl5     inference-perf   389m   848Mi   
+inference-perf-hot-6k5c7      inference-perf   349m   594Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      541m   52Mi    
+router-epp-6db5568fd9-w86s2   epp              937m   106Mi   
+load 7.37 12.40 15.35 1791022268
+inference-perf-6rv8t          inference-perf   474m   742Mi   
+inference-perf-cold-66nl5     inference-perf   389m   848Mi   
+inference-perf-hot-6k5c7      inference-perf   379m   606Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      608m   52Mi    
+router-epp-6db5568fd9-w86s2   epp              974m   117Mi   
+load 6.79 12.11 15.22 1791022278
+inference-perf-6rv8t          inference-perf   474m   742Mi   
+inference-perf-cold-66nl5     inference-perf   389m   848Mi   
+inference-perf-hot-6k5c7      inference-perf   379m   606Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      608m   52Mi    
+router-epp-6db5568fd9-w86s2   epp              974m   117Mi   
+load 6.07 11.78 15.08 1791022288
+inference-perf-6rv8t          inference-perf   509m    755Mi   
+inference-perf-cold-66nl5     inference-perf   248m    857Mi   
+inference-perf-hot-6k5c7      inference-perf   318m    617Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      581m    52Mi    
+router-epp-6db5568fd9-w86s2   epp              1035m   107Mi   
+load 5.62 11.49 14.95 1791022298
+inference-perf-6rv8t          inference-perf   489m    769Mi   
+inference-perf-cold-66nl5     inference-perf   347m    880Mi   
+inference-perf-hot-6k5c7      inference-perf   294m    626Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      556m    53Mi    
+router-epp-6db5568fd9-w86s2   epp              1035m   107Mi   
+load 5.07 11.18 14.81 1791022308
+inference-perf-6rv8t          inference-perf   489m    769Mi   
+inference-perf-cold-66nl5     inference-perf   347m    880Mi   
+inference-perf-hot-6k5c7      inference-perf   294m    626Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      556m    53Mi    
+router-epp-6db5568fd9-w86s2   epp              1035m   107Mi   
+load 5.74 11.12 14.76 1791022318
+inference-perf-6rv8t          inference-perf   285m   779Mi   
+inference-perf-cold-66nl5     inference-perf   341m   892Mi   
+inference-perf-hot-6k5c7      inference-perf   173m   632Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      556m   53Mi    
+router-epp-6db5568fd9-w86s2   epp              992m   113Mi   
+load 5.86 10.97 14.67 1791022328
+inference-perf-6rv8t          inference-perf   574m   796Mi   
+inference-perf-cold-66nl5     inference-perf   516m   907Mi   
+inference-perf-hot-6k5c7      inference-perf   672m   652Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      681m   56Mi    
+router-epp-6db5568fd9-w86s2   epp              992m   113Mi   
+load 7.39 11.12 14.68 1791022338
+inference-perf-6rv8t          inference-perf   574m   796Mi   
+inference-perf-cold-66nl5     inference-perf   516m   907Mi   
+inference-perf-hot-6k5c7      inference-perf   672m   652Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      681m   56Mi    
+router-epp-6db5568fd9-w86s2   epp              992m   113Mi   
+load 6.87 10.88 14.56 1791022348
+inference-perf-6rv8t          inference-perf   690m    820Mi   
+inference-perf-cold-66nl5     inference-perf   516m    907Mi   
+inference-perf-hot-6k5c7      inference-perf   562m    676Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      887m    57Mi    
+router-epp-6db5568fd9-w86s2   epp              1358m   118Mi   
+load 6.57 10.69 14.46 1791022358
+inference-perf-6rv8t          inference-perf   617m    840Mi   
+inference-perf-cold-66nl5     inference-perf   491m    928Mi   
+inference-perf-hot-6k5c7      inference-perf   455m    698Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      867m    58Mi    
+router-epp-6db5568fd9-w86s2   epp              1352m   114Mi   
+load 6.91 10.62 14.39 1791022368
+inference-perf-6rv8t          inference-perf   617m    840Mi   
+inference-perf-cold-66nl5     inference-perf   491m    928Mi   
+inference-perf-hot-6k5c7      inference-perf   455m    698Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      867m    58Mi    
+router-epp-6db5568fd9-w86s2   epp              1352m   114Mi   
+load 6.54 10.42 14.29 1791022378
+inference-perf-6rv8t          inference-perf   779m    863Mi   
+inference-perf-cold-66nl5     inference-perf   485m    947Mi   
+inference-perf-hot-6k5c7      inference-perf   464m    712Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      906m    59Mi    
+router-epp-6db5568fd9-w86s2   epp              1272m   115Mi   
+load 6.30 10.24 14.19 1791022388
+inference-perf-6rv8t          inference-perf   563m    899Mi   
+inference-perf-cold-66nl5     inference-perf   401m    968Mi   
+inference-perf-hot-6k5c7      inference-perf   464m    712Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      769m    60Mi    
+router-epp-6db5568fd9-w86s2   epp              1143m   109Mi   
+load 5.86 10.01 14.07 1791022398
+inference-perf-6rv8t          inference-perf   563m    899Mi   
+inference-perf-cold-66nl5     inference-perf   401m    968Mi   
+inference-perf-hot-6k5c7      inference-perf   464m    712Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      769m    60Mi    
+router-epp-6db5568fd9-w86s2   epp              1143m   109Mi   
+load 6.82 10.03 14.01 1791022408
+inference-perf-6rv8t          inference-perf   633m    917Mi   
+inference-perf-cold-66nl5     inference-perf   590m    987Mi   
+inference-perf-hot-6k5c7      inference-perf   407m    739Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      779m    60Mi    
+router-epp-6db5568fd9-w86s2   epp              1143m   109Mi   
+load 6.51 9.86 13.91 1791022419
+inference-perf-6rv8t          inference-perf   798m    936Mi    
+inference-perf-cold-66nl5     inference-perf   476m    1005Mi   
+inference-perf-hot-6k5c7      inference-perf   497m    756Mi    
+router-epp-6db5568fd9-w86s2   envoy-proxy      1062m   61Mi     
+router-epp-6db5568fd9-w86s2   epp              1349m   118Mi    
+load 5.95 9.63 13.80 1791022429
+inference-perf-6rv8t          inference-perf   798m    936Mi    
+inference-perf-cold-66nl5     inference-perf   476m    1005Mi   
+inference-perf-hot-6k5c7      inference-perf   497m    756Mi    
+router-epp-6db5568fd9-w86s2   envoy-proxy      1062m   61Mi     
+router-epp-6db5568fd9-w86s2   epp              1349m   118Mi    
+load 6.12 9.55 13.72 1791022439
+inference-perf-6rv8t          inference-perf   572m    957Mi    
+inference-perf-cold-66nl5     inference-perf   476m    1005Mi   
+inference-perf-hot-6k5c7      inference-perf   274m    764Mi    
+router-epp-6db5568fd9-w86s2   envoy-proxy      651m    60Mi     
+router-epp-6db5568fd9-w86s2   epp              1205m   114Mi    
+load 8.82 10.01 13.83 1791022449
+inference-perf-6rv8t          inference-perf   804m    993Mi    
+inference-perf-cold-66nl5     inference-perf   535m    1038Mi   
+inference-perf-hot-6k5c7      inference-perf   552m    787Mi    
+router-epp-6db5568fd9-w86s2   envoy-proxy      778m    61Mi     
+router-epp-6db5568fd9-w86s2   epp              1156m   121Mi    
+load 8.92 9.99 13.78 1791022459
+inference-perf-6rv8t          inference-perf   804m    993Mi    
+inference-perf-cold-66nl5     inference-perf   535m    1038Mi   
+inference-perf-hot-6k5c7      inference-perf   552m    787Mi    
+router-epp-6db5568fd9-w86s2   envoy-proxy      778m    61Mi     
+router-epp-6db5568fd9-w86s2   epp              1156m   121Mi    
+load 9.11 9.99 13.74 1791022469
+inference-perf-6rv8t          inference-perf   842m    1019Mi   
+inference-perf-cold-66nl5     inference-perf   633m    1059Mi   
+inference-perf-hot-6k5c7      inference-perf   552m    787Mi    
+router-epp-6db5568fd9-w86s2   envoy-proxy      1162m   61Mi     
+router-epp-6db5568fd9-w86s2   epp              1487m   125Mi    
+load 9.42 10.03 13.71 1791022479
+inference-perf-6rv8t          inference-perf   900m    1049Mi   
+inference-perf-cold-66nl5     inference-perf   542m    1074Mi   
+inference-perf-hot-6k5c7      inference-perf   644m    828Mi    
+router-epp-6db5568fd9-w86s2   envoy-proxy      1114m   61Mi     
+router-epp-6db5568fd9-w86s2   epp              1469m   110Mi    
+load 10.38 10.21 13.73 1791022489
+inference-perf-6rv8t          inference-perf   900m    1049Mi   
+inference-perf-cold-66nl5     inference-perf   542m    1074Mi   
+inference-perf-hot-6k5c7      inference-perf   644m    828Mi    
+router-epp-6db5568fd9-w86s2   envoy-proxy      1114m   61Mi     
+router-epp-6db5568fd9-w86s2   epp              1469m   110Mi    
+load 11.32 10.42 13.76 1791022499
+inference-perf-6rv8t          inference-perf   706m    1072Mi   
+inference-perf-cold-66nl5     inference-perf   655m    1096Mi   
+inference-perf-hot-6k5c7      inference-perf   613m    847Mi    
+router-epp-6db5568fd9-w86s2   envoy-proxy      1046m   62Mi     
+router-epp-6db5568fd9-w86s2   epp              1453m   118Mi    
+load 12.81 10.76 13.84 1791022509
+inference-perf-6rv8t          inference-perf   1022m   1112Mi   
+inference-perf-cold-66nl5     inference-perf   579m    1114Mi   
+inference-perf-hot-6k5c7      inference-perf   735m    875Mi    
+router-epp-6db5568fd9-w86s2   envoy-proxy      1046m   62Mi     
+router-epp-6db5568fd9-w86s2   epp              1477m   123Mi    
+load 12.68 10.81 13.82 1791022519
+inference-perf-6rv8t          inference-perf   1022m   1112Mi   
+inference-perf-cold-66nl5     inference-perf   579m    1114Mi   
+inference-perf-hot-6k5c7      inference-perf   735m    875Mi    
+router-epp-6db5568fd9-w86s2   envoy-proxy      1046m   62Mi     
+router-epp-6db5568fd9-w86s2   epp              1477m   123Mi    
+load 15.22 11.42 13.99 1791022529
+inference-perf-6rv8t          inference-perf   1022m   1112Mi   
+inference-perf-cold-66nl5     inference-perf   764m    1141Mi   
+inference-perf-hot-6k5c7      inference-perf   685m    892Mi    
+router-epp-6db5568fd9-w86s2   envoy-proxy      1232m   62Mi     
+router-epp-6db5568fd9-w86s2   epp              1496m   120Mi    
+load 15.96 11.72 14.06 1791022539
+inference-perf-6rv8t          inference-perf   844m    1157Mi   
+inference-perf-cold-66nl5     inference-perf   711m    1171Mi   
+inference-perf-hot-6k5c7      inference-perf   640m    909Mi    
+router-epp-6db5568fd9-w86s2   envoy-proxy      1151m   61Mi     
+router-epp-6db5568fd9-w86s2   epp              1516m   122Mi    
+load 15.74 11.81 14.06 1791022549
+inference-perf-6rv8t          inference-perf   844m    1157Mi   
+inference-perf-cold-66nl5     inference-perf   711m    1171Mi   
+inference-perf-hot-6k5c7      inference-perf   640m    909Mi    
+router-epp-6db5568fd9-w86s2   envoy-proxy      1151m   61Mi     
+router-epp-6db5568fd9-w86s2   epp              1516m   122Mi    
+load 14.27 11.62 13.97 1791022559
+inference-perf-6rv8t          inference-perf   1073m   1195Mi   
+inference-perf-cold-66nl5     inference-perf   723m    1194Mi   
+inference-perf-hot-6k5c7      inference-perf   706m    932Mi    
+router-epp-6db5568fd9-w86s2   envoy-proxy      1216m   61Mi     
+router-epp-6db5568fd9-w86s2   epp              1542m   131Mi    
+load 15.87 12.04 14.09 1791022570
+inference-perf-6rv8t          inference-perf   681m    1229Mi   
+inference-perf-cold-66nl5     inference-perf   606m    1229Mi   
+inference-perf-hot-6k5c7      inference-perf   619m    959Mi    
+router-epp-6db5568fd9-w86s2   envoy-proxy      979m    61Mi     
+router-epp-6db5568fd9-w86s2   epp              1393m   125Mi    
+load 18.03 12.62 14.25 1791022580
+inference-perf-6rv8t          inference-perf   681m    1229Mi   
+inference-perf-cold-66nl5     inference-perf   606m    1229Mi   
+inference-perf-hot-6k5c7      inference-perf   619m    959Mi    
+router-epp-6db5568fd9-w86s2   envoy-proxy      979m    61Mi     
+router-epp-6db5568fd9-w86s2   epp              1393m   125Mi    
+load 18.74 12.96 14.35 1791022590
+inference-perf-6rv8t          inference-perf   1017m   1260Mi   
+inference-perf-cold-66nl5     inference-perf   846m    1263Mi   
+inference-perf-hot-6k5c7      inference-perf   899m    981Mi    
+router-epp-6db5568fd9-w86s2   envoy-proxy      1419m   62Mi     
+router-epp-6db5568fd9-w86s2   epp              1599m   121Mi    
+load 18.72 13.16 14.40 1791022600
+inference-perf-6rv8t          inference-perf   1134m   1287Mi   
+inference-perf-cold-66nl5     inference-perf   817m    1281Mi   
+inference-perf-hot-6k5c7      inference-perf   693m    1006Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1267m   62Mi     
+router-epp-6db5568fd9-w86s2   epp              1576m   124Mi    
+load 20.72 13.76 14.58 1791022610
+inference-perf-6rv8t          inference-perf   1134m   1287Mi   
+inference-perf-cold-66nl5     inference-perf   817m    1281Mi   
+inference-perf-hot-6k5c7      inference-perf   693m    1006Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1267m   62Mi     
+router-epp-6db5568fd9-w86s2   epp              1576m   124Mi    
+load 19.52 13.74 14.56 1791022620
+inference-perf-6rv8t          inference-perf   1205m   1324Mi   
+inference-perf-cold-66nl5     inference-perf   836m    1304Mi   
+inference-perf-hot-6k5c7      inference-perf   723m    1027Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1434m   62Mi     
+router-epp-6db5568fd9-w86s2   epp              1620m   138Mi    
+load 18.43 13.70 14.54 1791022630
+inference-perf-6rv8t          inference-perf   1344m   1382Mi   
+inference-perf-cold-66nl5     inference-perf   780m    1319Mi   
+inference-perf-hot-6k5c7      inference-perf   815m    1066Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1403m   62Mi     
+router-epp-6db5568fd9-w86s2   epp              1593m   129Mi    
+load 20.55 14.29 14.72 1791022640
+inference-perf-6rv8t          inference-perf   1344m   1382Mi   
+inference-perf-cold-66nl5     inference-perf   780m    1319Mi   
+inference-perf-hot-6k5c7      inference-perf   815m    1066Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1403m   62Mi     
+router-epp-6db5568fd9-w86s2   epp              1593m   129Mi    
+load 19.34 14.23 14.70 1791022650
+inference-perf-6rv8t          inference-perf   1006m   1410Mi   
+inference-perf-cold-66nl5     inference-perf   807m    1350Mi   
+inference-perf-hot-6k5c7      inference-perf   882m    1088Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1361m   62Mi     
+router-epp-6db5568fd9-w86s2   epp              1607m   131Mi    
+load 20.74 14.70 14.85 1791022660
+inference-perf-6rv8t          inference-perf   1185m   1457Mi   
+inference-perf-cold-66nl5     inference-perf   952m    1384Mi   
+inference-perf-hot-6k5c7      inference-perf   848m    1123Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1481m   63Mi     
+router-epp-6db5568fd9-w86s2   epp              1641m   138Mi    
+load 21.47 15.07 14.97 1791022670
+inference-perf-6rv8t          inference-perf   1185m   1457Mi   
+inference-perf-cold-66nl5     inference-perf   952m    1384Mi   
+inference-perf-hot-6k5c7      inference-perf   848m    1123Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1481m   63Mi     
+router-epp-6db5568fd9-w86s2   epp              1641m   138Mi    
+load 20.24 15.03 14.96 1791022680
+inference-perf-6rv8t          inference-perf   1185m   1457Mi   
+inference-perf-cold-66nl5     inference-perf   772m    1409Mi   
+inference-perf-hot-6k5c7      inference-perf   848m    1123Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1416m   63Mi     
+router-epp-6db5568fd9-w86s2   epp              1619m   132Mi    
+load 21.97 15.57 15.13 1791022690
+inference-perf-6rv8t          inference-perf   1031m   1497Mi   
+inference-perf-cold-66nl5     inference-perf   1020m   1434Mi   
+inference-perf-hot-6k5c7      inference-perf   966m    1172Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      975m    63Mi     
+router-epp-6db5568fd9-w86s2   epp              1435m   140Mi    
+load 23.67 16.13 15.32 1791022700
+inference-perf-6rv8t          inference-perf   1031m   1497Mi   
+inference-perf-cold-66nl5     inference-perf   1020m   1434Mi   
+inference-perf-hot-6k5c7      inference-perf   966m    1172Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      975m    63Mi     
+router-epp-6db5568fd9-w86s2   epp              1435m   140Mi    
+load 24.05 16.46 15.44 1791022711
+inference-perf-6rv8t          inference-perf   861m    1535Mi   
+inference-perf-cold-66nl5     inference-perf   750m    1466Mi   
+inference-perf-hot-6k5c7      inference-perf   697m    1202Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1486m   63Mi     
+router-epp-6db5568fd9-w86s2   epp              1435m   140Mi    
+load 24.09 16.72 15.53 1791022721
+inference-perf-6rv8t          inference-perf   1160m   1586Mi   
+inference-perf-cold-66nl5     inference-perf   935m    1497Mi   
+inference-perf-hot-6k5c7      inference-perf   1044m   1251Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1452m   63Mi     
+router-epp-6db5568fd9-w86s2   epp              1597m   137Mi    
+load 25.51 17.28 15.73 1791022731
+inference-perf-6rv8t          inference-perf   1160m   1586Mi   
+inference-perf-cold-66nl5     inference-perf   935m    1497Mi   
+inference-perf-hot-6k5c7      inference-perf   1044m   1251Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1452m   63Mi     
+router-epp-6db5568fd9-w86s2   epp              1597m   137Mi    
+load 25.11 17.45 15.80 1791022741
+inference-perf-6rv8t          inference-perf   1278m   1648Mi   
+inference-perf-cold-66nl5     inference-perf   858m    1521Mi   
+inference-perf-hot-6k5c7      inference-perf   787m    1276Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1494m   63Mi     
+router-epp-6db5568fd9-w86s2   epp              1613m   145Mi    
+load 27.70 18.27 16.09 1791022751
+inference-perf-6rv8t          inference-perf   1119m   1685Mi   
+inference-perf-cold-66nl5     inference-perf   1004m   1558Mi   
+inference-perf-hot-6k5c7      inference-perf   865m    1310Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1445m   65Mi     
+router-epp-6db5568fd9-w86s2   epp              1626m   148Mi    
+load 27.87 18.62 16.22 1791022761
+inference-perf-6rv8t          inference-perf   1119m   1685Mi   
+inference-perf-cold-66nl5     inference-perf   1004m   1558Mi   
+inference-perf-hot-6k5c7      inference-perf   865m    1310Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1445m   65Mi     
+router-epp-6db5568fd9-w86s2   epp              1626m   148Mi    
+load 28.26 19.02 16.38 1791022771
+inference-perf-6rv8t          inference-perf   1285m   1730Mi   
+inference-perf-cold-66nl5     inference-perf   835m    1593Mi   
+inference-perf-hot-6k5c7      inference-perf   992m    1342Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1506m   64Mi     
+router-epp-6db5568fd9-w86s2   epp              1628m   140Mi    
+load 29.68 19.61 16.60 1791022781
+inference-perf-6rv8t          inference-perf   1277m   1768Mi   
+inference-perf-cold-66nl5     inference-perf   1097m   1623Mi   
+inference-perf-hot-6k5c7      inference-perf   838m    1364Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1509m   65Mi     
+router-epp-6db5568fd9-w86s2   epp              1622m   146Mi    
+load 31.99 20.45 16.90 1791022791
+inference-perf-6rv8t          inference-perf   1277m   1768Mi   
+inference-perf-cold-66nl5     inference-perf   1097m   1623Mi   
+inference-perf-hot-6k5c7      inference-perf   838m    1364Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1509m   65Mi     
+router-epp-6db5568fd9-w86s2   epp              1622m   146Mi    
+load 34.13 21.30 17.22 1791022801
+inference-perf-6rv8t          inference-perf   1305m   1812Mi   
+inference-perf-cold-66nl5     inference-perf   916m    1661Mi   
+inference-perf-hot-6k5c7      inference-perf   877m    1390Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1528m   65Mi     
+router-epp-6db5568fd9-w86s2   epp              1647m   161Mi    
+load 32.77 21.41 17.30 1791022811
+inference-perf-6rv8t          inference-perf   1337m   1857Mi   
+inference-perf-cold-66nl5     inference-perf   1000m   1701Mi   
+inference-perf-hot-6k5c7      inference-perf   946m    1424Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1528m   65Mi     
+router-epp-6db5568fd9-w86s2   epp              1644m   152Mi    
+load 36.90 22.67 17.75 1791022821
+inference-perf-6rv8t          inference-perf   1337m   1857Mi   
+inference-perf-cold-66nl5     inference-perf   1000m   1701Mi   
+inference-perf-hot-6k5c7      inference-perf   946m    1424Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1528m   65Mi     
+router-epp-6db5568fd9-w86s2   epp              1644m   152Mi    
+load 40.50 23.91 18.21 1791022831
+inference-perf-6rv8t          inference-perf   1232m   1915Mi   
+inference-perf-cold-66nl5     inference-perf   716m    1722Mi   
+inference-perf-hot-6k5c7      inference-perf   781m    1455Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1259m   66Mi     
+router-epp-6db5568fd9-w86s2   epp              1427m   181Mi    
+load 38.59 24.05 18.32 1791022842
+inference-perf-6rv8t          inference-perf   1422m   1986Mi   
+inference-perf-cold-66nl5     inference-perf   993m    1754Mi   
+inference-perf-hot-6k5c7      inference-perf   1005m   1502Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1558m   68Mi     
+router-epp-6db5568fd9-w86s2   epp              1599m   174Mi    
+load 38.78 24.57 18.55 1791022852
+inference-perf-6rv8t          inference-perf   1422m   1986Mi   
+inference-perf-cold-66nl5     inference-perf   993m    1754Mi   
+inference-perf-hot-6k5c7      inference-perf   1005m   1502Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1558m   68Mi     
+router-epp-6db5568fd9-w86s2   epp              1599m   174Mi    
+load 42.33 25.80 19.02 1791022862
+inference-perf-6rv8t          inference-perf   1422m   1986Mi   
+inference-perf-cold-66nl5     inference-perf   986m    1795Mi   
+inference-perf-hot-6k5c7      inference-perf   892m    1527Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1544m   68Mi     
+router-epp-6db5568fd9-w86s2   epp              1617m   164Mi    
+load 41.95 26.27 19.24 1791022872
+inference-perf-6rv8t          inference-perf   1283m   2039Mi   
+inference-perf-cold-66nl5     inference-perf   938m    1839Mi   
+inference-perf-hot-6k5c7      inference-perf   1125m   1582Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1563m   68Mi     
+router-epp-6db5568fd9-w86s2   epp              1630m   183Mi    
+load 41.07 26.62 19.43 1791022882
+inference-perf-6rv8t          inference-perf   1314m   2096Mi   
+inference-perf-cold-66nl5     inference-perf   1092m   1881Mi   
+inference-perf-hot-6k5c7      inference-perf   1056m   1627Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1580m   68Mi     
+router-epp-6db5568fd9-w86s2   epp              1645m   210Mi    
+load 42.04 27.29 19.73 1791022892
+inference-perf-6rv8t          inference-perf   1314m   2096Mi   
+inference-perf-cold-66nl5     inference-perf   1092m   1881Mi   
+inference-perf-hot-6k5c7      inference-perf   1056m   1627Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1580m   68Mi     
+router-epp-6db5568fd9-w86s2   epp              1645m   210Mi    
+load 42.69 27.92 20.01 1791022902
+inference-perf-6rv8t          inference-perf   1447m   2159Mi   
+inference-perf-cold-66nl5     inference-perf   1224m   1915Mi   
+inference-perf-hot-6k5c7      inference-perf   1036m   1669Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1589m   70Mi     
+router-epp-6db5568fd9-w86s2   epp              1646m   200Mi    
+load 42.87 28.45 20.27 1791022912
+inference-perf-6rv8t          inference-perf   1397m   2193Mi   
+inference-perf-cold-66nl5     inference-perf   1141m   1963Mi   
+inference-perf-hot-6k5c7      inference-perf   997m    1707Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1589m   71Mi     
+router-epp-6db5568fd9-w86s2   epp              1640m   184Mi    
+load 45.73 29.54 20.71 1791022922
+inference-perf-6rv8t          inference-perf   1397m   2193Mi   
+inference-perf-cold-66nl5     inference-perf   1141m   1963Mi   
+inference-perf-hot-6k5c7      inference-perf   997m    1707Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1589m   71Mi     
+router-epp-6db5568fd9-w86s2   epp              1640m   184Mi    
+load 42.09 29.32 20.74 1791022932
+inference-perf-6rv8t          inference-perf   1423m   2271Mi   
+inference-perf-cold-66nl5     inference-perf   997m    2010Mi   
+inference-perf-hot-6k5c7      inference-perf   1093m   1743Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1570m   71Mi     
+router-epp-6db5568fd9-w86s2   epp              1641m   165Mi    
+load 43.72 30.10 21.08 1791022942
+inference-perf-6rv8t          inference-perf   1423m   2271Mi   
+inference-perf-cold-66nl5     inference-perf   997m    2010Mi   
+inference-perf-hot-6k5c7      inference-perf   1042m   1790Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1304m   71Mi     
+router-epp-6db5568fd9-w86s2   epp              1408m   165Mi    
+load 43.64 30.52 21.32 1791022953
+inference-perf-6rv8t          inference-perf   1423m   2271Mi   
+inference-perf-cold-66nl5     inference-perf   997m    2010Mi   
+inference-perf-hot-6k5c7      inference-perf   1042m   1790Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1304m   71Mi     
+router-epp-6db5568fd9-w86s2   epp              1408m   165Mi    
+load 45.10 31.27 21.66 1791022963
+inference-perf-6rv8t          inference-perf   1163m   2404Mi   
+inference-perf-cold-66nl5     inference-perf   844m    2049Mi   
+inference-perf-hot-6k5c7      inference-perf   929m    1825Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1518m   72Mi     
+router-epp-6db5568fd9-w86s2   epp              1642m   213Mi    
+load 47.44 32.21 22.07 1791022973
+inference-perf-6rv8t          inference-perf   1344m   2451Mi   
+inference-perf-cold-66nl5     inference-perf   1131m   2096Mi   
+inference-perf-hot-6k5c7      inference-perf   1265m   1874Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1599m   73Mi     
+router-epp-6db5568fd9-w86s2   epp              1641m   241Mi    
+load 48.52 32.95 22.42 1791022983
+inference-perf-6rv8t          inference-perf   1344m   2451Mi   
+inference-perf-cold-66nl5     inference-perf   1131m   2096Mi   
+inference-perf-hot-6k5c7      inference-perf   1265m   1874Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1599m   73Mi     
+router-epp-6db5568fd9-w86s2   epp              1641m   241Mi    
+load 48.09 33.36 22.67 1791022993
+inference-perf-6rv8t          inference-perf   1380m   2499Mi   
+inference-perf-cold-66nl5     inference-perf   1018m   2161Mi   
+inference-perf-hot-6k5c7      inference-perf   1085m   1911Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1596m   76Mi     
+router-epp-6db5568fd9-w86s2   epp              1646m   278Mi    
+load 48.76 33.99 22.99 1791023003
+inference-perf-6rv8t          inference-perf   1424m   2557Mi   
+inference-perf-cold-66nl5     inference-perf   1061m   2203Mi   
+inference-perf-hot-6k5c7      inference-perf   974m    1942Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1557m   79Mi     
+router-epp-6db5568fd9-w86s2   epp              1646m   278Mi    
+load 50.25 34.80 23.37 1791023013
+inference-perf-6rv8t          inference-perf   1424m   2557Mi   
+inference-perf-cold-66nl5     inference-perf   1061m   2203Mi   
+inference-perf-hot-6k5c7      inference-perf   974m    1942Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1557m   79Mi     
+router-epp-6db5568fd9-w86s2   epp              1646m   278Mi    
+load 50.89 35.46 23.71 1791023023
+inference-perf-6rv8t          inference-perf   1451m   2608Mi   
+inference-perf-cold-66nl5     inference-perf   1061m   2203Mi   
+inference-perf-hot-6k5c7      inference-perf   994m    1981Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1583m   81Mi     
+router-epp-6db5568fd9-w86s2   epp              1647m   330Mi    
+load 48.35 35.44 23.83 1791023033
+inference-perf-6rv8t          inference-perf   1356m   2671Mi   
+inference-perf-cold-66nl5     inference-perf   1048m   2244Mi   
+inference-perf-hot-6k5c7      inference-perf   1094m   2026Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1583m   81Mi     
+router-epp-6db5568fd9-w86s2   epp              1622m   364Mi    
+load 47.97 35.78 24.06 1791023043
+inference-perf-6rv8t          inference-perf   1356m   2671Mi   
+inference-perf-cold-66nl5     inference-perf   1048m   2244Mi   
+inference-perf-hot-6k5c7      inference-perf   1094m   2026Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1583m   81Mi     
+router-epp-6db5568fd9-w86s2   epp              1622m   364Mi    
+load 48.20 36.22 24.33 1791023053
+inference-perf-6rv8t          inference-perf   1356m   2671Mi   
+inference-perf-cold-66nl5     inference-perf   1041m   2282Mi   
+inference-perf-hot-6k5c7      inference-perf   924m    2060Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1575m   86Mi     
+router-epp-6db5568fd9-w86s2   epp              1649m   401Mi    
+load 47.33 36.44 24.53 1791023063
+inference-perf-6rv8t          inference-perf   1516m   2767Mi   
+inference-perf-cold-66nl5     inference-perf   1030m   2330Mi   
+inference-perf-hot-6k5c7      inference-perf   998m    2098Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1629m   86Mi     
+router-epp-6db5568fd9-w86s2   epp              1633m   427Mi    
+load 43.79 36.04 24.53 1791023074
+inference-perf-6rv8t          inference-perf   1516m   2767Mi   
+inference-perf-cold-66nl5     inference-perf   1030m   2330Mi   
+inference-perf-hot-6k5c7      inference-perf   998m    2098Mi   
+router-epp-6db5568fd9-w86s2   envoy-proxy      1629m   86Mi     
+router-epp-6db5568fd9-w86s2   epp              1633m   427Mi    
+load 35.61 34.63 24.25 1791023084
+router-epp-6db5568fd9-w86s2   envoy-proxy    1104m   86Mi     
+router-epp-6db5568fd9-w86s2   epp            1586m   207Mi    

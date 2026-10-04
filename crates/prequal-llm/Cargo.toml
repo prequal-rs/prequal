@@ -1,0 +1,24 @@
+[package]
+name = "prequal-llm"
+description = "Load- and prefix-cache-aware routing for LLM inference fleets (vLLM, SGLang) from their Prometheus metrics"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+readme = "README.md"
+keywords = ["llm", "vllm", "load-balancing", "prefix-cache", "inference"]
+categories = ["network-programming", "asynchronous"]
+
+[lints]
+workspace = true
+
+[dependencies]
+prequal-core.workspace = true
+prequal-tower.workspace = true
+futures-util = "0.3.34"
+rand = "0.10.3"
+tokio = { version = "1.53.1", features = ["time", "sync", "macros"] }
+
+[dev-dependencies]
+tokio = { version = "1.53.1", features = ["time", "sync", "rt", "macros"] }

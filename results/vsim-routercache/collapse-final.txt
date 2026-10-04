@@ -1,0 +1,2 @@
+prequal                      x3.2  collapsed  0/20  median p50/p90/p99 8/12/17 ms
+prequal                      x3.4  collapsed  2/20  median p50/p90/p99 10/16/20 ms

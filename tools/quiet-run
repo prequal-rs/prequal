@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Usage: tools/quiet-run <cmd...> — run a benchmark once the host is idle, holding $BENCH_LOCK (default ~/bench.lock)
+# so benchmark users of a shared box take turns. Idle = under QUIET_BUSY_PCT (default 15) percent busy over 2 s,
+# measured on every CPU except QUIET_IGNORE_CPUS (space-separated, e.g. "5 11" when a core is lent to someone else).
+set -euo pipefail
+exec 9>"${BENCH_LOCK:-$HOME/bench.lock}"
+flock 9
+
+snapshot() {
+  awk -v ignore=" ${QUIET_IGNORE_CPUS:-} " '
+    /^cpu[0-9]/ { id = substr($1, 4); if (index(ignore, " " id " ")) next
+                  for (i = 2; i <= 9; i++) total += $i; idle += $5 + $6 }
+    END { print total, idle }' /proc/stat
+}
+
+busy_pct() {
+  local t0 i0 t1 i1
+  read -r t0 i0 < <(snapshot)
+  sleep 2
+  read -r t1 i1 < <(snapshot)
+  local dt=$(( t1 - t0 ))
+  echo $(( 100 * (dt - (i1 - i0)) / (dt > 0 ? dt : 1) ))
+}
+
+waited=0
+until (( $(busy_pct) < ${QUIET_BUSY_PCT:-15} )); do
+  (( waited++ == 0 )) && echo "quiet-run: host busy, waiting" >&2
+  sleep 3
+done
+"$@" 9>&-

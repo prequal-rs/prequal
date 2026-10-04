@@ -1,0 +1,145 @@
+load 10.72 18.39 12.48 1790876639
+load 9.23 17.82 12.36 1790876649
+inference-perf-kb2hd         inference-perf   893m   187Mi    
+router-epp-5758ddbcc-xjmvk   router           18m    1Mi      
+load 7.96 17.26 12.23 1790876659
+inference-perf-kb2hd         inference-perf   916m   208Mi    
+router-epp-5758ddbcc-xjmvk   router           13m    1Mi      
+load 6.80 16.55 12.08 1790876669
+inference-perf-kb2hd         inference-perf   916m   208Mi    
+router-epp-5758ddbcc-xjmvk   router           13m    1Mi      
+load 5.90 16.03 11.96 1790876679
+inference-perf-kb2hd         inference-perf   997m   295Mi    
+router-epp-5758ddbcc-xjmvk   router           10m    1Mi      
+load 5.31 15.57 11.85 1790876689
+inference-perf-kb2hd         inference-perf   948m   550Mi    
+router-epp-5758ddbcc-xjmvk   router           72m    4Mi      
+load 4.97 15.16 11.76 1790876699
+inference-perf-kb2hd         inference-perf   948m   550Mi    
+router-epp-5758ddbcc-xjmvk   router           72m    4Mi      
+load 4.28 14.68 11.64 1790876710
+inference-perf-kb2hd         inference-perf   1222m   624Mi    
+router-epp-5758ddbcc-xjmvk   router           209m    6Mi      
+load 4.81 14.44 11.59 1790876720
+inference-perf-kb2hd         inference-perf   1245m   676Mi    
+router-epp-5758ddbcc-xjmvk   router           212m    8Mi      
+load 4.22 14.00 11.48 1790876730
+inference-perf-kb2hd         inference-perf   1245m   676Mi    
+router-epp-5758ddbcc-xjmvk   router           212m    8Mi      
+load 4.12 13.65 11.39 1790876740
+inference-perf-kb2hd         inference-perf   1320m   715Mi    
+router-epp-5758ddbcc-xjmvk   router           214m    9Mi      
+load 3.97 13.30 11.30 1790876750
+inference-perf-kb2hd         inference-perf   1126m   789Mi    
+router-epp-5758ddbcc-xjmvk   router           176m    8Mi      
+load 3.89 12.98 11.22 1790876760
+inference-perf-kb2hd         inference-perf   1126m   789Mi    
+router-epp-5758ddbcc-xjmvk   router           176m    8Mi      
+load 4.30 12.76 11.17 1790876770
+inference-perf-kb2hd         inference-perf   3696m   922Mi    
+router-epp-5758ddbcc-xjmvk   router           411m    9Mi      
+load 4.10 12.44 11.08 1790876780
+inference-perf-kb2hd         inference-perf   3340m   1054Mi   
+router-epp-5758ddbcc-xjmvk   router           411m    9Mi      
+load 4.26 12.20 11.01 1790876790
+inference-perf-kb2hd         inference-perf   3340m   1054Mi   
+router-epp-5758ddbcc-xjmvk   router           411m    9Mi      
+load 4.46 11.98 10.95 1790876800
+inference-perf-kb2hd         inference-perf   3469m   1162Mi   
+router-epp-5758ddbcc-xjmvk   router           392m    11Mi     
+load 3.93 11.62 10.85 1790876810
+inference-perf-kb2hd         inference-perf   3912m   1342Mi   
+router-epp-5758ddbcc-xjmvk   router           442m    10Mi     
+load 4.34 11.45 10.80 1790876820
+inference-perf-kb2hd         inference-perf   3912m   1342Mi   
+router-epp-5758ddbcc-xjmvk   router           442m    10Mi     
+load 4.60 11.27 10.75 1790876830
+inference-perf-kb2hd         inference-perf   3447m   1440Mi   
+router-epp-5758ddbcc-xjmvk   router           422m    12Mi     
+load 5.72 11.28 10.76 1790876840
+inference-perf-kb2hd         inference-perf   3370m   1597Mi   
+router-epp-5758ddbcc-xjmvk   router           402m    12Mi     
+load 6.09 11.17 10.73 1790876850
+inference-perf-kb2hd         inference-perf   3370m   1597Mi   
+router-epp-5758ddbcc-xjmvk   router           402m    12Mi     
+load 6.00 10.98 10.67 1790876860
+inference-perf-kb2hd         inference-perf   3536m   1778Mi   
+router-epp-5758ddbcc-xjmvk   router           402m    12Mi     
+load 5.40 10.69 10.58 1790876871
+inference-perf-kb2hd         inference-perf   3389m   1889Mi   
+router-epp-5758ddbcc-xjmvk   router           405m    12Mi     
+load 4.94 10.42 10.49 1790876881
+inference-perf-kb2hd         inference-perf   3389m   1889Mi   
+router-epp-5758ddbcc-xjmvk   router           405m    12Mi     
+load 4.97 10.24 10.43 1790876891
+inference-perf-kb2hd         inference-perf   3400m   1985Mi   
+router-epp-5758ddbcc-xjmvk   router           368m    12Mi     
+load 5.51 10.18 10.41 1790876901
+inference-perf-kb2hd         inference-perf   3345m   2142Mi   
+router-epp-5758ddbcc-xjmvk   router           391m    12Mi     
+load 5.30 9.98 10.34 1790876911
+inference-perf-kb2hd         inference-perf   3345m   2142Mi   
+router-epp-5758ddbcc-xjmvk   router           391m    12Mi     
+load 5.08 9.78 10.27 1790876921
+inference-perf-kb2hd         inference-perf   3635m   2263Mi   
+router-epp-5758ddbcc-xjmvk   router           406m    13Mi     
+load 5.19 9.65 10.23 1790876931
+inference-perf-kb2hd         inference-perf   3347m   2379Mi   
+router-epp-5758ddbcc-xjmvk   router           393m    13Mi     
+load 6.09 9.70 10.24 1790876941
+inference-perf-kb2hd         inference-perf   3347m   2379Mi   
+router-epp-5758ddbcc-xjmvk   router           393m    13Mi     
+load 6.52 9.67 10.22 1790876951
+inference-perf-kb2hd         inference-perf   4380m   2687Mi   
+router-epp-5758ddbcc-xjmvk   router           477m    13Mi     
+load 8.41 9.97 10.31 1790876961
+inference-perf-kb2hd         inference-perf   6536m   2878Mi   
+router-epp-5758ddbcc-xjmvk   router           745m    13Mi     
+load 9.05 10.05 10.34 1790876971
+inference-perf-kb2hd         inference-perf   6536m   2878Mi   
+router-epp-5758ddbcc-xjmvk   router           745m    13Mi     
+load 10.03 10.23 10.39 1790876981
+inference-perf-kb2hd         inference-perf   6020m   3182Mi   
+router-epp-5758ddbcc-xjmvk   router           704m    14Mi     
+load 10.20 10.26 10.40 1790876991
+inference-perf-kb2hd         inference-perf   6020m   3182Mi   
+router-epp-5758ddbcc-xjmvk   router           682m    14Mi     
+load 10.29 10.28 10.40 1790877002
+inference-perf-kb2hd         inference-perf   6020m   3182Mi   
+router-epp-5758ddbcc-xjmvk   router           682m    14Mi     
+load 10.01 10.22 10.38 1790877012
+inference-perf-kb2hd         inference-perf   5911m   3430Mi   
+router-epp-5758ddbcc-xjmvk   router           655m    14Mi     
+load 9.56 10.12 10.35 1790877022
+inference-perf-kb2hd         inference-perf   5710m   3688Mi   
+router-epp-5758ddbcc-xjmvk   router           608m    14Mi     
+load 9.81 10.15 10.35 1790877032
+inference-perf-kb2hd         inference-perf   5710m   3688Mi   
+router-epp-5758ddbcc-xjmvk   router           608m    14Mi     
+load 10.23 10.22 10.38 1790877042
+inference-perf-kb2hd         inference-perf   5504m   3870Mi   
+router-epp-5758ddbcc-xjmvk   router           614m    15Mi     
+load 9.82 10.14 10.35 1790877052
+inference-perf-kb2hd         inference-perf   5793m   4293Mi   
+router-epp-5758ddbcc-xjmvk   router           649m    14Mi     
+load 10.07 10.18 10.36 1790877062
+inference-perf-kb2hd         inference-perf   5793m   4293Mi   
+router-epp-5758ddbcc-xjmvk   router           649m    14Mi     
+load 10.49 10.27 10.39 1790877072
+inference-perf-kb2hd         inference-perf   5276m   4489Mi   
+router-epp-5758ddbcc-xjmvk   router           587m    14Mi     
+load 11.39 10.48 10.45 1790877082
+inference-perf-kb2hd         inference-perf   5920m   4722Mi   
+router-epp-5758ddbcc-xjmvk   router           598m    14Mi     
+load 12.21 10.68 10.52 1790877092
+inference-perf-kb2hd         inference-perf   5920m   4722Mi   
+router-epp-5758ddbcc-xjmvk   router           598m    14Mi     
+load 14.95 11.31 10.73 1790877102
+inference-perf-kb2hd         inference-perf   6207m   4900Mi   
+router-epp-5758ddbcc-xjmvk   router           713m    14Mi     
+load 14.90 11.42 10.77 1790877112
+inference-perf-kb2hd         inference-perf   6289m   5181Mi   
+router-epp-5758ddbcc-xjmvk   router           633m    15Mi     
+load 12.84 11.09 10.67 1790877123
+inference-perf-kb2hd         inference-perf   6289m   5181Mi   
+router-epp-5758ddbcc-xjmvk   router           633m    15Mi     

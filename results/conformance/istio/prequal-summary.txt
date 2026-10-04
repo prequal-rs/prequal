@@ -1,0 +1,12 @@
+2026-10-01T20:34:27+00:00 prequal: istio 1.31.1, gie v1.6.2,  20:34:27 up 5 days,  6:49, 1875 users,  load average: 0.91, 1.61, 1.90
+FAIL	sigs.k8s.io/gateway-api-inference-extension/conformance	5263.611s
+TestConformance/EppUnAvailableFailOpen 598 failed requests
+TestConformance/GatewayDestinationEndpointServed 300 failed requests
+TestConformance/GatewayFollowingEPPRouting 299 failed requests
+TestConformance/GatewayFollowingEPPRoutingWithDataParallelism 299 failed requests
+TestConformance/GatewayWeightedAcrossTwoInferencePools 299 failed requests
+TestConformance/HTTPRouteInvalidInferencePoolRef 0 failed requests
+TestConformance/HTTPRouteMultipleGatewaysDifferentPools 0 failed requests
+TestConformance/InferencePoolAccepted 0 failed requests
+TestConformance/InferencePoolAppProtocol 2691 failed requests
+TestConformance/InferencePoolHTTPRoutePortValidation 709 failed requests (run stopped here)

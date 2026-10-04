@@ -1,0 +1,27 @@
+[package]
+name = "prequal-server"
+description = "Server side of Prequal load balancing: requests-in-flight tracking, latency estimators, and a tower layer"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+readme = "README.md"
+keywords = ["load-balancing", "prequal", "tower", "middleware", "tail-latency"]
+categories = ["network-programming", "asynchronous"]
+
+[lints]
+workspace = true
+
+[dependencies]
+pin-project-lite = "0.2.17"
+prequal-core.workspace = true
+tower-layer = "0.3.3"
+tower-service = "0.3.3"
+
+[dev-dependencies]
+divan = "0.1.21"
+
+[[bench]]
+name = "estimators"
+harness = false

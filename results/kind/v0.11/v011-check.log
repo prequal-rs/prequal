@@ -1,0 +1,53 @@
+deployment.apps/llm-d-sim scaled
+20:18:36.047 start prequal v0.11.0 load 1.07 6.90 9.43
+Pulled: ghcr.io/llm-d/charts/llm-d-router-standalone:v0.11.0
+Digest: sha256:56a5635f5fd6e1252f802e06186cf9c4c60bcb95b7911b0867660a7db4d04c1c
+Waiting for deployment "router-epp" rollout to finish: 0 of 1 updated replicas are available...
+deployment "router-epp" successfully rolled out
+20:19:45.233 rollout ready after 6s
+20:19:50.760 load started
+20:20:36.573 metrics-1: 42 llm_d_epp lines;  llm_d_epp_ready_endpoints{name="router"} 10 
+20:21:17.758 metrics-2: 258 llm_d_epp lines;  llm_d_epp_request_total{model_name="Qwen/Qwen3-8B",target_model_name="Qwen/Qwen3-8B",fairness_id="default-flow",priority="0"} 137 llm_d_epp_ready_endpoints{name="router"} 10 llm_d_epp_request_total{model_name="Qwen/Qwen3-8B",target_model_name="Qwen/Qwen3-8B",fairness_id="default-flow",priority="0"} 137 llm_d_epp_ready_endpoints{name="router"} 10 
+20:21:18.762 delete pod/router-epp-6d8d85798b-qcjtc
+pod "router-epp-6d8d85798b-qcjtc" deleted from bench namespace
+20:21:25.732 pod gone after 6.963843115s
+envoy-proxy exit=0 reason=Completed finished=2026-10-02T20:21:18Z
+epp exit=0 reason=Completed finished=2026-10-02T20:21:23Z
+deletionTimestamp 2026-10-02T20:21:25Z
+deletionTimestamp 2026-10-02T20:23:28Z
+Waiting for deployment "router-epp" rollout to finish: 0 of 1 updated replicas are available...
+deployment "router-epp" successfully rolled out
+20:21:28.541 replacement ready 9.773382878s after delete
+job.batch/inference-perf condition met
+jq: error: Could not open file $BENCH/check-prequal/check-prequal-2*/stage_0_lifecycle_metrics.json: No such file or directory
+20:23:26.056 load result: 
+release "router" uninstalled
+deployment.apps/llm-d-sim scaled
+20:23:27.524 done load 9.31 8.03 9.16
+22:20:49.670 start llmd v0.11.0 load 11.66 9.20 9.45
+Pulled: ghcr.io/llm-d/charts/llm-d-router-standalone:v0.11.0
+Digest: sha256:56a5635f5fd6e1252f802e06186cf9c4c60bcb95b7911b0867660a7db4d04c1c
+Waiting for deployment "router-epp" rollout to finish: 0 of 1 updated replicas are available...
+deployment "router-epp" successfully rolled out
+22:22:38.501 rollout ready after 9s
+22:22:45.559 load started
+22:23:32.450 metrics-1: 19 llm_d_epp lines;  llm_d_epp_ready_endpoints{name="router"} 10 
+22:23:57.497 metrics-2: 19 llm_d_epp lines;  llm_d_epp_ready_endpoints{name="router"} 10 
+22:23:58.500 delete pod/router-epp-5d95c984b5-lp92h
+pod "router-epp-5d95c984b5-lp92h" deleted from bench namespace
+22:24:30.672 pod gone after 32.166754900s
+2026-10-02T22:23:58Z   FailedPreStopHook   PreStopHook failed
+envoy-proxy exit=0 reason=Completed finished=2026-10-02T22:23:58Z
+epp exit=0 reason=Completed finished=2026-10-02T22:24:28Z
+deletionTimestamp 2026-10-02T22:24:30Z
+deletionTimestamp 2026-10-02T22:26:08Z
+Waiting for deployment "router-epp" rollout to finish: 0 of 1 updated replicas are available...
+deployment "router-epp" successfully rolled out
+22:24:33.566 replacement ready 35.062366986s after delete
+job.batch/inference-perf condition met
+jq: error: Could not open file $BENCH/check-llmd/check-llmd-2*/stage_0_lifecycle_metrics.json: No such file or directory
+22:26:44.269 load result: 
+release "router" uninstalled
+deployment.apps/llm-d-sim scaled
+22:26:45.861 done load 8.56 10.60 10.30
+CHECK-EXIT 0

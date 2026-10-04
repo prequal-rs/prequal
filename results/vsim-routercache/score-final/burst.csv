@@ -1,0 +1,9 @@
+policy,routers,engines,load,rps,completed,errors,ttft_p50_ms,ttft_p99_ms,e2e_p50_ms,e2e_p99_ms,tokens_per_s,workload,stage,stage_rate,concurrency,ttft_p90_ms,prefix_hit_rate
+prequal,1,8,0.528,16.3,1960,0,45,1488,25114,34054,16333,shared-prefix,1,0.00,400,281,0.9432
+prequal,1,8,0.535,16.6,1987,0,44,900,25030,31614,16558,shared-prefix,1,0.00,400,269,0.9489
+prequal,1,8,0.538,16.6,1996,0,44,873,25040,33220,16633,shared-prefix,1,0.00,400,263,0.9536
+prequal,1,8,0.528,16.3,1960,0,44,1056,24834,33928,16333,shared-prefix,1,0.00,400,333,0.9469
+prequal,1,8,0.539,16.7,2000,0,45,873,25244,30974,16667,shared-prefix,1,0.00,400,259,0.9550
+prequal,1,8,0.539,16.7,2000,0,44,879,25209,32614,16667,shared-prefix,1,0.00,400,271,0.9570
+prequal,1,8,0.538,16.7,1999,0,44,966,25094,33530,16658,shared-prefix,1,0.00,400,210,0.9593
+prequal,1,8,0.523,16.2,1942,0,45,1599,25053,33428,16183,shared-prefix,1,0.00,400,269,0.9447

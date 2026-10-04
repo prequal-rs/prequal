@@ -1,0 +1,9 @@
+# prequal-router alone in place of the chart's Envoy + EPP pod (deploy/helm/prequal-router), under the chart's
+# Service name and port so inference-perf's base_url is unchanged. Resources mirror common.yaml's EPP container.
+fullnameOverride: router-epp
+image: {repository: local.dev/prequal-router, tag: dev, pullPolicy: Never}
+replicaCount: 1
+target: {service: llm-d-sim-svc, port: http, engine: vllm}
+policy: prequal
+service: {port: 80}
+resources: {requests: {cpu: "2", memory: 1Gi}, limits: {cpu: "4", memory: 8Gi}}

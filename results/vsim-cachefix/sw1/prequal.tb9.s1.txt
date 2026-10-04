@@ -1,0 +1,20 @@
+diagnose: per tier, requests then to-holder / spread / forgotten / cold / stale-belief / believed-fresh
+diagnose: tier 0: 2610 / 0.952 / 0.013 / 0.031 / 0.004 / 0.001 / 0.052
+diagnose: tier 1: 3686 / 0.439 / 0.002 / 0.269 / 0.290 / 0.001 / 0.340
+diagnose: tier 2: 2755 / 0.148 / 0.001 / 0.134 / 0.717 / 0.001 / 0.166
+engines: 67882500 prompt tokens, 33082784 cached (48.7%); per engine prompt/hit: 7620k/56% 7582k/54% 6967k/50% 6975k/49% 6285k/43% 5955k/39% 6592k/48% 5970k/40% 6885k/49% 7050k/54%
+stage 1 (4.0 rps x 120s): 471 ok / 0 err, ttft p50/p90/p99 3/30/32 ms, e2e p50/p99 1029/1032 ms, 3925 out tok/s, prefix hit 50.1%
+stage 2 (6.0 rps x 120s): 705 ok / 0 err, ttft p50/p90/p99 3/30/32 ms, e2e p50/p99 1029/1526 ms, 5875 out tok/s, prefix hit 49.8%
+stage 3 (8.0 rps x 120s): 961 ok / 0 err, ttft p50/p90/p99 4/31/32 ms, e2e p50/p99 1029/1784 ms, 8008 out tok/s, prefix hit 50.1%
+stage 4 (10.0 rps x 120s): 1236 ok / 0 err, ttft p50/p90/p99 30/32/32 ms, e2e p50/p99 1030/2067 ms, 10300 out tok/s, prefix hit 47.7%
+stage 5 (12.0 rps x 120s): 1417 ok / 0 err, ttft p50/p90/p99 4/32/32 ms, e2e p50/p99 1030/2235 ms, 11808 out tok/s, prefix hit 50.3%
+stage 6 (14.0 rps x 120s): 1630 ok / 0 err, ttft p50/p90/p99 30/32/32 ms, e2e p50/p99 1031/2716 ms, 13583 out tok/s, prefix hit 47.3%
+stage 7 (16.0 rps x 120s): 1898 ok / 0 err, ttft p50/p90/p99 27/32/34 ms, e2e p50/p99 1059/3335 ms, 15817 out tok/s, prefix hit 49.3%
+policy,routers,engines,load,rps,completed,errors,ttft_p50_ms,ttft_p99_ms,e2e_p50_ms,e2e_p99_ms,tokens_per_s,workload,stage,stage_rate,concurrency,ttft_p90_ms,prefix_hit_rate
+prequal,1,10,0.200,4.0,471,0,3,32,1029,1032,3925,shared-prefix,1,4.00,0,30,0.5008
+prequal,1,10,0.300,6.0,705,0,3,32,1029,1526,5875,shared-prefix,2,6.00,0,30,0.4976
+prequal,1,10,0.400,8.0,961,0,4,32,1029,1784,8008,shared-prefix,3,8.00,0,31,0.5011
+prequal,1,10,0.500,10.0,1236,0,30,32,1030,2067,10300,shared-prefix,4,10.00,0,32,0.4770
+prequal,1,10,0.600,12.0,1417,0,4,32,1030,2235,11808,shared-prefix,5,12.00,0,32,0.5035
+prequal,1,10,0.700,14.0,1630,0,30,32,1031,2716,13583,shared-prefix,6,14.00,0,32,0.4730
+prequal,1,10,0.800,16.0,1898,0,27,34,1059,3335,15817,shared-prefix,7,16.00,0,32,0.4928

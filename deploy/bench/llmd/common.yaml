@@ -1,0 +1,11 @@
+# Shared router values for both arms (on top of llm-d-router's optimized-baseline.yaml).
+router:
+  epp:
+    replicas: 1
+    resources: {requests: {cpu: "2", memory: 4Gi}, limits: {cpu: "4", memory: 8Gi}}
+  monitoring: {prometheus: {auth: {enabled: false}}}
+  modelServers: {matchLabels: {app: llm-d-sim}}
+  proxy:
+    enabled: true
+    failOpen: false  # surface EPP failures as errors instead of silently bypassing the EPP
+    resources: {requests: {cpu: "1", memory: 1Gi}, limits: {memory: 4Gi}}

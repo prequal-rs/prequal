@@ -1,0 +1,218 @@
+load 7.63 14.34 14.05 1790878372
+router-epp-5d47b4b8-v4zdx    epp        3m     19Mi     
+load 6.53 13.88 13.91 1790878382
+router-epp-5d47b4b8-v4zdx    epp        3m     19Mi     
+load 5.53 13.43 13.76 1790878392
+router-epp-5d47b4b8-mr7qp    envoy-proxy    9m    14Mi     
+router-epp-5d47b4b8-mr7qp    epp            47m   3Mi      
+router-epp-5d47b4b8-v4zdx    epp            4m    19Mi     
+load 4.83 13.02 13.62 1790878402
+router-epp-5d47b4b8-mr7qp    envoy-proxy    8m    14Mi     
+router-epp-5d47b4b8-mr7qp    epp            45m   4Mi      
+router-epp-5d47b4b8-v4zdx    epp            5m    19Mi     
+load 4.09 12.59 13.47 1790878413
+router-epp-5d47b4b8-mr7qp    envoy-proxy    8m    14Mi     
+router-epp-5d47b4b8-mr7qp    epp            45m   4Mi      
+router-epp-5d47b4b8-v4zdx    epp            5m    19Mi     
+load 3.53 12.19 13.33 1790878423
+router-epp-5d47b4b8-mr7qp    envoy-proxy    7m    14Mi     
+router-epp-5d47b4b8-mr7qp    epp            42m   4Mi      
+router-epp-5d47b4b8-v4zdx    epp            5m    19Mi     
+load 3.07 11.80 13.20 1790878433
+router-epp-5d47b4b8-mr7qp    envoy-proxy    8m    14Mi     
+router-epp-5d47b4b8-mr7qp    epp            44m   4Mi      
+load 2.90 11.48 13.08 1790878443
+router-epp-5d47b4b8-mr7qp    envoy-proxy    8m    14Mi     
+router-epp-5d47b4b8-mr7qp    epp            44m   4Mi      
+load 2.61 11.13 12.95 1790878453
+inference-perf-d87wb         inference-perf   869m   187Mi    
+router-epp-5d47b4b8-mr7qp    envoy-proxy      6m     14Mi     
+router-epp-5d47b4b8-mr7qp    epp              30m    4Mi      
+load 2.36 10.80 12.82 1790878463
+inference-perf-d87wb         inference-perf   894m   204Mi    
+router-epp-5d47b4b8-mr7qp    envoy-proxy      4m     14Mi     
+router-epp-5d47b4b8-mr7qp    epp              12m    4Mi      
+load 2.47 10.54 12.71 1790878473
+inference-perf-d87wb         inference-perf   894m   204Mi    
+router-epp-5d47b4b8-mr7qp    envoy-proxy      4m     14Mi     
+router-epp-5d47b4b8-mr7qp    epp              12m    4Mi      
+load 2.40 10.26 12.60 1790878483
+inference-perf-d87wb         inference-perf   998m   283Mi    
+router-epp-5d47b4b8-mr7qp    envoy-proxy      3m     14Mi     
+router-epp-5d47b4b8-mr7qp    epp              12m    4Mi      
+load 2.34 9.99 12.48 1790878493
+inference-perf-d87wb         inference-perf   998m   355Mi    
+router-epp-5d47b4b8-mr7qp    envoy-proxy      138m   20Mi     
+router-epp-5d47b4b8-mr7qp    epp              13m    4Mi      
+load 2.50 9.77 12.39 1790878503
+inference-perf-d87wb         inference-perf   998m   355Mi    
+router-epp-5d47b4b8-mr7qp    envoy-proxy      138m   20Mi     
+router-epp-5d47b4b8-mr7qp    epp              13m    4Mi      
+load 2.57 9.55 12.28 1790878513
+inference-perf-d87wb         inference-perf   1029m   605Mi    
+router-epp-5d47b4b8-mr7qp    envoy-proxy      599m    22Mi     
+router-epp-5d47b4b8-mr7qp    epp              128m    8Mi      
+load 2.87 9.38 12.20 1790878523
+inference-perf-d87wb         inference-perf   1271m   672Mi    
+router-epp-5d47b4b8-mr7qp    envoy-proxy      630m    24Mi     
+router-epp-5d47b4b8-mr7qp    epp              188m    9Mi      
+load 3.33 9.27 12.13 1790878533
+inference-perf-d87wb         inference-perf   1271m   672Mi    
+router-epp-5d47b4b8-mr7qp    envoy-proxy      630m    24Mi     
+router-epp-5d47b4b8-mr7qp    epp              188m    9Mi      
+load 3.13 9.03 12.02 1790878543
+inference-perf-d87wb         inference-perf   1315m   712Mi    
+router-epp-5d47b4b8-mr7qp    envoy-proxy      508m    24Mi     
+router-epp-5d47b4b8-mr7qp    epp              191m    11Mi     
+load 3.59 8.93 11.96 1790878553
+inference-perf-d87wb         inference-perf   1259m   757Mi    
+router-epp-5d47b4b8-mr7qp    envoy-proxy      634m    24Mi     
+router-epp-5d47b4b8-mr7qp    epp              194m    13Mi     
+load 5.82 9.24 12.03 1790878563
+inference-perf-d87wb         inference-perf   2601m   866Mi    
+router-epp-5d47b4b8-mr7qp    envoy-proxy      940m    27Mi     
+router-epp-5d47b4b8-mr7qp    epp              316m    12Mi     
+load 5.78 9.12 11.96 1790878574
+inference-perf-d87wb         inference-perf   2601m   866Mi    
+router-epp-5d47b4b8-mr7qp    envoy-proxy      940m    27Mi     
+router-epp-5d47b4b8-mr7qp    epp              316m    12Mi     
+load 7.36 9.36 12.01 1790878584
+inference-perf-d87wb         inference-perf   3778m   1080Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      1453m   28Mi     
+router-epp-5d47b4b8-mr7qp    epp              365m    13Mi     
+load 7.91 9.41 12.00 1790878594
+inference-perf-d87wb         inference-perf   3778m   1080Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      1494m   28Mi     
+router-epp-5d47b4b8-mr7qp    epp              365m    13Mi     
+load 8.11 9.41 11.97 1790878604
+inference-perf-d87wb         inference-perf   3778m   1080Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      1494m   28Mi     
+router-epp-5d47b4b8-mr7qp    epp              365m    13Mi     
+load 8.08 9.37 11.93 1790878614
+inference-perf-d87wb         inference-perf   3728m   1349Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      1519m   28Mi     
+router-epp-5d47b4b8-mr7qp    epp              372m    13Mi     
+load 8.28 9.37 11.90 1790878624
+inference-perf-d87wb         inference-perf   4009m   1471Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      1519m   28Mi     
+router-epp-5d47b4b8-mr7qp    epp              380m    14Mi     
+load 8.18 9.31 11.85 1790878634
+inference-perf-d87wb         inference-perf   4009m   1471Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      1519m   28Mi     
+router-epp-5d47b4b8-mr7qp    epp              380m    14Mi     
+load 8.06 9.25 11.80 1790878644
+inference-perf-d87wb         inference-perf   3602m   1604Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      1629m   30Mi     
+router-epp-5d47b4b8-mr7qp    epp              376m    14Mi     
+load 9.69 9.57 11.88 1790878654
+inference-perf-d87wb         inference-perf   3952m   1754Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      1463m   29Mi     
+router-epp-5d47b4b8-mr7qp    epp              387m    15Mi     
+load 8.89 9.40 11.80 1790878664
+inference-perf-d87wb         inference-perf   3952m   1754Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      1463m   29Mi     
+router-epp-5d47b4b8-mr7qp    epp              387m    15Mi     
+load 8.54 9.31 11.75 1790878674
+inference-perf-d87wb         inference-perf   3968m   1850Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      1629m   29Mi     
+router-epp-5d47b4b8-mr7qp    epp              388m    14Mi     
+load 8.23 9.21 11.69 1790878684
+inference-perf-d87wb         inference-perf   3365m   1969Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      1409m   29Mi     
+router-epp-5d47b4b8-mr7qp    epp              359m    14Mi     
+load 8.41 9.22 11.66 1790878694
+inference-perf-d87wb         inference-perf   3365m   1969Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      1409m   29Mi     
+router-epp-5d47b4b8-mr7qp    epp              359m    14Mi     
+load 9.69 9.48 11.72 1790878704
+inference-perf-d87wb         inference-perf   3931m   2151Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      1588m   29Mi     
+router-epp-5d47b4b8-mr7qp    epp              378m    14Mi     
+load 10.11 9.58 11.73 1790878715
+inference-perf-d87wb         inference-perf   4082m   2276Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      1608m   31Mi     
+router-epp-5d47b4b8-mr7qp    epp              393m    15Mi     
+load 9.47 9.46 11.67 1790878725
+inference-perf-d87wb         inference-perf   4082m   2276Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      1608m   31Mi     
+router-epp-5d47b4b8-mr7qp    epp              393m    15Mi     
+load 10.65 9.70 11.71 1790878735
+inference-perf-d87wb         inference-perf   3776m   2422Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      1568m   30Mi     
+router-epp-5d47b4b8-mr7qp    epp              383m    14Mi     
+load 14.19 10.49 11.94 1790878745
+inference-perf-d87wb         inference-perf   4502m   2662Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      1704m   32Mi     
+router-epp-5d47b4b8-mr7qp    epp              339m    16Mi     
+load 15.76 10.95 12.08 1790878755
+inference-perf-d87wb         inference-perf   4502m   2662Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      1704m   32Mi     
+router-epp-5d47b4b8-mr7qp    epp              339m    16Mi     
+load 16.17 11.20 12.15 1790878765
+inference-perf-d87wb         inference-perf   6018m   2912Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      2240m   32Mi     
+router-epp-5d47b4b8-mr7qp    epp              485m    18Mi     
+load 16.76 11.49 12.23 1790878775
+inference-perf-d87wb         inference-perf   5982m   3090Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      2240m   32Mi     
+router-epp-5d47b4b8-mr7qp    epp              486m    18Mi     
+load 19.23 12.18 12.45 1790878785
+inference-perf-d87wb         inference-perf   5982m   3090Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      2240m   32Mi     
+router-epp-5d47b4b8-mr7qp    epp              486m    18Mi     
+load 20.51 12.69 12.61 1790878795
+inference-perf-d87wb         inference-perf   6046m   3246Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      2221m   32Mi     
+router-epp-5d47b4b8-mr7qp    epp              486m    18Mi     
+load 22.29 13.32 12.82 1790878805
+inference-perf-d87wb         inference-perf   6054m   3602Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      2237m   34Mi     
+router-epp-5d47b4b8-mr7qp    epp              484m    18Mi     
+load 23.74 13.92 13.02 1790878815
+inference-perf-d87wb         inference-perf   6054m   3602Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      2237m   34Mi     
+router-epp-5d47b4b8-mr7qp    epp              484m    18Mi     
+load 24.89 14.50 13.22 1790878826
+inference-perf-d87wb         inference-perf   6230m   3798Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      2290m   34Mi     
+router-epp-5d47b4b8-mr7qp    epp              496m    19Mi     
+load 25.20 14.91 13.37 1790878836
+inference-perf-d87wb         inference-perf   6169m   3988Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      2127m   36Mi     
+router-epp-5d47b4b8-mr7qp    epp              481m    19Mi     
+load 24.77 15.16 13.47 1790878846
+inference-perf-d87wb         inference-perf   6169m   3988Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      2127m   36Mi     
+router-epp-5d47b4b8-mr7qp    epp              481m    19Mi     
+load 23.96 15.32 13.54 1790878856
+inference-perf-d87wb         inference-perf   5927m   4231Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      2276m   35Mi     
+router-epp-5d47b4b8-mr7qp    epp              481m    18Mi     
+load 23.05 15.41 13.58 1790878866
+inference-perf-d87wb         inference-perf   6060m   4475Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      2252m   35Mi     
+router-epp-5d47b4b8-mr7qp    epp              486m    18Mi     
+load 23.05 15.66 13.69 1790878876
+inference-perf-d87wb         inference-perf   6060m   4475Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      2252m   35Mi     
+router-epp-5d47b4b8-mr7qp    epp              486m    18Mi     
+load 23.33 15.96 13.81 1790878886
+inference-perf-d87wb         inference-perf   5809m   4736Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      2202m   35Mi     
+router-epp-5d47b4b8-mr7qp    epp              476m    18Mi     
+load 23.62 16.26 13.93 1790878896
+inference-perf-d87wb         inference-perf   5731m   4963Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      2204m   35Mi     
+router-epp-5d47b4b8-mr7qp    epp              485m    18Mi     
+load 25.20 16.85 14.14 1790878906
+inference-perf-d87wb         inference-perf   5731m   4963Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      2204m   35Mi     
+router-epp-5d47b4b8-mr7qp    epp              485m    18Mi     
+load 22.21 16.49 14.06 1790878916
+inference-perf-d87wb         inference-perf   6276m   5194Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      2210m   36Mi     
+router-epp-5d47b4b8-mr7qp    epp              481m    18Mi     
+load 19.11 16.01 13.93 1790878926
+inference-perf-d87wb         inference-perf   2731m   5346Mi   
+router-epp-5d47b4b8-mr7qp    envoy-proxy      1819m   35Mi     
+router-epp-5d47b4b8-mr7qp    epp              287m    19Mi     

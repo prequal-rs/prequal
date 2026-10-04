@@ -1,0 +1,6 @@
+2026-10-01T14:18:47.248389159Z 2026-10-01 14:18:47,247 - inference_perf.loadgen.load_generator - INFO - Stage 0 - run started
+2026-10-01T14:19:50.325472851Z 2026-10-01 14:19:50,325 - inference_perf.loadgen.load_generator - INFO - Stage 0 - run completed
+2026-10-01T14:19:51.689370600Z 2026-10-01 14:19:51,689 - inference_perf.loadgen.load_generator - INFO - Stage 1 - run started
+2026-10-01T14:22:53.932157114Z 2026-10-01 14:22:53,931 - inference_perf.loadgen.load_generator - INFO - Stage 1 - run completed
+2026-10-01T14:22:55.419877208Z 2026-10-01 14:22:55,419 - inference_perf.loadgen.load_generator - INFO - Stage 2 - run started
+2026-10-01T14:25:57.749299217Z 2026-10-01 14:25:57,748 - inference_perf.loadgen.load_generator - INFO - Stage 2 - run completed

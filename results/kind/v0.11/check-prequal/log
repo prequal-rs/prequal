@@ -1,0 +1,14 @@
+20:18:36.047 start prequal v0.11.0 load 1.07 6.90 9.43
+20:19:45.233 rollout ready after 6s
+20:19:50.760 load started
+20:20:36.573 metrics-1: 42 llm_d_epp lines;  llm_d_epp_ready_endpoints{name="router"} 10 
+20:21:17.758 metrics-2: 258 llm_d_epp lines;  llm_d_epp_request_total{model_name="Qwen/Qwen3-8B",target_model_name="Qwen/Qwen3-8B",fairness_id="default-flow",priority="0"} 137 llm_d_epp_ready_endpoints{name="router"} 10 llm_d_epp_request_total{model_name="Qwen/Qwen3-8B",target_model_name="Qwen/Qwen3-8B",fairness_id="default-flow",priority="0"} 137 llm_d_epp_ready_endpoints{name="router"} 10 
+20:21:18.762 delete pod/router-epp-6d8d85798b-qcjtc
+20:21:25.732 pod gone after 6.963843115s
+envoy-proxy exit=0 reason=Completed finished=2026-10-02T20:21:18Z
+epp exit=0 reason=Completed finished=2026-10-02T20:21:23Z
+deletionTimestamp 2026-10-02T20:21:25Z
+deletionTimestamp 2026-10-02T20:23:28Z
+20:21:28.541 replacement ready 9.773382878s after delete
+20:23:26.056 load result: 
+20:23:27.524 done load 9.31 8.03 9.16

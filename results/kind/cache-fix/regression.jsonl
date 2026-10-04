@@ -1,0 +1,26 @@
+2026-10-03T15:59:22+00:00 suite-loaded
+2026-10-03T16:22:22+00:00 suite-two-epp
+2026-10-03T16:45:23+00:00 teardown-llmd
+2026-10-03T16:45:33+00:00 done: No kind clusters found.
+EXIT 0
+no server running on /tmp/tmux-1000/default
+{"run":"llmd-loaded-r1","stage":"stage_0","ok":300,"fail":0,"ttft_p50":0.0337143715005368,"ttft_p90":0.06065573503728956,"ttft_p99":0.09507156144245521,"out_tok_s":5115.446737750697,"prefix_hit":0.509}
+{"run":"llmd-loaded-r1","stage":"stage_1","ok":2700,"fail":0,"ttft_p50":0.048693421529605985,"ttft_p90":0.11216378894168878,"ttft_p99":0.1969083894090709,"out_tok_s":15500.990528536986,"prefix_hit":0.988}
+{"run":"llmd-loaded-r1","stage":"stage_2","ok":4260,"fail":240,"ttft_p50":0.34742340503726155,"ttft_p90":5.100028587644919,"ttft_p99":18.838199380801502,"out_tok_s":15146.605660607382,"prefix_hit":null}
+{"run":"llmd-loaded-r1","prefix_hit_rate":0.956}
+{"run":"llmd-loaded-r1","peak_load1":66.59,"epp_mcpu":1665,"epp_mib":491,"envoy-proxy_mcpu":1836,"envoy-proxy_mib":173,"inference-perf_mcpu":3868,"inference-perf_mib":4303}
+{"run":"llmd-two-epp-r1","stage":"stage_0","ok":300,"fail":0,"ttft_p50":0.05622869305079803,"ttft_p90":0.06290703037520871,"ttft_p99":0.11564083497272803,"out_tok_s":5123.674655423507,"prefix_hit":0.349}
+{"run":"llmd-two-epp-r1","stage":"stage_1","ok":2700,"fail":0,"ttft_p50":0.08106062252772972,"ttft_p90":0.17450838882941752,"ttft_p99":0.35273678381578016,"out_tok_s":15490.162596246377,"prefix_hit":0.949}
+{"run":"llmd-two-epp-r1","stage":"stage_2","ok":4500,"fail":0,"ttft_p50":0.867916994553525,"ttft_p90":1.8202591276960447,"ttft_p99":2.8854951463092617,"out_tok_s":20656.201112783452,"prefix_hit":0.974}
+{"run":"llmd-two-epp-r1","prefix_hit_rate":0.940}
+{"run":"llmd-two-epp-r1","peak_load1":87.55,"epp_mcpu":2062,"epp_mib":1458,"envoy-proxy_mcpu":2201,"envoy-proxy_mib":194,"inference-perf_mcpu":4970,"inference-perf_mib":5445}
+{"run":"prequal-loaded-r1","stage":"stage_0","ok":300,"fail":0,"ttft_p50":0.04182169400155544,"ttft_p90":0.056145492009818554,"ttft_p99":0.09668672603555022,"out_tok_s":5114.854764020977,"prefix_hit":0.511}
+{"run":"prequal-loaded-r1","stage":"stage_1","ok":2700,"fail":0,"ttft_p50":0.025695492047816515,"ttft_p90":0.036237537360284476,"ttft_p99":0.11800761760794556,"out_tok_s":15507.388456110899,"prefix_hit":0.988}
+{"run":"prequal-loaded-r1","stage":"stage_2","ok":4500,"fail":0,"ttft_p50":0.07742700702510774,"ttft_p90":0.22624932796461508,"ttft_p99":0.46067913197097393,"out_tok_s":25746.001314094236,"prefix_hit":0.999}
+{"run":"prequal-loaded-r1","prefix_hit_rate":0.975}
+{"run":"prequal-loaded-r1","peak_load1":49.54,"epp_mcpu":572,"epp_mib":25,"envoy-proxy_mcpu":2345,"envoy-proxy_mib":71,"inference-perf_mcpu":5218,"inference-perf_mib":5252}
+{"run":"prequal-two-epp-r1","stage":"stage_0","ok":300,"fail":0,"ttft_p50":0.04793398699257523,"ttft_p90":0.05568439274793491,"ttft_p99":0.1088335314416326,"out_tok_s":5103.17268244872,"prefix_hit":0.432}
+{"run":"prequal-two-epp-r1","stage":"stage_1","ok":2700,"fail":0,"ttft_p50":0.027053186495322734,"ttft_p90":0.04932658980833366,"ttft_p99":0.15859102632501107,"out_tok_s":15503.495666739984,"prefix_hit":0.967}
+{"run":"prequal-two-epp-r1","stage":"stage_2","ok":4500,"fail":0,"ttft_p50":0.2699135735165328,"ttft_p90":0.7611137242754922,"ttft_p99":1.4923592084285346,"out_tok_s":25297.690071594803,"prefix_hit":0.992}
+{"run":"prequal-two-epp-r1","prefix_hit_rate":0.961}
+{"run":"prequal-two-epp-r1","peak_load1":92.31,"epp_mcpu":775,"epp_mib":59,"envoy-proxy_mcpu":2768,"envoy-proxy_mib":153,"inference-perf_mcpu":4659,"inference-perf_mib":5263}

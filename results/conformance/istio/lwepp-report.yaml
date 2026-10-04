@@ -1,0 +1,25 @@
+GatewayAPIInferenceExtensionVersion: v1.6.2
+apiVersion: gateway.networking.k8s.io/v1
+date: "2026-10-01T20:05:52Z"
+gatewayAPIChannel: standard
+gatewayAPIVersion: v1.6.1
+implementation:
+  contact:
+  - https://github.com/prequal-rs/prequal/issues
+  organization: prequal-rs/prequal (unofficial run)
+  project: lwepp on istio 1.31.1
+  url: https://github.com/prequal-rs/prequal
+  version: v1.6.2
+kind: ConformanceReport
+mode: epp-lwepp
+profiles:
+- core:
+    failedTests:
+    - GatewayWeightedAcrossTwoInferencePools
+    result: failure
+    statistics:
+      Failed: 1
+      Passed: 13
+      Skipped: 0
+  name: Gateway
+  summary: Core tests failed with 1 test failures.

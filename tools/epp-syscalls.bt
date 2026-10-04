@@ -1,0 +1,9 @@
+// Syscall counts/bytes of one process (pid = $1) for 20 s: how many messages each recv/writev/wakeup carries.
+// sudo bpftrace -q tools/epp-syscalls.bt <pid>; used by tools/kind-epp-cpu.sh (TRACE=1).
+tracepoint:syscalls:sys_enter_writev /pid == $1/ { @writev = count(); @iovcnt = hist(args->vlen); }
+tracepoint:syscalls:sys_exit_writev /pid == $1 && args->ret > 0/ { @writev_bytes = sum(args->ret); }
+tracepoint:syscalls:sys_enter_recvfrom /pid == $1/ { @recvfrom = count(); }
+tracepoint:syscalls:sys_exit_recvfrom /pid == $1 && args->ret > 0/ { @recv_bytes = sum(args->ret); @recv_ok = count(); }
+tracepoint:syscalls:sys_enter_epoll_wait /pid == $1/ { @epoll_wait = count(); }
+tracepoint:syscalls:sys_enter_clock_nanosleep /pid == $1/ { @nanosleep = count(); }
+interval:s:20 { exit(); }

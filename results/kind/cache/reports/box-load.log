@@ -1,0 +1,14 @@
+2026-10-03T08:59:36+00:00 cal-llmd-kv6000 (v0.11.0):  08:59:36 up 6 days, 19:14, 114 users,  load average: 6.81, 11.14, 7.19 22G available
+2026-10-03T09:10:25+00:00 cal-llmd-kvinf (v0.11.0):  09:10:25 up 6 days, 19:25, 113 users,  load average: 7.23, 19.50, 15.46 23G available
+2026-10-03T09:20:06+00:00 cal-prequal-barrier (v0.11.0):  09:20:06 up 6 days, 19:35, 114 users,  load average: 7.14, 20.12, 18.57 24G available
+2026-10-03T09:26:15+00:00 prequal-cache-r1 (v0.11.0):  09:26:15 up 6 days, 19:41, 114 users,  load average: 5.05, 10.17, 14.41 26G available
+2026-10-03T09:45:50+00:00 llmd-cache-r1 (v0.11.0):  09:45:50 up 6 days, 20:00, 114 users,  load average: 7.49, 14.78, 13.06 24G available
+2026-10-03T10:06:16+00:00 llmd-precise-cache-r1 (v0.11.0):  10:06:16 up 6 days, 20:21, 114 users,  load average: 6.48, 22.90, 18.88 26G available
+2026-10-03T10:26:43+00:00 prequal-cache-r2 (v0.11.0):  10:26:43 up 6 days, 20:41, 114 users,  load average: 7.17, 24.56, 21.81 20G available
+2026-10-03T10:48:24+00:00 llmd-cache-r2 (v0.11.0):  10:48:24 up 6 days, 21:03, 116 users,  load average: 7.06, 30.08, 28.80 26G available
+2026-10-03T11:09:29+00:00 llmd-precise-cache-r2 (v0.11.0):  11:09:29 up 6 days, 21:24, 142 users,  load average: 7.49, 22.95, 23.07 24G available
+2026-10-03T11:30:07+00:00 prequal-cache-two-epp-r1 (v0.11.0):  11:30:07 up 6 days, 21:45, 167 users,  load average: 6.85, 23.17, 22.27 23G available
+2026-10-03T11:53:22+00:00 llmd-cache-two-epp-r1 (v0.11.0):  11:53:22 up 6 days, 22:08, 174 users,  load average: 7.84, 22.12, 20.00 20G available
+2026-10-03T12:16:54+00:00 llmd-precise-ob-cache-r1 (v0.11.0):  12:16:54 up 6 days, 22:31, 176 users,  load average: 5.78, 23.79, 26.18 26G available
+2026-10-03T12:37:55+00:00 llmd-precise-ob-cache-r2 (v0.11.0):  12:37:55 up 6 days, 22:53, 199 users,  load average: 7.54, 22.18, 22.00 22G available
+2026-10-03T12:58:45+00:00 prequal-cache-r3 (v0.11.0):  12:58:45 up 6 days, 23:13, 230 users,  load average: 7.97, 22.66, 21.38 22G available

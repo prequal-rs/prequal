@@ -1,0 +1,50 @@
+[package]
+name = "prequal-pingora"
+description = "Prequal load balancing for Pingora: a BackendSelection with async probing, piggybacked load, and outlier ejection"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+readme = "README.md"
+keywords = ["pingora", "load-balancing", "prequal", "reverse-proxy", "kubernetes"]
+categories = ["network-programming", "asynchronous"]
+
+[package.metadata.docs.rs]
+features = ["proxy", "kubernetes", "k8s-openapi/v1_32"]
+
+[features]
+# Ready-made reverse proxy (`prequal_pingora::proxy`).
+proxy = ["dep:async-trait", "dep:pingora-core", "dep:pingora-http", "dep:pingora-proxy"]
+# Discovery from a Kubernetes Service's EndpointSlices (`prequal_pingora::kubernetes`). The final
+# binary must pick a k8s-openapi version feature (e.g. `v1_32`), per k8s-openapi's library convention.
+# Needs Rust 1.89 (kube 4.2); the crate without this feature builds on 1.85.
+kubernetes = ["dep:async-trait", "dep:kube", "dep:k8s-openapi", "dep:pingora-error"]
+
+[lints]
+workspace = true
+
+[dependencies]
+async-trait = { version = "0.1", optional = true }
+http = "1"
+k8s-openapi = { version = "0.28.0", optional = true }
+kube = { version = "4.2.0", optional = true }
+pingora-core = { version = "0.9.0", default-features = false, optional = true }
+pingora-error = { version = "0.9.0", optional = true }
+pingora-http = { version = "0.9.0", optional = true }
+pingora-load-balancing = { version = "0.9.0", default-features = false }
+pingora-proxy = { version = "0.9.0", default-features = false, optional = true }
+prequal-core.workspace = true
+prequal-tower.workspace = true
+rand = "0.10.3"
+tokio = { version = "1.53.1", features = ["net", "io-util", "time", "sync", "rt"] }
+
+[dev-dependencies]
+# Must match the workspace binaries' pin: k8s-openapi rejects two version features in one build.
+k8s-openapi = { version = "0.28.0", features = ["v1_32"] }
+pingora-core = { version = "0.9.0", default-features = false }
+tokio = { version = "1.53.1", features = ["net", "io-util", "time", "sync", "rt", "macros", "rt-multi-thread"] }
+
+[[example]]
+name = "proxy"
+required-features = ["proxy"]

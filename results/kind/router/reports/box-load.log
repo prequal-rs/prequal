@@ -1,0 +1,6 @@
+2026-10-01T17:23:16+00:00 router-loaded-r1:  17:23:16 up 5 days,  3:38, 1680 users,  load average: 3.93, 4.66, 3.61 26G available
+2026-10-01T17:32:54+00:00 llmd-loaded-r1:  17:32:54 up 5 days,  3:47, 1708 users,  load average: 9.19, 8.82, 5.97 11G available
+2026-10-01T17:42:41+00:00 router-loaded-r2:  17:42:41 up 5 days,  3:57, 1729 users,  load average: 24.46, 22.06, 13.06 13G available
+2026-10-01T17:52:16+00:00 llmd-loaded-r2:  17:52:16 up 5 days,  4:07, 1734 users,  load average: 10.52, 10.66, 10.53 11G available
+2026-10-01T18:02:15+00:00 prequal-loaded-r1:  18:02:15 up 5 days,  4:17, 1736 users,  load average: 16.57, 20.71, 15.16 26G available
+2026-10-01T18:11:40+00:00 prequal-loaded-r2:  18:11:40 up 5 days,  4:26, 1738 users,  load average: 16.81, 17.13, 14.86 15G available

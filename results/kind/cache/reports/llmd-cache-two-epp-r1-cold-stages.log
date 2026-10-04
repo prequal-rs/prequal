@@ -1,0 +1,16 @@
+2026-10-03T11:54:38.644790036Z 2026-10-03 11:54:38,644 - inference_perf.loadgen.load_generator - INFO - Stage 0 - run started
+2026-10-03T11:56:41.780240375Z 2026-10-03 11:56:41,779 - inference_perf.loadgen.load_generator - INFO - Stage 0 - run completed
+2026-10-03T11:56:43.380766122Z 2026-10-03 11:56:43,380 - inference_perf.loadgen.load_generator - INFO - Stage 1 - run started
+2026-10-03T11:58:46.498820559Z 2026-10-03 11:58:46,498 - inference_perf.loadgen.load_generator - INFO - Stage 1 - run completed
+2026-10-03T11:58:47.867731438Z 2026-10-03 11:58:47,866 - inference_perf.loadgen.load_generator - INFO - Stage 2 - run started
+2026-10-03T12:00:51.037029249Z 2026-10-03 12:00:51,036 - inference_perf.loadgen.load_generator - INFO - Stage 2 - run completed
+2026-10-03T12:00:52.683353440Z 2026-10-03 12:00:52,683 - inference_perf.loadgen.load_generator - INFO - Stage 3 - run started
+2026-10-03T12:02:55.831269974Z 2026-10-03 12:02:55,830 - inference_perf.loadgen.load_generator - INFO - Stage 3 - run completed
+2026-10-03T12:02:57.405644992Z 2026-10-03 12:02:57,404 - inference_perf.loadgen.load_generator - INFO - Stage 4 - run started
+2026-10-03T12:05:00.642187868Z 2026-10-03 12:05:00,641 - inference_perf.loadgen.load_generator - INFO - Stage 4 - run completed
+2026-10-03T12:05:02.150992170Z 2026-10-03 12:05:02,150 - inference_perf.loadgen.load_generator - INFO - Stage 5 - run started
+2026-10-03T12:07:06.477775832Z 2026-10-03 12:07:06,477 - inference_perf.loadgen.load_generator - INFO - Stage 5 - run completed
+2026-10-03T12:07:08.983736494Z 2026-10-03 12:07:08,982 - inference_perf.loadgen.load_generator - INFO - Stage 6 - run started
+2026-10-03T12:09:29.404366562Z 2026-10-03 12:09:29,403 - inference_perf.loadgen.load_generator - INFO - Stage 6 - run completed
+2026-10-03T12:09:30.912046013Z 2026-10-03 12:09:30,911 - inference_perf.loadgen.load_generator - INFO - Stage 7 - run started
+2026-10-03T12:12:11.309063454Z 2026-10-03 12:12:11,308 - inference_perf.loadgen.load_generator - INFO - Stage 7 - run completed

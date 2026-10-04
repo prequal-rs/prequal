@@ -1,0 +1,637 @@
+load 4.88 9.96 14.30 1791019585
+load 4.84 9.78 14.19 1791019595
+load 4.48 9.54 14.07 1791019605
+inference-perf-cold-r6dvb     inference-perf   873m   203Mi   
+inference-perf-hot-fxknm      inference-perf   874m   207Mi   
+inference-perf-kz4dr          inference-perf   879m   206Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      9m     18Mi    
+router-epp-6d8d85798b-tc7c2   epp              17m    4Mi     
+load 4.02 9.28 13.93 1791019615
+inference-perf-cold-r6dvb     inference-perf   997m   277Mi   
+inference-perf-hot-fxknm      inference-perf   49m    280Mi   
+inference-perf-kz4dr          inference-perf   998m   257Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      6m     18Mi    
+router-epp-6d8d85798b-tc7c2   epp              14m    4Mi     
+load 3.93 9.09 13.82 1791019625
+inference-perf-cold-r6dvb     inference-perf   997m   277Mi   
+inference-perf-hot-fxknm      inference-perf   49m    280Mi   
+inference-perf-kz4dr          inference-perf   998m   257Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      6m     18Mi    
+router-epp-6d8d85798b-tc7c2   epp              14m    4Mi     
+load 3.56 8.84 13.69 1791019635
+inference-perf-cold-r6dvb     inference-perf   997m   352Mi   
+inference-perf-hot-fxknm      inference-perf   11m    281Mi   
+inference-perf-kz4dr          inference-perf   293m   355Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      6m     18Mi    
+router-epp-6d8d85798b-tc7c2   epp              13m    4Mi     
+load 3.17 8.58 13.55 1791019645
+inference-perf-cold-r6dvb     inference-perf   997m   408Mi   
+inference-perf-hot-fxknm      inference-perf   11m    283Mi   
+inference-perf-kz4dr          inference-perf   11m    358Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      6m     18Mi    
+router-epp-6d8d85798b-tc7c2   epp              12m    4Mi     
+load 3.98 8.58 13.49 1791019655
+inference-perf-cold-r6dvb     inference-perf   997m   408Mi   
+inference-perf-hot-fxknm      inference-perf   11m    283Mi   
+inference-perf-kz4dr          inference-perf   11m    358Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      6m     18Mi    
+router-epp-6d8d85798b-tc7c2   epp              12m    4Mi     
+load 3.76 8.38 13.38 1791019665
+inference-perf-cold-r6dvb     inference-perf   598m   606Mi   
+inference-perf-hot-fxknm      inference-perf   51m    299Mi   
+inference-perf-kz4dr          inference-perf   362m   477Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      171m   26Mi    
+router-epp-6d8d85798b-tc7c2   epp              117m   8Mi     
+load 3.65 8.20 13.26 1791019675
+inference-perf-cold-r6dvb     inference-perf   598m   606Mi   
+inference-perf-hot-fxknm      inference-perf   473m   399Mi   
+inference-perf-kz4dr          inference-perf   362m   477Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      652m   41Mi    
+router-epp-6d8d85798b-tc7c2   epp              117m   8Mi     
+load 3.77 8.08 13.17 1791019685
+inference-perf-cold-r6dvb     inference-perf   598m   606Mi   
+inference-perf-hot-fxknm      inference-perf   473m   399Mi   
+inference-perf-kz4dr          inference-perf   362m   477Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      652m   41Mi    
+router-epp-6d8d85798b-tc7c2   epp              117m   8Mi     
+load 3.34 7.84 13.04 1791019695
+inference-perf-cold-r6dvb     inference-perf   406m   665Mi   
+inference-perf-hot-fxknm      inference-perf   517m   431Mi   
+inference-perf-kz4dr          inference-perf   646m   519Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      644m   44Mi    
+router-epp-6d8d85798b-tc7c2   epp              208m   10Mi    
+load 3.45 7.72 12.94 1791019705
+inference-perf-cold-r6dvb     inference-perf   433m   693Mi   
+inference-perf-hot-fxknm      inference-perf   487m   456Mi   
+inference-perf-kz4dr          inference-perf   571m   550Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      647m   46Mi    
+router-epp-6d8d85798b-tc7c2   epp              210m   10Mi    
+load 3.60 7.61 12.85 1791019715
+inference-perf-cold-r6dvb     inference-perf   433m   693Mi   
+inference-perf-hot-fxknm      inference-perf   487m   456Mi   
+inference-perf-kz4dr          inference-perf   571m   550Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      647m   46Mi    
+router-epp-6d8d85798b-tc7c2   epp              210m   10Mi    
+load 3.57 7.47 12.75 1791019725
+inference-perf-cold-r6dvb     inference-perf   461m   714Mi   
+inference-perf-hot-fxknm      inference-perf   245m   465Mi   
+inference-perf-kz4dr          inference-perf   635m   578Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      718m   47Mi    
+router-epp-6d8d85798b-tc7c2   epp              235m   10Mi    
+load 3.57 7.34 12.65 1791019735
+inference-perf-cold-r6dvb     inference-perf   626m   741Mi   
+inference-perf-hot-fxknm      inference-perf   463m   484Mi   
+inference-perf-kz4dr          inference-perf   572m   598Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      718m   47Mi    
+router-epp-6d8d85798b-tc7c2   epp              230m   11Mi    
+load 3.69 7.25 12.56 1791019745
+inference-perf-cold-r6dvb     inference-perf   626m   741Mi   
+inference-perf-hot-fxknm      inference-perf   463m   484Mi   
+inference-perf-kz4dr          inference-perf   572m   598Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      718m   47Mi    
+router-epp-6d8d85798b-tc7c2   epp              230m   11Mi    
+load 5.67 7.57 12.61 1791019756
+inference-perf-cold-r6dvb     inference-perf   431m   761Mi   
+inference-perf-hot-fxknm      inference-perf   344m   506Mi   
+inference-perf-kz4dr          inference-perf   602m   617Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      618m   49Mi    
+router-epp-6d8d85798b-tc7c2   epp              187m   11Mi    
+load 5.11 7.38 12.50 1791019766
+inference-perf-cold-r6dvb     inference-perf   548m   778Mi   
+inference-perf-hot-fxknm      inference-perf   568m   524Mi   
+inference-perf-kz4dr          inference-perf   522m   638Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      776m   50Mi    
+router-epp-6d8d85798b-tc7c2   epp              249m   11Mi    
+load 4.47 7.17 12.37 1791019776
+inference-perf-cold-r6dvb     inference-perf   548m   778Mi   
+inference-perf-hot-fxknm      inference-perf   568m   524Mi   
+inference-perf-kz4dr          inference-perf   522m   638Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      776m   50Mi    
+router-epp-6d8d85798b-tc7c2   epp              249m   11Mi    
+load 4.40 7.07 12.28 1791019786
+inference-perf-cold-r6dvb     inference-perf   298m   786Mi   
+inference-perf-hot-fxknm      inference-perf   568m   524Mi   
+inference-perf-kz4dr          inference-perf   423m   661Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      420m   50Mi    
+router-epp-6d8d85798b-tc7c2   epp              163m   11Mi    
+load 3.80 6.85 12.15 1791019796
+inference-perf-cold-r6dvb     inference-perf   299m   800Mi   
+inference-perf-hot-fxknm      inference-perf   351m   551Mi   
+inference-perf-kz4dr          inference-perf   308m   671Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      497m   52Mi    
+router-epp-6d8d85798b-tc7c2   epp              171m   11Mi    
+load 3.36 6.66 12.03 1791019806
+inference-perf-cold-r6dvb     inference-perf   299m   800Mi   
+inference-perf-hot-fxknm      inference-perf   351m   551Mi   
+inference-perf-kz4dr          inference-perf   308m   671Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      497m   52Mi    
+router-epp-6d8d85798b-tc7c2   epp              171m   11Mi    
+load 3.16 6.50 11.93 1791019816
+inference-perf-cold-r6dvb     inference-perf   263m   806Mi   
+inference-perf-hot-fxknm      inference-perf   282m   561Mi   
+inference-perf-kz4dr          inference-perf   362m   683Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      424m   52Mi    
+router-epp-6d8d85798b-tc7c2   epp              165m   11Mi    
+load 2.99 6.35 11.82 1791019826
+inference-perf-cold-r6dvb     inference-perf   305m   820Mi   
+inference-perf-hot-fxknm      inference-perf   282m   561Mi   
+inference-perf-kz4dr          inference-perf   285m   693Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      434m   54Mi    
+router-epp-6d8d85798b-tc7c2   epp              152m   11Mi    
+load 2.85 6.21 11.71 1791019836
+inference-perf-cold-r6dvb     inference-perf   305m   820Mi   
+inference-perf-hot-fxknm      inference-perf   282m   561Mi   
+inference-perf-kz4dr          inference-perf   285m   693Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      434m   54Mi    
+router-epp-6d8d85798b-tc7c2   epp              152m   11Mi    
+load 3.18 6.17 11.64 1791019846
+inference-perf-cold-r6dvb     inference-perf   374m   836Mi   
+inference-perf-hot-fxknm      inference-perf   223m   572Mi   
+inference-perf-kz4dr          inference-perf   280m   704Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      426m   54Mi    
+router-epp-6d8d85798b-tc7c2   epp              166m   11Mi    
+load 3.00 6.03 11.54 1791019856
+inference-perf-cold-r6dvb     inference-perf   246m   845Mi   
+inference-perf-hot-fxknm      inference-perf   246m   582Mi   
+inference-perf-kz4dr          inference-perf   634m   725Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      454m   56Mi    
+router-epp-6d8d85798b-tc7c2   epp              161m   11Mi    
+load 3.72 6.08 11.49 1791019866
+inference-perf-cold-r6dvb     inference-perf   246m   845Mi   
+inference-perf-hot-fxknm      inference-perf   246m   582Mi   
+inference-perf-kz4dr          inference-perf   634m   725Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      454m   56Mi    
+router-epp-6d8d85798b-tc7c2   epp              161m   11Mi    
+load 3.85 6.03 11.42 1791019876
+inference-perf-cold-r6dvb     inference-perf   219m   856Mi   
+inference-perf-hot-fxknm      inference-perf   250m   593Mi   
+inference-perf-kz4dr          inference-perf   405m   749Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      517m   56Mi    
+router-epp-6d8d85798b-tc7c2   epp              170m   11Mi    
+load 3.79 5.95 11.33 1791019886
+inference-perf-cold-r6dvb     inference-perf   302m   867Mi   
+inference-perf-hot-fxknm      inference-perf   399m   608Mi   
+inference-perf-kz4dr          inference-perf   519m   769Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      491m   57Mi    
+router-epp-6d8d85798b-tc7c2   epp              175m   11Mi    
+load 4.73 6.08 11.32 1791019896
+inference-perf-cold-r6dvb     inference-perf   302m   867Mi   
+inference-perf-hot-fxknm      inference-perf   399m   608Mi   
+inference-perf-kz4dr          inference-perf   519m   769Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      491m   57Mi    
+router-epp-6d8d85798b-tc7c2   epp              175m   11Mi    
+load 4.55 5.99 11.24 1791019906
+inference-perf-cold-r6dvb     inference-perf   309m   880Mi   
+inference-perf-hot-fxknm      inference-perf   261m   616Mi   
+inference-perf-kz4dr          inference-perf   281m   778Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      554m   58Mi    
+router-epp-6d8d85798b-tc7c2   epp              166m   11Mi    
+load 4.68 5.98 11.17 1791019916
+inference-perf-cold-r6dvb     inference-perf   420m   897Mi   
+inference-perf-hot-fxknm      inference-perf   325m   627Mi   
+inference-perf-kz4dr          inference-perf   459m   797Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      405m   58Mi    
+router-epp-6d8d85798b-tc7c2   epp              158m   11Mi    
+load 4.59 5.91 11.10 1791019927
+inference-perf-cold-r6dvb     inference-perf   420m   897Mi   
+inference-perf-hot-fxknm      inference-perf   325m   627Mi   
+inference-perf-kz4dr          inference-perf   459m   797Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      405m   58Mi    
+router-epp-6d8d85798b-tc7c2   epp              158m   11Mi    
+load 4.91 5.93 11.05 1791019937
+inference-perf-cold-r6dvb     inference-perf   554m   917Mi   
+inference-perf-hot-fxknm      inference-perf   448m   646Mi   
+inference-perf-kz4dr          inference-perf   459m   797Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      645m   59Mi    
+router-epp-6d8d85798b-tc7c2   epp              215m   12Mi    
+load 5.18 5.95 11.00 1791019947
+inference-perf-cold-r6dvb     inference-perf   314m   925Mi   
+inference-perf-hot-fxknm      inference-perf   390m   665Mi   
+inference-perf-kz4dr          inference-perf   588m   825Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      612m   60Mi    
+router-epp-6d8d85798b-tc7c2   epp              180m   11Mi    
+load 4.84 5.85 10.91 1791019957
+inference-perf-cold-r6dvb     inference-perf   314m   925Mi   
+inference-perf-hot-fxknm      inference-perf   390m   665Mi   
+inference-perf-kz4dr          inference-perf   588m   825Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      612m   60Mi    
+router-epp-6d8d85798b-tc7c2   epp              180m   11Mi    
+load 4.70 5.79 10.84 1791019967
+inference-perf-cold-r6dvb     inference-perf   530m   945Mi   
+inference-perf-hot-fxknm      inference-perf   315m   675Mi   
+inference-perf-kz4dr          inference-perf   577m   847Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      647m   60Mi    
+router-epp-6d8d85798b-tc7c2   epp              231m   12Mi    
+load 4.59 5.73 10.76 1791019977
+inference-perf-cold-r6dvb     inference-perf   610m   972Mi   
+inference-perf-hot-fxknm      inference-perf   461m   689Mi   
+inference-perf-kz4dr          inference-perf   601m   868Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      701m   60Mi    
+router-epp-6d8d85798b-tc7c2   epp              242m   12Mi    
+load 4.28 5.63 10.67 1791019987
+inference-perf-cold-r6dvb     inference-perf   610m   972Mi   
+inference-perf-hot-fxknm      inference-perf   510m   715Mi   
+inference-perf-kz4dr          inference-perf   750m   894Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      775m   60Mi    
+router-epp-6d8d85798b-tc7c2   epp              259m   12Mi    
+load 5.31 5.80 10.68 1791019997
+inference-perf-cold-r6dvb     inference-perf   610m   972Mi   
+inference-perf-hot-fxknm      inference-perf   510m   715Mi   
+inference-perf-kz4dr          inference-perf   750m   894Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      775m   60Mi    
+router-epp-6d8d85798b-tc7c2   epp              259m   12Mi    
+load 5.10 5.74 10.61 1791020007
+inference-perf-cold-r6dvb     inference-perf   340m   987Mi   
+inference-perf-hot-fxknm      inference-perf   575m   735Mi   
+inference-perf-kz4dr          inference-perf   537m   927Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      631m   60Mi    
+router-epp-6d8d85798b-tc7c2   epp              202m   12Mi    
+load 4.71 5.64 10.52 1791020017
+inference-perf-cold-r6dvb     inference-perf   389m   1004Mi   
+inference-perf-hot-fxknm      inference-perf   422m   756Mi    
+inference-perf-kz4dr          inference-perf   460m   942Mi    
+router-epp-6d8d85798b-tc7c2   envoy-proxy      671m   60Mi     
+router-epp-6d8d85798b-tc7c2   epp              213m   12Mi     
+load 4.52 5.57 10.44 1791020027
+inference-perf-cold-r6dvb     inference-perf   389m   1004Mi   
+inference-perf-hot-fxknm      inference-perf   422m   756Mi    
+inference-perf-kz4dr          inference-perf   460m   942Mi    
+router-epp-6d8d85798b-tc7c2   envoy-proxy      671m   60Mi     
+router-epp-6d8d85798b-tc7c2   epp              213m   12Mi     
+load 5.35 5.71 10.44 1791020037
+inference-perf-cold-r6dvb     inference-perf   349m   1016Mi   
+inference-perf-hot-fxknm      inference-perf   422m   756Mi    
+inference-perf-kz4dr          inference-perf   563m   959Mi    
+router-epp-6d8d85798b-tc7c2   envoy-proxy      517m   60Mi     
+router-epp-6d8d85798b-tc7c2   epp              173m   12Mi     
+load 6.03 5.84 10.43 1791020047
+inference-perf-cold-r6dvb     inference-perf   526m   1042Mi   
+inference-perf-hot-fxknm      inference-perf   402m   779Mi    
+inference-perf-kz4dr          inference-perf   846m   998Mi    
+router-epp-6d8d85798b-tc7c2   envoy-proxy      772m   60Mi     
+router-epp-6d8d85798b-tc7c2   epp              280m   12Mi     
+load 6.32 5.91 10.40 1791020057
+inference-perf-cold-r6dvb     inference-perf   526m   1042Mi   
+inference-perf-hot-fxknm      inference-perf   402m   779Mi    
+inference-perf-kz4dr          inference-perf   846m   998Mi    
+router-epp-6d8d85798b-tc7c2   envoy-proxy      772m   60Mi     
+router-epp-6d8d85798b-tc7c2   epp              280m   12Mi     
+load 5.96 5.85 10.33 1791020067
+inference-perf-cold-r6dvb     inference-perf   655m   1066Mi   
+inference-perf-hot-fxknm      inference-perf   498m   799Mi    
+inference-perf-kz4dr          inference-perf   803m   1022Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      876m   61Mi     
+router-epp-6d8d85798b-tc7c2   epp              245m   12Mi     
+load 5.89 5.83 10.28 1791020077
+inference-perf-cold-r6dvb     inference-perf   592m   1091Mi   
+inference-perf-hot-fxknm      inference-perf   659m   817Mi    
+inference-perf-kz4dr          inference-perf   758m   1045Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      837m   61Mi     
+router-epp-6d8d85798b-tc7c2   epp              245m   12Mi     
+load 5.83 5.82 10.23 1791020087
+inference-perf-cold-r6dvb     inference-perf   592m   1091Mi   
+inference-perf-hot-fxknm      inference-perf   659m   817Mi    
+inference-perf-kz4dr          inference-perf   758m   1045Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      837m   61Mi     
+router-epp-6d8d85798b-tc7c2   epp              245m   12Mi     
+load 5.70 5.80 10.17 1791020098
+inference-perf-cold-r6dvb     inference-perf   666m   1115Mi   
+inference-perf-hot-fxknm      inference-perf   602m   855Mi    
+inference-perf-kz4dr          inference-perf   768m   1088Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      928m   60Mi     
+router-epp-6d8d85798b-tc7c2   epp              273m   13Mi     
+load 5.37 5.72 10.10 1791020108
+inference-perf-cold-r6dvb     inference-perf   659m   1142Mi   
+inference-perf-hot-fxknm      inference-perf   586m   875Mi    
+inference-perf-kz4dr          inference-perf   782m   1114Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      818m   60Mi     
+router-epp-6d8d85798b-tc7c2   epp              273m   13Mi     
+load 5.76 5.80 10.08 1791020118
+inference-perf-cold-r6dvb     inference-perf   659m   1142Mi   
+inference-perf-hot-fxknm      inference-perf   586m   875Mi    
+inference-perf-kz4dr          inference-perf   782m   1114Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      818m   60Mi     
+router-epp-6d8d85798b-tc7c2   epp              273m   13Mi     
+load 5.66 5.77 10.02 1791020128
+inference-perf-cold-r6dvb     inference-perf   583m    1159Mi   
+inference-perf-hot-fxknm      inference-perf   668m    901Mi    
+inference-perf-kz4dr          inference-perf   782m    1114Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1049m   61Mi     
+router-epp-6d8d85798b-tc7c2   epp              276m    13Mi     
+load 5.47 5.73 9.96 1791020138
+inference-perf-cold-r6dvb     inference-perf   699m    1180Mi   
+inference-perf-hot-fxknm      inference-perf   596m    923Mi    
+inference-perf-kz4dr          inference-perf   1168m   1161Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      909m    61Mi     
+router-epp-6d8d85798b-tc7c2   epp              278m    13Mi     
+load 6.20 5.88 9.97 1791020148
+inference-perf-cold-r6dvb     inference-perf   699m    1180Mi   
+inference-perf-hot-fxknm      inference-perf   596m    923Mi    
+inference-perf-kz4dr          inference-perf   1168m   1161Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      909m    61Mi     
+router-epp-6d8d85798b-tc7c2   epp              278m    13Mi     
+load 6.18 5.89 9.93 1791020158
+inference-perf-cold-r6dvb     inference-perf   522m   1209Mi   
+inference-perf-hot-fxknm      inference-perf   788m   952Mi    
+inference-perf-kz4dr          inference-perf   722m   1188Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      909m   61Mi     
+router-epp-6d8d85798b-tc7c2   epp              278m   13Mi     
+load 6.09 5.89 9.86 1791020168
+inference-perf-cold-r6dvb     inference-perf   792m    1241Mi   
+inference-perf-hot-fxknm      inference-perf   1039m   988Mi    
+inference-perf-kz4dr          inference-perf   692m    1226Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      864m    62Mi     
+router-epp-6d8d85798b-tc7c2   epp              289m    13Mi     
+load 6.25 5.93 9.83 1791020178
+inference-perf-cold-r6dvb     inference-perf   792m    1241Mi   
+inference-perf-hot-fxknm      inference-perf   1039m   988Mi    
+inference-perf-kz4dr          inference-perf   692m    1226Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      864m    62Mi     
+router-epp-6d8d85798b-tc7c2   epp              289m    13Mi     
+load 6.51 6.00 9.81 1791020188
+inference-perf-cold-r6dvb     inference-perf   792m    1241Mi   
+inference-perf-hot-fxknm      inference-perf   819m    1015Mi   
+inference-perf-kz4dr          inference-perf   1016m   1262Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1193m   61Mi     
+router-epp-6d8d85798b-tc7c2   epp              306m    13Mi     
+load 7.54 6.23 9.85 1791020198
+inference-perf-cold-r6dvb     inference-perf   708m    1268Mi   
+inference-perf-hot-fxknm      inference-perf   667m    1035Mi   
+inference-perf-kz4dr          inference-perf   941m    1294Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1023m   62Mi     
+router-epp-6d8d85798b-tc7c2   epp              308m    14Mi     
+load 7.94 6.35 9.85 1791020208
+inference-perf-cold-r6dvb     inference-perf   708m    1268Mi   
+inference-perf-hot-fxknm      inference-perf   667m    1035Mi   
+inference-perf-kz4dr          inference-perf   941m    1294Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1023m   62Mi     
+router-epp-6d8d85798b-tc7c2   epp              308m    14Mi     
+load 7.89 6.39 9.82 1791020218
+inference-perf-cold-r6dvb     inference-perf   886m    1298Mi   
+inference-perf-hot-fxknm      inference-perf   702m    1054Mi   
+inference-perf-kz4dr          inference-perf   1230m   1349Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1166m   61Mi     
+router-epp-6d8d85798b-tc7c2   epp              337m    13Mi     
+load 7.36 6.33 9.76 1791020228
+inference-perf-cold-r6dvb     inference-perf   834m    1334Mi   
+inference-perf-hot-fxknm      inference-perf   1025m   1093Mi   
+inference-perf-kz4dr          inference-perf   999m    1388Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1247m   62Mi     
+router-epp-6d8d85798b-tc7c2   epp              330m    14Mi     
+load 7.65 6.42 9.76 1791020238
+inference-perf-cold-r6dvb     inference-perf   834m    1334Mi   
+inference-perf-hot-fxknm      inference-perf   1025m   1093Mi   
+inference-perf-kz4dr          inference-perf   999m    1388Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1247m   62Mi     
+router-epp-6d8d85798b-tc7c2   epp              330m    14Mi     
+load 9.95 6.95 9.89 1791020248
+inference-perf-cold-r6dvb     inference-perf   852m    1368Mi   
+inference-perf-hot-fxknm      inference-perf   751m    1121Mi   
+inference-perf-kz4dr          inference-perf   999m    1388Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1154m   62Mi     
+router-epp-6d8d85798b-tc7c2   epp              341m    14Mi     
+load 9.10 6.87 9.83 1791020259
+inference-perf-cold-r6dvb     inference-perf   817m    1400Mi   
+inference-perf-hot-fxknm      inference-perf   828m    1144Mi   
+inference-perf-kz4dr          inference-perf   1196m   1433Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1185m   63Mi     
+router-epp-6d8d85798b-tc7c2   epp              336m    14Mi     
+load 8.54 6.82 9.79 1791020269
+inference-perf-cold-r6dvb     inference-perf   817m    1400Mi   
+inference-perf-hot-fxknm      inference-perf   828m    1144Mi   
+inference-perf-kz4dr          inference-perf   1196m   1433Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1185m   63Mi     
+router-epp-6d8d85798b-tc7c2   epp              336m    14Mi     
+load 8.39 6.84 9.76 1791020279
+inference-perf-cold-r6dvb     inference-perf   828m    1429Mi   
+inference-perf-hot-fxknm      inference-perf   719m    1164Mi   
+inference-perf-kz4dr          inference-perf   1200m   1484Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      998m    62Mi     
+router-epp-6d8d85798b-tc7c2   epp              327m    14Mi     
+load 9.72 7.17 9.84 1791020289
+inference-perf-cold-r6dvb     inference-perf   828m   1429Mi   
+inference-perf-hot-fxknm      inference-perf   724m   1184Mi   
+inference-perf-kz4dr          inference-perf   858m   1512Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      998m   62Mi     
+router-epp-6d8d85798b-tc7c2   epp              298m   15Mi     
+load 12.42 7.82 10.02 1791020299
+inference-perf-cold-r6dvb     inference-perf   828m   1429Mi   
+inference-perf-hot-fxknm      inference-perf   724m   1184Mi   
+inference-perf-kz4dr          inference-perf   858m   1512Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      998m   62Mi     
+router-epp-6d8d85798b-tc7c2   epp              298m   15Mi     
+load 11.96 7.88 10.01 1791020309
+inference-perf-cold-r6dvb     inference-perf   816m    1465Mi   
+inference-perf-hot-fxknm      inference-perf   994m    1222Mi   
+inference-perf-kz4dr          inference-perf   1268m   1552Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1198m   63Mi     
+router-epp-6d8d85798b-tc7c2   epp              360m    14Mi     
+load 12.25 8.08 10.06 1791020319
+inference-perf-cold-r6dvb     inference-perf   1086m   1509Mi   
+inference-perf-hot-fxknm      inference-perf   1153m   1269Mi   
+inference-perf-kz4dr          inference-perf   1412m   1609Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1552m   63Mi     
+router-epp-6d8d85798b-tc7c2   epp              417m    16Mi     
+load 12.66 8.31 10.11 1791020329
+inference-perf-cold-r6dvb     inference-perf   1086m   1509Mi   
+inference-perf-hot-fxknm      inference-perf   1153m   1269Mi   
+inference-perf-kz4dr          inference-perf   1412m   1609Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1552m   63Mi     
+router-epp-6d8d85798b-tc7c2   epp              417m    16Mi     
+load 12.53 8.43 10.13 1791020339
+inference-perf-cold-r6dvb     inference-perf   896m    1535Mi   
+inference-perf-hot-fxknm      inference-perf   1025m   1300Mi   
+inference-perf-kz4dr          inference-perf   1367m   1661Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1429m   63Mi     
+router-epp-6d8d85798b-tc7c2   epp              379m    16Mi     
+load 13.09 8.68 10.19 1791020349
+inference-perf-cold-r6dvb     inference-perf   1053m   1575Mi   
+inference-perf-hot-fxknm      inference-perf   1025m   1300Mi   
+inference-perf-kz4dr          inference-perf   1657m   1706Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1514m   64Mi     
+router-epp-6d8d85798b-tc7c2   epp              394m    16Mi     
+load 14.07 9.02 10.29 1791020359
+inference-perf-cold-r6dvb     inference-perf   1053m   1575Mi   
+inference-perf-hot-fxknm      inference-perf   1025m   1300Mi   
+inference-perf-kz4dr          inference-perf   1657m   1706Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1514m   64Mi     
+router-epp-6d8d85798b-tc7c2   epp              394m    16Mi     
+load 13.96 9.15 10.32 1791020369
+inference-perf-cold-r6dvb     inference-perf   1313m   1604Mi   
+inference-perf-hot-fxknm      inference-perf   973m    1339Mi   
+inference-perf-kz4dr          inference-perf   1443m   1749Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1455m   64Mi     
+router-epp-6d8d85798b-tc7c2   epp              396m    15Mi     
+load 13.41 9.20 10.32 1791020379
+inference-perf-cold-r6dvb     inference-perf   1060m   1644Mi   
+inference-perf-hot-fxknm      inference-perf   854m    1368Mi   
+inference-perf-kz4dr          inference-perf   1370m   1795Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1465m   65Mi     
+router-epp-6d8d85798b-tc7c2   epp              384m    16Mi     
+load 11.97 9.03 10.25 1791020390
+inference-perf-cold-r6dvb     inference-perf   1060m   1644Mi   
+inference-perf-hot-fxknm      inference-perf   854m    1368Mi   
+inference-perf-kz4dr          inference-perf   1370m   1795Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1465m   65Mi     
+router-epp-6d8d85798b-tc7c2   epp              384m    16Mi     
+load 10.85 8.88 10.19 1791020400
+inference-perf-cold-r6dvb     inference-perf   1107m   1683Mi   
+inference-perf-hot-fxknm      inference-perf   1255m   1397Mi   
+inference-perf-kz4dr          inference-perf   1308m   1857Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1425m   64Mi     
+router-epp-6d8d85798b-tc7c2   epp              376m    15Mi     
+load 12.60 9.31 10.32 1791020410
+inference-perf-cold-r6dvb     inference-perf   800m    1709Mi   
+inference-perf-hot-fxknm      inference-perf   1002m   1433Mi   
+inference-perf-kz4dr          inference-perf   1158m   1884Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      958m    64Mi     
+router-epp-6d8d85798b-tc7c2   epp              301m    16Mi     
+load 11.81 9.25 10.29 1791020420
+inference-perf-cold-r6dvb     inference-perf   800m    1709Mi   
+inference-perf-hot-fxknm      inference-perf   1002m   1433Mi   
+inference-perf-kz4dr          inference-perf   1158m   1884Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      958m    64Mi     
+router-epp-6d8d85798b-tc7c2   epp              301m    16Mi     
+load 12.21 9.43 10.33 1791020430
+inference-perf-cold-r6dvb     inference-perf   1417m   1749Mi   
+inference-perf-hot-fxknm      inference-perf   842m    1470Mi   
+inference-perf-kz4dr          inference-perf   1461m   1925Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1711m   65Mi     
+router-epp-6d8d85798b-tc7c2   epp              438m    17Mi     
+load 16.47 10.43 10.65 1791020440
+inference-perf-cold-r6dvb     inference-perf   1221m   1797Mi   
+inference-perf-hot-fxknm      inference-perf   1248m   1527Mi   
+inference-perf-kz4dr          inference-perf   1550m   1989Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1720m   67Mi     
+router-epp-6d8d85798b-tc7c2   epp              401m    18Mi     
+load 15.75 10.48 10.66 1791020450
+inference-perf-cold-r6dvb     inference-perf   1221m   1797Mi   
+inference-perf-hot-fxknm      inference-perf   1248m   1527Mi   
+inference-perf-kz4dr          inference-perf   1550m   1989Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1720m   67Mi     
+router-epp-6d8d85798b-tc7c2   epp              401m    18Mi     
+load 17.50 11.03 10.84 1791020460
+inference-perf-cold-r6dvb     inference-perf   1317m   1844Mi   
+inference-perf-hot-fxknm      inference-perf   1264m   1561Mi   
+inference-perf-kz4dr          inference-perf   1580m   2028Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1720m   67Mi     
+router-epp-6d8d85798b-tc7c2   epp              455m    19Mi     
+load 18.07 11.36 10.95 1791020470
+inference-perf-cold-r6dvb     inference-perf   1317m   1844Mi   
+inference-perf-hot-fxknm      inference-perf   1254m   1601Mi   
+inference-perf-kz4dr          inference-perf   1545m   2075Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1604m   67Mi     
+router-epp-6d8d85798b-tc7c2   epp              421m    19Mi     
+load 19.80 11.95 11.15 1791020480
+inference-perf-cold-r6dvb     inference-perf   1317m   1844Mi   
+inference-perf-hot-fxknm      inference-perf   1254m   1601Mi   
+inference-perf-kz4dr          inference-perf   1545m   2075Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1604m   67Mi     
+router-epp-6d8d85798b-tc7c2   epp              421m    19Mi     
+load 22.75 12.86 11.45 1791020490
+inference-perf-cold-r6dvb     inference-perf   1098m   1884Mi   
+inference-perf-hot-fxknm      inference-perf   1420m   1640Mi   
+inference-perf-kz4dr          inference-perf   1866m   2122Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1808m   68Mi     
+router-epp-6d8d85798b-tc7c2   epp              421m    19Mi     
+load 22.82 13.19 11.58 1791020500
+inference-perf-cold-r6dvb     inference-perf   1271m   1932Mi   
+inference-perf-hot-fxknm      inference-perf   1269m   1680Mi   
+inference-perf-kz4dr          inference-perf   1963m   2191Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1853m   68Mi     
+router-epp-6d8d85798b-tc7c2   epp              461m    18Mi     
+load 25.88 14.16 11.91 1791020510
+inference-perf-cold-r6dvb     inference-perf   1271m   1932Mi   
+inference-perf-hot-fxknm      inference-perf   1269m   1680Mi   
+inference-perf-kz4dr          inference-perf   1963m   2191Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1853m   68Mi     
+router-epp-6d8d85798b-tc7c2   epp              461m    18Mi     
+load 23.76 14.10 11.91 1791020521
+inference-perf-cold-r6dvb     inference-perf   1287m   1979Mi   
+inference-perf-hot-fxknm      inference-perf   1122m   1707Mi   
+inference-perf-kz4dr          inference-perf   1626m   2228Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1791m   68Mi     
+router-epp-6d8d85798b-tc7c2   epp              455m    18Mi     
+load 21.75 13.99 11.90 1791020531
+inference-perf-cold-r6dvb     inference-perf   1235m   2009Mi   
+inference-perf-hot-fxknm      inference-perf   1262m   1751Mi   
+inference-perf-kz4dr          inference-perf   1350m   2332Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1408m   68Mi     
+router-epp-6d8d85798b-tc7c2   epp              455m    19Mi     
+load 22.43 14.38 12.05 1791020541
+inference-perf-cold-r6dvb     inference-perf   1235m   2009Mi   
+inference-perf-hot-fxknm      inference-perf   1262m   1751Mi   
+inference-perf-kz4dr          inference-perf   1350m   2332Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1408m   68Mi     
+router-epp-6d8d85798b-tc7c2   epp              455m    19Mi     
+load 25.33 15.27 12.37 1791020551
+inference-perf-cold-r6dvb     inference-perf   1066m   2050Mi   
+inference-perf-hot-fxknm      inference-perf   863m    1775Mi   
+inference-perf-kz4dr          inference-perf   1755m   2384Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1605m   69Mi     
+router-epp-6d8d85798b-tc7c2   epp              338m    18Mi     
+load 27.21 16.02 12.64 1791020561
+inference-perf-cold-r6dvb     inference-perf   1437m   2083Mi   
+inference-perf-hot-fxknm      inference-perf   1293m   1807Mi   
+inference-perf-kz4dr          inference-perf   2092m   2429Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1883m   69Mi     
+router-epp-6d8d85798b-tc7c2   epp              471m    20Mi     
+load 28.28 16.61 12.87 1791020571
+inference-perf-cold-r6dvb     inference-perf   1437m   2083Mi   
+inference-perf-hot-fxknm      inference-perf   1293m   1807Mi   
+inference-perf-kz4dr          inference-perf   2092m   2429Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1883m   69Mi     
+router-epp-6d8d85798b-tc7c2   epp              471m    20Mi     
+load 30.79 17.53 13.21 1791020581
+inference-perf-cold-r6dvb     inference-perf   1391m   2134Mi   
+inference-perf-hot-fxknm      inference-perf   1209m   1855Mi   
+inference-perf-kz4dr          inference-perf   1937m   2473Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1945m   70Mi     
+router-epp-6d8d85798b-tc7c2   epp              479m    22Mi     
+load 29.44 17.69 13.31 1791020591
+inference-perf-cold-r6dvb     inference-perf   1566m   2186Mi   
+inference-perf-hot-fxknm      inference-perf   1313m   1894Mi   
+inference-perf-kz4dr          inference-perf   1774m   2560Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1939m   71Mi     
+router-epp-6d8d85798b-tc7c2   epp              482m    24Mi     
+load 30.91 18.40 13.58 1791020601
+inference-perf-cold-r6dvb     inference-perf   1566m   2186Mi   
+inference-perf-hot-fxknm      inference-perf   1313m   1894Mi   
+inference-perf-kz4dr          inference-perf   1774m   2560Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1939m   71Mi     
+router-epp-6d8d85798b-tc7c2   epp              482m    24Mi     
+load 28.03 18.20 13.57 1791020611
+inference-perf-cold-r6dvb     inference-perf   1476m   2236Mi   
+inference-perf-hot-fxknm      inference-perf   1471m   1927Mi   
+inference-perf-kz4dr          inference-perf   1774m   2560Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1945m   72Mi     
+router-epp-6d8d85798b-tc7c2   epp              481m    23Mi     
+load 27.93 18.51 13.72 1791020621
+inference-perf-cold-r6dvb     inference-perf   1446m   2270Mi   
+inference-perf-hot-fxknm      inference-perf   1412m   1981Mi   
+inference-perf-kz4dr          inference-perf   1787m   2652Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1936m   72Mi     
+router-epp-6d8d85798b-tc7c2   epp              480m    23Mi     
+load 29.30 19.11 13.97 1791020631
+inference-perf-cold-r6dvb     inference-perf   1446m   2270Mi   
+inference-perf-hot-fxknm      inference-perf   1412m   1981Mi   
+inference-perf-kz4dr          inference-perf   1787m   2652Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1936m   72Mi     
+router-epp-6d8d85798b-tc7c2   epp              480m    23Mi     
+load 29.46 19.49 14.15 1791020641
+inference-perf-cold-r6dvb     inference-perf   1446m   2270Mi   
+inference-perf-hot-fxknm      inference-perf   1424m   2031Mi   
+inference-perf-kz4dr          inference-perf   1912m   2710Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1952m   74Mi     
+router-epp-6d8d85798b-tc7c2   epp              480m    26Mi     
+load 27.82 19.46 14.20 1791020652
+inference-perf-cold-r6dvb     inference-perf   1402m   2323Mi   
+inference-perf-hot-fxknm      inference-perf   1540m   2076Mi   
+inference-perf-kz4dr          inference-perf   1799m   2774Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1945m   75Mi     
+router-epp-6d8d85798b-tc7c2   epp              484m    30Mi     
+load 24.01 18.92 14.08 1791020662
+inference-perf-hot-fxknm      inference-perf   1540m   2076Mi   
+inference-perf-kz4dr          inference-perf   1799m   2774Mi   
+router-epp-6d8d85798b-tc7c2   envoy-proxy      1945m   75Mi     
+router-epp-6d8d85798b-tc7c2   epp              484m    30Mi     

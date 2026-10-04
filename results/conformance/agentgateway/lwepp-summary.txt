@@ -1,0 +1,16 @@
+2026-10-01T22:11:21+00:00 lwepp: agentgateway v1.5.0, gie v1.6.2,  22:11:21 up 5 days,  8:26, 1999 users,  load average: 1.43, 1.89, 2.15
+    --- PASS: TestConformance/EppUnAvailableFailOpen (2.44s)
+    --- PASS: TestConformance/GatewayDestinationEndpointServed (0.34s)
+    --- PASS: TestConformance/GatewayFollowingEPPRouting (0.52s)
+    --- PASS: TestConformance/GatewayFollowingEPPRoutingWithDataParallelism (0.46s)
+    --- PASS: TestConformance/GatewayWeightedAcrossTwoInferencePools (214.88s)
+    --- PASS: TestConformance/HTTPRouteInvalidInferencePoolRef (0.30s)
+    --- PASS: TestConformance/HTTPRouteMultipleGatewaysDifferentPools (0.53s)
+    --- PASS: TestConformance/InferencePoolAccepted (1.16s)
+    --- PASS: TestConformance/InferencePoolAppProtocol (0.91s)
+    --- PASS: TestConformance/InferencePoolHTTPRoutePortValidation (0.88s)
+    --- PASS: TestConformance/InferencePoolInvalidEPPService (0.49s)
+    --- PASS: TestConformance/InferencePoolMissingEPPRef (0.52s)
+    --- PASS: TestConformance/HTTPRouteMultipleRulesDifferentPools (0.43s)
+    --- PASS: TestConformance/InferencePoolResolvedRefsCondition (10.62s)
+ok  	sigs.k8s.io/gateway-api-inference-extension/conformance	285.172s

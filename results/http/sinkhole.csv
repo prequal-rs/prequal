@@ -1,0 +1,4 @@
+policy,estimator,q_rif,probes_per_query,piggyback,failing_servers,cpu_work,servers,clients,load,completed,errors,mean_ms,p50_ms,p90_ms,p99_ms,p999_ms,client_cpu_us_per_req,client_peak_mb,server_cpu_us_per_req,server_peak_mb,probes_sent,probes_answered,probes_timed_out,probes_failed,probes_skipped
+P2cEwma,Rif,0.6,3,false,2,false,20,20,0.8,9790,2270,79.2,41.7,179.6,651.0,1052.2,513.1,32.4,287.6,33.3,0,0,0,0,0
+Prequal,Rif,0.6,0.5,true,2,false,20,20,0.8,11445,617,62.2,36.9,137.3,414.2,824.4,832.9,45.8,459.9,51.2,7214,7213,0,0,0
+Prequal,Rif,0.6,0.5,true,2,false,20,20,0.8,11644,416,64.9,38.8,146.8,409.2,760.6,956.2,46.3,577.9,53.2,7212,7212,0,0,0

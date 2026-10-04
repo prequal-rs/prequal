@@ -1,0 +1,6 @@
+apiVersion: v2
+name: prequal-router
+description: OpenAI-compatible router that balances vLLM/SGLang replicas with Prequal
+type: application
+version: 0.1.0
+appVersion: "0.1.0"

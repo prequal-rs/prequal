@@ -1,0 +1,5 @@
+router:
+  epp:
+    # The tag is the chart release (LLMD_VERSION in tools/kind-llmd.sh).
+    image: {registry: ghcr.io/llm-d, repository: llm-d-router-endpoint-picker, pullPolicy: IfNotPresent}
+    flags: {v: 4, enable-pprof: "true", tracing: "false"}

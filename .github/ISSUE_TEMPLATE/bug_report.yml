@@ -1,0 +1,52 @@
+name: Bug report
+description: Something behaves wrongly or crashes
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: Commands, flags, and a minimal request if routing is involved.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Crate or binary and version
+      placeholder: prequal-epp 0.1.0 (prequal-epp --version)
+    validations:
+      required: true
+  - type: dropdown
+    id: deployment
+    attributes:
+      label: Deployment
+      options:
+        - llm-d chart
+        - Other Inference Extension gateway
+        - Standalone router
+        - Library
+  - type: input
+    id: engine
+    attributes:
+      label: Engine and version
+      placeholder: vLLM 0.x, SGLang 0.x, or llm-d-inference-sim
+  - type: input
+    id: os
+    attributes:
+      label: OS and Rust version
+      description: Only if you built from source.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or metrics
+      render: text

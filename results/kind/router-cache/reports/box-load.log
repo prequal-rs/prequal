@@ -1,0 +1,6 @@
+2026-10-03T19:32:46+00:00 prequal-cache-r1 (v0.11.0):  19:32:46 up 7 days,  5:47, 289 users,  load average: 4.60, 2.50, 1.19 26G available
+2026-10-03T19:52:37+00:00 llmd-cache-r1 (v0.11.0):  19:52:37 up 7 days,  6:07, 289 users,  load average: 7.62, 13.97, 8.89 24G available
+2026-10-03T20:13:09+00:00 prequal-cache-r2 (v0.11.0):  20:13:09 up 7 days,  6:28, 288 users,  load average: 6.36, 22.11, 17.41 26G available
+2026-10-03T20:32:48+00:00 llmd-cache-r2 (v0.11.0):  20:32:48 up 7 days,  6:47, 288 users,  load average: 7.33, 12.65, 12.42 26G available
+2026-10-03T20:53:38+00:00 prequal-cache-two-epp-r1 (v0.11.0):  20:53:38 up 7 days,  7:08, 288 users,  load average: 6.43, 22.77, 19.59 26G available
+2026-10-03T21:14:40+00:00 llmd-cache-two-epp-r1 (v0.11.0):  21:14:40 up 7 days,  7:29, 288 users,  load average: 7.35, 15.80, 15.50 21G available

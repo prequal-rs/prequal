@@ -1,0 +1,12 @@
+{"run":"llmd-v2-loaded-r1","stage":"stage_0","ok":300,"fail":0,"ttft_p50":0.02889917849097401,"ttft_p90":0.060198274796130144,"ttft_p99":0.10714560472057195,"out_tok_s":5105.006984693183,"prefix_hit":null}
+{"run":"llmd-v2-loaded-r1","stage":"stage_1","ok":2700,"fail":0,"ttft_p50":0.035553488007280976,"ttft_p90":0.05068911181297153,"ttft_p99":0.13502550271688946,"out_tok_s":15509.447588742969,"prefix_hit":null}
+{"run":"llmd-v2-loaded-r1","stage":"stage_2","ok":4500,"fail":0,"ttft_p50":0.06560771304066293,"ttft_p90":0.15793214256409555,"ttft_p99":0.3070505969016824,"out_tok_s":25807.546785709303,"prefix_hit":null}
+{"run":"llmd-v2-loaded-r2","stage":"stage_0","ok":300,"fail":0,"ttft_p50":0.032916647964157164,"ttft_p90":0.059689178859116516,"ttft_p99":0.09813292013655878,"out_tok_s":5122.624292757557,"prefix_hit":null}
+{"run":"llmd-v2-loaded-r2","stage":"stage_1","ok":2700,"fail":0,"ttft_p50":0.03590096547850408,"ttft_p90":0.05387844110373407,"ttft_p99":0.14674126331054108,"out_tok_s":15498.072433041832,"prefix_hit":null}
+{"run":"llmd-v2-loaded-r2","stage":"stage_2","ok":4500,"fail":0,"ttft_p50":0.06550640598288737,"ttft_p90":0.16307739731855692,"ttft_p99":0.29641364289214844,"out_tok_s":25778.27364523649,"prefix_hit":null}
+{"run":"prequal-v2-loaded-r1","stage":"stage_0","ok":300,"fail":0,"ttft_p50":0.03486187898670323,"ttft_p90":0.055448779801372444,"ttft_p99":0.08808371432649435,"out_tok_s":5114.108682065737,"prefix_hit":null}
+{"run":"prequal-v2-loaded-r1","stage":"stage_1","ok":2700,"fail":0,"ttft_p50":0.023828685487387702,"ttft_p90":0.02875855527818203,"ttft_p99":0.1092978610680437,"out_tok_s":15521.317362332535,"prefix_hit":null}
+{"run":"prequal-v2-loaded-r1","stage":"stage_2","ok":4500,"fail":0,"ttft_p50":0.03316291997907683,"ttft_p90":0.06420770812546833,"ttft_p99":0.15986458274768703,"out_tok_s":25836.971459895456,"prefix_hit":null}
+{"run":"prequal-v2-loaded-r2","stage":"stage_0","ok":300,"fail":0,"ttft_p50":0.032725636003306136,"ttft_p90":0.057601798808900644,"ttft_p99":0.0850526952371,"out_tok_s":5111.234632826078,"prefix_hit":null}
+{"run":"prequal-v2-loaded-r2","stage":"stage_1","ok":2700,"fail":0,"ttft_p50":0.02378003450576216,"ttft_p90":0.02800672929151915,"ttft_p99":0.11364128797024022,"out_tok_s":15520.904788385338,"prefix_hit":null}
+{"run":"prequal-v2-loaded-r2","stage":"stage_2","ok":4500,"fail":0,"ttft_p50":0.03337173501495272,"ttft_p90":0.08763152859755781,"ttft_p99":0.21178705973900058,"out_tok_s":25815.932769471743,"prefix_hit":null}

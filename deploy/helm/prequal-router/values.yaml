@@ -1,0 +1,45 @@
+image:
+  repository: ghcr.io/prequal-rs/prequal-router
+  tag: "0.1.0"
+  pullPolicy: IfNotPresent
+
+replicaCount: 2
+
+# The Kubernetes Service in front of the model-server pods. The router lists its EndpointSlices
+# every 2 s and routes only to ready pods.
+target:
+  service: vllm
+  namespace: ""   # defaults to the release namespace
+  port: http      # Service port name or number
+  engine: vllm    # vllm | sglang: which /metrics names to read
+  metricsPath: /metrics
+
+policy: prequal   # prequal or a baseline (prequal-router --help)
+extraArgs: []
+
+# Container port; non-root can't bind below 1024, so a Service on :80 maps here.
+listenPort: 8000
+# /healthz (liveness) and /readyz (a replica is up and the router is not draining); not exposed by the Service.
+adminPort: 8081
+service:
+  type: ClusterIP
+  port: 8000
+
+resources:
+  requests:
+    cpu: 250m
+    memory: 64Mi
+  limits:
+    memory: 256Mi
+
+podSecurityContext:
+  runAsNonRoot: true
+securityContext:
+  allowPrivilegeEscalation: false
+  readOnlyRootFilesystem: true
+  capabilities:
+    drop: [ALL]
+
+nodeSelector: {}
+tolerations: []
+affinity: {}

@@ -1,0 +1,143 @@
+load 4.80 4.87 3.78 1790875476
+load 4.22 4.74 3.75 1790875486
+load 3.73 4.61 3.72 1790875496
+inference-perf-8p6vv         inference-perf   846m   229Mi    
+router-epp-5758ddbcc-tsvjg   router           17m    1Mi      
+load 3.46 4.53 3.70 1790875506
+inference-perf-8p6vv         inference-perf   998m   234Mi    
+router-epp-5758ddbcc-tsvjg   router           10m    1Mi      
+load 3.08 4.41 3.67 1790875516
+inference-perf-8p6vv         inference-perf   998m   234Mi    
+router-epp-5758ddbcc-tsvjg   router           10m    1Mi      
+load 2.76 4.30 3.64 1790875526
+inference-perf-8p6vv         inference-perf   998m   302Mi    
+router-epp-5758ddbcc-tsvjg   router           10m    1Mi      
+load 2.80 4.26 3.63 1790875536
+inference-perf-8p6vv         inference-perf   998m   569Mi    
+router-epp-5758ddbcc-tsvjg   router           133m   6Mi      
+load 3.13 4.28 3.65 1790875546
+inference-perf-8p6vv         inference-perf   998m   569Mi    
+router-epp-5758ddbcc-tsvjg   router           133m   6Mi      
+load 3.11 4.24 3.64 1790875556
+inference-perf-8p6vv         inference-perf   1315m   643Mi    
+router-epp-5758ddbcc-tsvjg   router           219m    9Mi      
+load 3.04 4.18 3.63 1790875566
+inference-perf-8p6vv         inference-perf   1454m   688Mi    
+router-epp-5758ddbcc-tsvjg   router           218m    9Mi      
+load 3.12 4.16 3.63 1790875577
+inference-perf-8p6vv         inference-perf   1454m   688Mi    
+router-epp-5758ddbcc-tsvjg   router           218m    9Mi      
+load 3.26 4.15 3.63 1790875587
+inference-perf-8p6vv         inference-perf   1247m   736Mi    
+router-epp-5758ddbcc-tsvjg   router           218m    9Mi      
+load 3.70 4.22 3.66 1790875597
+inference-perf-8p6vv         inference-perf   1761m   833Mi    
+router-epp-5758ddbcc-tsvjg   router           235m    9Mi      
+load 4.22 4.31 3.69 1790875607
+inference-perf-8p6vv         inference-perf   1761m   833Mi    
+router-epp-5758ddbcc-tsvjg   router           235m    9Mi      
+load 4.26 4.31 3.70 1790875617
+inference-perf-8p6vv         inference-perf   3438m   957Mi    
+router-epp-5758ddbcc-tsvjg   router           371m    9Mi      
+load 4.55 4.37 3.73 1790875627
+inference-perf-8p6vv         inference-perf   3391m   1116Mi   
+router-epp-5758ddbcc-tsvjg   router           371m    9Mi      
+load 4.46 4.36 3.73 1790875637
+inference-perf-8p6vv         inference-perf   3391m   1116Mi   
+router-epp-5758ddbcc-tsvjg   router           371m    9Mi      
+load 5.20 4.53 3.79 1790875647
+inference-perf-8p6vv         inference-perf   3419m   1249Mi   
+router-epp-5758ddbcc-tsvjg   router           391m    11Mi     
+load 5.47 4.61 3.83 1790875657
+inference-perf-8p6vv         inference-perf   3494m   1339Mi   
+router-epp-5758ddbcc-tsvjg   router           396m    11Mi     
+load 5.77 4.70 3.87 1790875667
+inference-perf-8p6vv         inference-perf   3494m   1339Mi   
+router-epp-5758ddbcc-tsvjg   router           396m    11Mi     
+load 8.01 5.22 4.05 1790875677
+inference-perf-8p6vv         inference-perf   3386m   1496Mi   
+router-epp-5758ddbcc-tsvjg   router           383m    11Mi     
+load 8.89 5.51 4.15 1790875687
+inference-perf-8p6vv         inference-perf   3124m   1632Mi   
+router-epp-5758ddbcc-tsvjg   router           394m    11Mi     
+load 9.35 5.71 4.23 1790875697
+inference-perf-8p6vv         inference-perf   3124m   1632Mi   
+router-epp-5758ddbcc-tsvjg   router           394m    11Mi     
+load 8.52 5.65 4.23 1790875707
+inference-perf-8p6vv         inference-perf   3831m   1815Mi   
+router-epp-5758ddbcc-tsvjg   router           405m    12Mi     
+load 8.15 5.67 4.25 1790875717
+inference-perf-8p6vv         inference-perf   3831m   1815Mi   
+router-epp-5758ddbcc-tsvjg   router           414m    11Mi     
+load 8.50 5.83 4.32 1790875728
+inference-perf-8p6vv         inference-perf   3831m   1815Mi   
+router-epp-5758ddbcc-tsvjg   router           414m    11Mi     
+load 8.25 5.86 4.35 1790875738
+inference-perf-8p6vv         inference-perf   3680m   2087Mi   
+router-epp-5758ddbcc-tsvjg   router           438m    12Mi     
+load 8.21 5.93 4.38 1790875748
+inference-perf-8p6vv         inference-perf   3221m   2204Mi   
+router-epp-5758ddbcc-tsvjg   router           373m    11Mi     
+load 7.56 5.87 4.38 1790875758
+inference-perf-8p6vv         inference-perf   3221m   2204Mi   
+router-epp-5758ddbcc-tsvjg   router           373m    11Mi     
+load 7.61 5.94 4.42 1790875768
+inference-perf-8p6vv         inference-perf   3641m   2388Mi   
+router-epp-5758ddbcc-tsvjg   router           412m    11Mi     
+load 9.01 6.29 4.55 1790875778
+inference-perf-8p6vv         inference-perf   3129m   2526Mi   
+router-epp-5758ddbcc-tsvjg   router           407m    12Mi     
+load 11.24 6.86 4.75 1790875788
+inference-perf-8p6vv         inference-perf   3129m   2526Mi   
+router-epp-5758ddbcc-tsvjg   router           407m    12Mi     
+load 11.92 7.16 4.87 1790875798
+inference-perf-8p6vv         inference-perf   6227m   2807Mi   
+router-epp-5758ddbcc-tsvjg   router           712m    13Mi     
+load 12.72 7.50 5.01 1790875808
+inference-perf-8p6vv         inference-perf   5970m   3061Mi   
+router-epp-5758ddbcc-tsvjg   router           712m    13Mi     
+load 13.13 7.76 5.12 1790875818
+inference-perf-8p6vv         inference-perf   5970m   3061Mi   
+router-epp-5758ddbcc-tsvjg   router           712m    13Mi     
+load 12.72 7.85 5.18 1790875828
+inference-perf-8p6vv         inference-perf   5748m   3241Mi   
+router-epp-5758ddbcc-tsvjg   router           669m    13Mi     
+load 11.91 7.84 5.20 1790875838
+inference-perf-8p6vv         inference-perf   6164m   3410Mi   
+router-epp-5758ddbcc-tsvjg   router           644m    14Mi     
+load 11.17 7.81 5.22 1790875848
+inference-perf-8p6vv         inference-perf   5786m   3588Mi   
+router-epp-5758ddbcc-tsvjg   router           670m    14Mi     
+load 11.60 8.01 5.32 1790875859
+inference-perf-8p6vv         inference-perf   5786m   3588Mi   
+router-epp-5758ddbcc-tsvjg   router           670m    14Mi     
+load 11.98 8.21 5.41 1790875869
+inference-perf-8p6vv         inference-perf   5986m   3886Mi   
+router-epp-5758ddbcc-tsvjg   router           643m    13Mi     
+load 12.34 8.42 5.51 1790875879
+inference-perf-8p6vv         inference-perf   5816m   4044Mi   
+router-epp-5758ddbcc-tsvjg   router           643m    13Mi     
+load 13.06 8.70 5.63 1790875889
+inference-perf-8p6vv         inference-perf   5816m   4044Mi   
+router-epp-5758ddbcc-tsvjg   router           643m    13Mi     
+load 12.57 8.74 5.68 1790875899
+inference-perf-8p6vv         inference-perf   5979m   4207Mi   
+router-epp-5758ddbcc-tsvjg   router           666m    13Mi     
+load 11.70 8.69 5.69 1790875909
+inference-perf-8p6vv         inference-perf   5898m   4654Mi   
+router-epp-5758ddbcc-tsvjg   router           649m    15Mi     
+load 10.59 8.55 5.68 1790875919
+inference-perf-8p6vv         inference-perf   5898m   4654Mi   
+router-epp-5758ddbcc-tsvjg   router           649m    15Mi     
+load 12.33 9.00 5.86 1790875929
+inference-perf-8p6vv         inference-perf   5793m   4811Mi   
+router-epp-5758ddbcc-tsvjg   router           647m    15Mi     
+load 13.21 9.35 6.03 1790875939
+inference-perf-8p6vv         inference-perf   5562m   4977Mi   
+router-epp-5758ddbcc-tsvjg   router           639m    15Mi     
+load 12.97 9.43 6.09 1790875949
+inference-perf-8p6vv         inference-perf   5562m   4977Mi   
+router-epp-5758ddbcc-tsvjg   router           639m    15Mi     
+load 11.21 9.17 6.04 1790875960
+inference-perf-8p6vv         inference-perf   5843m   5250Mi   
+router-epp-5758ddbcc-tsvjg   router           660m    14Mi     

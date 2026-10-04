@@ -1,0 +1,26 @@
+[package]
+name = "prequal-core"
+description = "Runtime-agnostic core of the Prequal load balancer: probe pool, hot-cold lexicographic selection, outlier ejection"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+readme = "README.md"
+keywords = ["load-balancing", "prequal", "tail-latency", "rpc", "probing"]
+categories = ["network-programming", "algorithms"]
+
+[lints]
+workspace = true
+
+[dependencies]
+rand = { version = "0.10.3", default-features = false, features = ["alloc"] }
+
+[dev-dependencies]
+divan = "0.1.21"
+proptest = "1.11.0"
+rand = "0.10.3"
+
+[[bench]]
+name = "select"
+harness = false

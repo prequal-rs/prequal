@@ -1,0 +1,4 @@
+# Lean mode (docs/lean-mode.md), layered on arm-prequal.yaml; the driver also sets Envoy's response_body_mode to NONE.
+router:
+  epp:
+    flags: {prefill-signal: scrape}
