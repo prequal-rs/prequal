@@ -14,6 +14,7 @@ mod cli;
 mod diagnose;
 mod engine;
 mod load;
+mod oracle;
 mod order;
 mod popularity;
 mod preset;
@@ -62,7 +63,10 @@ async fn main() -> io::Result<()> {
             (false, PrefillSignal::FirstChunk) => args.policy.clone(),
             (false, signal) => format!("{}@{signal}", args.policy),
         } + if args.end_at_first_token { "+close" } else { "" }
-            + &args.queue_order.map_or_else(String::new, |order| format!("+queue-{order}")),
+            + &args.queue_order.map_or_else(String::new, |order| format!("+queue-{order}"))
+            + &args.oracle_index.map_or_else(String::new, |mode| format!("+oracle-{mode:?}").to_lowercase())
+            + &args.gossip_ms.map_or_else(String::new, |ms| format!("+gossip-{ms}ms"))
+            + &if args.gossip_loss > 0.0 { format!("-loss-{}", args.gossip_loss) } else { String::new() },
         routers: if direct { 0 } else { args.routers },
         engines: if args.targets.is_empty() { args.engines } else { args.targets.len() },
         workload: match (&args.trace, args.workload) {
@@ -105,6 +109,10 @@ fn run_virtual(args: &Args, specs: &[EngineSpec], schedule: &Schedule, source: S
         diagnose: args.diagnose.then(|| args.tier_ends()),
         hidden: engine::Hidden { kv_capacity: args.hide_kv_capacity, prefix_counters: args.hide_prefix_counters },
         queue_order: args.queue_order,
+        oracle: args.oracle_index,
+        restart_router_at: args.router_restart_s.map(Duration::from_secs_f64),
+        gossip_delay: args.gossip_ms.map(Duration::from_millis),
+        gossip_loss: args.gossip_loss,
     };
     let (outcomes, totals) = vsim::run(&setup, source);
     report::print_totals(&totals);

@@ -12,6 +12,7 @@ use crate::{
     engine::EngineStats,
     fleet::Replica,
     heat::HeatTracker,
+    index::ExactIndex,
     policy::{Policy, PolicyRng},
     prompt::Prompt,
     ticket::{PrefillSignal, Ticket},
@@ -55,6 +56,7 @@ struct State {
     queued: usize,
     heat: HeatTracker,
     next_ticket: u64,
+    exact: Option<Arc<dyn ExactIndex>>,
 }
 
 /// Seconds over which prefix heat decays.
@@ -93,6 +95,7 @@ impl Scheduler {
             queued: 0,
             heat: HeatTracker::new(HEAT_TAU_SECS),
             next_ticket: 0,
+            exact: None,
         };
         let shared = Shared { policy, state: Mutex::new(state), room: Notify::new() };
         Self { shared: Arc::new(shared) }
@@ -117,6 +120,13 @@ impl Scheduler {
     #[must_use]
     pub fn with_clock(self, clock: Clock) -> Self {
         self.state().clock = clock;
+        self
+    }
+
+    /// Lets `index` decide how much of a prompt each replica holds, in place of the approximate index alone.
+    #[must_use]
+    pub fn with_exact_index(self, index: Arc<dyn ExactIndex>) -> Self {
+        self.state().exact = Some(index);
         self
     }
 
@@ -158,6 +168,12 @@ impl Scheduler {
     /// Applies a good scrape of `addr` (clearing any down mark); unknown addresses are ignored.
     pub fn observe(&self, addr: SocketAddr, stats: EngineStats) {
         self.shared.update_replica(addr, |replica, now| replica.observe(stats, now));
+    }
+
+    /// Records that another router sent `prompt` to `addr`, so this router's index covers their placements too.
+    /// Experimental.
+    pub fn observe_peer_route(&self, addr: SocketAddr, prompt: &Prompt) {
+        self.shared.update_replica(addr, |replica, _| replica.record_peer_route(prompt));
     }
 
     /// Marks `addr` down until its next good scrape (a failed scrape).

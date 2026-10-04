@@ -14,6 +14,7 @@ were on one shared 12-thread Linux host with no GPUs. Section numbers refer to b
 | [`kind/router/`](kind/router) | §5, standalone router vs Envoy + picker (llm-d v0.10) | `tools/kind-llmd.sh run <router\|prequal\|llmd> <label> loaded` |
 | [`vsim-routercache/`](vsim-routercache) | §4: current scorecard (`scorecard-final.md`), collapse, production-trace replays (`trf-s1/`, `trf-s2/`), and the router-only ideas that lost | `tools/vsim-compete.sh`, `tools/vsim-collapse.sh`, `tools/llm-compare.mjs` |
 | [`vsim-cachefix/`](vsim-cachefix) | The calibration fix in simulation: scorecards before and after, bytes-per-token sweeps with `--diagnose` | as above, `llm-bench --virtual --token-bytes N --diagnose` |
+| [`vsim-peer-index/`](vsim-peer-index), [`vsim-peer-index-restart/`](vsim-peer-index-restart) | [docs/peer-index.md](../docs/peer-index.md): one to four routers, today against the engine-cache oracle and placement gossip | `tools/vsim-peer-index.sh` (arms in that page) |
 | [`vsim/`](vsim) | The scorecard before the cache-pressure work | `tools/vsim-compete.sh` |
 | [`vsim-collapse/`](vsim-collapse) | Host-slowdown collapse counts before the cache-pressure work | `tools/vsim-collapse.sh` |
 | [`vsim-lean/`](vsim-lean) | [Lean mode](../docs/lean-mode.md) in simulation | `tools/vsim-compete.sh` with `--prefill-signal scrape` |

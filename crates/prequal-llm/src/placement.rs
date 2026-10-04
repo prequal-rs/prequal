@@ -45,7 +45,13 @@ impl Scheduler {
             }
             state.replicas[i].sample_load(now);
         });
-        let matched: Vec<usize> = slots.iter().map(|&i| state.replicas[i].matched_blocks(prompt)).collect();
+        let matched_blocks = |i: usize| {
+            let replica = &state.replicas[i];
+            let approximate = replica.matched_blocks(prompt);
+            let Some(exact) = &state.exact else { return approximate };
+            exact.matched_blocks(replica.addr, prompt, approximate).min(prompt.blocks.len())
+        };
+        let matched: Vec<usize> = slots.iter().copied().map(matched_blocks).collect();
         let key = prompt_key(prompt, matched.iter().copied().min().unwrap_or(0));
         let head = *heat.get_or_insert_with(|| key.map_or_else(HeadStats::default, |key| state.heat.record(key, now)));
         let candidates: Vec<Candidate> = slots

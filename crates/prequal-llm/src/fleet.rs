@@ -148,6 +148,13 @@ impl Replica {
         self.active_tokens += prompt.tokens + output;
     }
 
+    /// Another router sent `prompt` here: the engine caches it and counts its tokens like this router's own, so it
+    /// enters the cache model and its calibration ([`Replica::calibrate`]).
+    pub fn record_peer_route(&mut self, prompt: &Prompt) {
+        self.cache.touch(&prompt.blocks);
+        self.prefilled_bytes += (prompt.tokens * BYTES_PER_TOKEN as u64) as f64;
+    }
+
     /// A request routed here finished prefill, which is when the engine counts its prompt and cache hits (both in
     /// this router's estimated tokens).
     pub fn count_prefilled(&mut self, prompt_tokens: u64, hit_tokens: u64) {

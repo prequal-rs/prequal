@@ -1,4 +1,16 @@
-use std::collections::{BTreeMap, HashMap};
+use std::{
+    collections::{BTreeMap, HashMap},
+    net::SocketAddr,
+};
+
+use crate::prompt::Prompt;
+
+/// Outside knowledge of replicas' prefix caches (an engine's KV events, a simulator's ground truth), consulted at
+/// each routing decision ([`Scheduler::with_exact_index`](crate::Scheduler::with_exact_index)). Experimental.
+pub trait ExactIndex: Send + Sync {
+    /// Leading blocks of `prompt` that `addr` holds; `approximate` is what the scheduler's own index believes.
+    fn matched_blocks(&self, addr: SocketAddr, prompt: &Prompt, approximate: usize) -> usize;
+}
 
 /// One replica's approximate prefix cache: the blocks this router sent it, least recently used evicted first.
 #[derive(Debug)]

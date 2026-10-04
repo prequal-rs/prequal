@@ -46,6 +46,7 @@ mod scrape;
 mod ticket;
 
 pub use engine::{Engine, EngineProber, EngineStats};
+pub use index::ExactIndex;
 pub use policy::Policy;
 pub use prompt::{
     BLOCK_BYTES, BYTES_PER_TOKEN, DEFAULT_MAX_TOKENS, Prompt, completion_tokens, max_tokens, prompt_region,

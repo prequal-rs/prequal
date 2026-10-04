@@ -256,6 +256,29 @@ fn non_finite_scrapes_are_sanitized_before_routing() {
     assert_eq!(scheduler.up_count(), 1);
 }
 
+struct HeldBy(SocketAddr);
+
+impl ExactIndex for HeldBy {
+    fn matched_blocks(&self, addr: SocketAddr, prompt: &Prompt, _: usize) -> usize {
+        if addr == self.0 { prompt.blocks.len() } else { 0 }
+    }
+}
+
+#[test]
+fn exact_index_and_peer_routes_say_where_a_prompt_is_cached() {
+    for holder in addrs(4) {
+        let exact = Scheduler::new(by_name("prequal").unwrap()).with_exact_index(Arc::new(HeldBy(holder)));
+        let told = Scheduler::new(by_name("prequal").unwrap());
+        for scheduler in [&exact, &told] {
+            scheduler.sync(addrs(4));
+            idle(scheduler);
+        }
+        told.observe_peer_route(holder, &prompt(0, 0));
+        assert_eq!(exact.route(&prompt(0, 0), 10, |_| true).unwrap().addr(), holder);
+        assert_eq!(told.route(&prompt(0, 0), 10, |_| true).unwrap().addr(), holder);
+    }
+}
+
 #[test]
 fn every_named_policy_routes() {
     for name in crate::policy::NAMES {

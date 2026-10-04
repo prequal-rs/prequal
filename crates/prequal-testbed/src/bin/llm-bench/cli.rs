@@ -6,6 +6,7 @@ use clap::{Parser, ValueEnum};
 use prequal_llm::PrefillSignal;
 
 use crate::{
+    oracle::OracleIndex,
     order::QueueOrder,
     preset::{EngineSpec, Preset, Slowdown},
     trace::Trace,
@@ -85,6 +86,18 @@ pub struct Args {
     /// Virtual time only: engines don't publish prefix-cache counters (as SGLang), so routers can't calibrate.
     #[arg(long)]
     pub hide_prefix_counters: bool,
+    /// Virtual time only: routers see the engines' real prefix caches (see `oracle`).
+    #[arg(long, value_enum)]
+    pub oracle_index: Option<OracleIndex>,
+    /// Virtual time only: router 0 restarts, forgetting everything, this many seconds into the run.
+    #[arg(long)]
+    pub router_restart_s: Option<f64>,
+    /// Virtual time only: routers tell each other where they sent each prompt, this many milliseconds later.
+    #[arg(long)]
+    pub gossip_ms: Option<u64>,
+    /// Share of `--gossip-ms` messages that never arrive.
+    #[arg(long, default_value_t = 0.0, requires = "gossip_ms")]
+    pub gossip_loss: f64,
     /// Engines admit by a stamped priority instead of FCFS (see `order`): `oracle`, `noisy:<sigma>` or `history`,
     /// optionally `+kv`, then `@<seconds>` of aging. Over HTTP the load generator stamps the request body.
     #[arg(long)]

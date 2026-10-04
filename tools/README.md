@@ -15,6 +15,7 @@ published numbers are in [results/README.md](../results/README.md).
 | `vsim-compete.sh` | All policies × scenarios × seeds in the virtual-time simulator (`llm-bench --virtual`), in parallel |
 | `vsim-collapse.sh` | Collapse frequency under simulated host slowdown on the kind `loaded` workload |
 | `vsim-queue-order.sh` | Engine queue orders (`llm-bench --queue-order`, vLLM priority scheduling) against FCFS on the Mooncake traces; `ENGINE_ARGS` points it at real vLLM servers instead of virtual time |
+| `vsim-peer-index.sh` | What routers sharing a fleet gain from an engine-cache oracle or from gossiping placements, for one to four routers ([docs/peer-index.md](../docs/peer-index.md)) |
 | `queue-order-summary.mjs` | `vsim-queue-order.sh` output as per-trace markdown tables, each order's change against FCFS |
 | `llm-compete.sh` | The same scenarios over real sockets (`llm-bench` with `prequal-router` processes); slow |
 | `llm-compare.mjs` | Per-stage win/loss table of one policy against a rival, from `vsim-compete.sh` or `llm-compete.sh` output |

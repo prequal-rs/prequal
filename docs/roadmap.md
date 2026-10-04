@@ -148,6 +148,11 @@ engine's replay buffer), non-LRU eviction and out-of-band traffic.
 prequal with and without it on `cache`, `cache-two-routers`, a router-restart scenario and an `lfu` engine. Build the
 integration only if the oracle gains at least 3 hit-rate points or 10% at TTFT p90 in some scenario.
 
+**Gate result (2026-10-04).** Met only with several routers: no gain with one, 3–24 hit-rate points with two to four.
+Routers telling each other their placements reach the same hit rate with no engine feature, so that comes first and
+this project waits on a case it can't cover (traffic bypassing the routers, non-LRU eviction). The lfu-engine scenario
+was not run. See [peer-index](peer-index.md).
+
 **Engine side.** vLLM and SGLang `--kv-events-config`: ZMQ PUB with `BlockStored`, `BlockRemoved`,
 `AllBlocksCleared`, a replay endpoint, and a `medium` field for tiers. vLLM switched event encoding from arrays to
 maps in v0.24, so a parser must handle both.
@@ -213,6 +218,8 @@ eviction-age expiry.
 ## Router-only work alongside
 
 These need no engine features:
+- **Placement gossip between routers.** Simulated only so far; it recovers the hit rate several routers lose
+  ([peer-index](peer-index.md)). To build: peer discovery and the message channel.
 - **Benchmark arms:** SGLang's Rust router (event-aware) and llm-d's "sticky until saturated" configuration.
 - **A shared-system-prompt workload in kind.** Keying prompts past the prefix every replica holds is measured only
   on production-trace replays in the simulator so far.
