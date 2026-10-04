@@ -35,6 +35,7 @@ Reference for running `prequal-epp` and `prequal-router`. `--help` on either bin
 | `--ext-proc-threads`, `--ext-proc-coalesce-us` | 1, 100 | Threads serving ext_proc, and how long a thread lingers to batch messages. Raise threads only if one saturates |
 | `--admission-limit` | 0 | Experimental late binding; leave off |
 | `--engine-priority-handicap` | off | Experimental. Stamps each body with a vLLM `priority` so requests predicted to hold little KV run first; a costlier request is overtaken only by ones arriving within this long after it (e.g. `60s`). `InferenceObjective` priority still dominates, and a client's own `priority` is overridden. vLLM only (`--engine vllm`), and every server needs `--scheduling-policy priority`, which otherwise rejects the field. The stamps are not comparable with llm-d's `requestHandler.propagatePriority` values, so don't front one pool with both. Learns output lengths from response bodies, so lean mode leaves it in arrival order |
+| `--gossip-peers`, `--gossip-port` | off, 9004 | Experimental. `host:port` resolving to every picker of the pool (a headless Service, re-resolved every 5 s): each picker tells the others over UDP where it sent each prompt, so replicas share one view of the fleet's prefix caches ([peer-index](peer-index.md)). The messages are unauthenticated; restrict the port to the pickers ([`gossip.yaml`](../deploy/epp/gossip.yaml)) |
 | `--conformance-test-hooks` | off | Test only: the conformance suite's endpoint-selection request header and served-endpoint response header. Any client could use the header to steer its requests |
 
 **llm-d chart flags.** `prequal-epp` accepts the flags llm-d's charts and the conformance manifests pass to every
@@ -56,7 +57,7 @@ a `--config-file`'s plugins are not applied (routing is set by `--policy`) or th
   but ignored (active-active). Each replica keeps its own prefix-cache model. Replicas notice each other's load on
   the shared fleet and then place new prefixes by a hash they all share, so they mostly agree. One replica still gets
   the best cache hit rate: in the [cache-pressure benchmark](benchmarks.md#2-cache-pressure), 0.625 with one picker
-  against 0.563 with two.
+  against 0.563 with two. `--gossip-peers` (experimental) is meant to close that gap.
 
 ### Request outcomes
 

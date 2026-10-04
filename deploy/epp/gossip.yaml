@@ -1,0 +1,35 @@
+# Placement gossip between prequal-epp replicas (experimental, see docs/peer-index.md). Apply beside
+# prequal-epp.yaml, run more than one replica, and add to the container:
+#   args:  - --gossip-peers=prequal-epp-peers.$(POD_NAMESPACE).svc:9004
+#   ports: - {name: gossip, containerPort: 9004, protocol: UDP}
+apiVersion: v1
+kind: Service
+metadata:
+  name: prequal-epp-peers
+spec:
+  clusterIP: None                  # headless: the name resolves to every picker pod
+  publishNotReadyAddresses: true   # a starting picker should hear placements before it serves
+  selector: {app: prequal-epp}
+  ports:
+    - {name: gossip, port: 9004, targetPort: gossip, protocol: UDP}
+---
+# Gossip is unauthenticated: only the pickers may reach the port. The first rule keeps the other ports open;
+# tighten it to your gateway and Prometheus.
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: prequal-epp-gossip
+spec:
+  podSelector:
+    matchLabels: {app: prequal-epp}
+  policyTypes: [Ingress]
+  ingress:
+    - ports:
+        - {port: 9002, protocol: TCP}
+        - {port: 9003, protocol: TCP}
+        - {port: 9090, protocol: TCP}
+    - from:
+        - podSelector:
+            matchLabels: {app: prequal-epp}
+      ports:
+        - {port: 9004, protocol: UDP}

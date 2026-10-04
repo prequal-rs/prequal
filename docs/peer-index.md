@@ -6,7 +6,8 @@ of the engines' caches would recover (the gate for [roadmap](roadmap.md) project
 telling each other where they sent each prompt recovers the same without any engine feature.
 
 All numbers are from the virtual-time simulator (`llm-bench --virtual`), policy `prequal`, mean of five seeds. Nothing
-here has run on real engines, and the gossip mechanism exists only in the simulator.
+here has run on real engines. `prequal-epp` implements the gossip ([below](#using-it)), but that implementation has
+not been benchmarked yet.
 
 ## Arms
 
@@ -64,6 +65,15 @@ both 66.4%.
 - Project 4's gate (3 hit-rate points or 10% at TTFT p90) is met only with several routers, and gossip meets it too,
   with no engine feature, tokenizer or ZMQ dependency. KV events would still cover what gossip cannot: traffic that
   bypasses the routers and engines whose eviction isn't LRU. Neither is measured.
+
+## Using it
+
+`prequal-epp --gossip-peers <host:port>` turns it on (`prequal_llm::Gossip`); `prequal-router` has no flag yet. The
+name must resolve to every picker of the pool, which a headless Service does: [`deploy/epp/gossip.yaml`](../deploy/epp/gossip.yaml)
+has one, with a NetworkPolicy. After each pick a picker sends the chosen replica and the prompt's block hashes to every
+peer in UDP datagrams of at most 160 blocks (41 KB of prompt), never waiting on the socket. Each datagram is applied on
+its own, so a lost one only shortens what the peer believes is cached. Nothing is authenticated: whoever can reach the
+port can steer routing.
 
 ## Not measured
 

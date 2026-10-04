@@ -85,6 +85,14 @@ pub struct Args {
     /// vLLM rejects a non-zero priority otherwise.
     #[arg(long, value_parser = parse_duration)]
     pub engine_priority_handicap: Option<Duration>,
+    /// Experimental. `host:port` resolving to every picker of this pool (a headless Service on `--gossip-port`): each
+    /// tells the others where it sent each prompt, so their prefix indexes agree. The messages are unauthenticated UDP;
+    /// expose the port to the pickers only.
+    #[arg(long)]
+    pub gossip_peers: Option<String>,
+    /// UDP port this picker's gossip listens on, when `--gossip-peers` is set.
+    #[arg(long, default_value_t = 9004)]
+    pub gossip_port: u16,
     /// Gateway API Inference Extension conformance hooks, as in the reference lwepp: the `test-epp-endpoint-selection`
     /// request header restricts candidates and responses report `x-conformance-test-served-endpoint`. Test only:
     /// any client could steer its requests.

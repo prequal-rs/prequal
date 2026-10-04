@@ -31,7 +31,7 @@ use std::{collections::BTreeMap, error::Error, net::SocketAddr, process::ExitCod
 
 use clap::Parser;
 use envoy_types::pb::envoy::service::ext_proc::v3::external_processor_server::ExternalProcessorServer;
-use prequal_llm::{Engine, EngineProber, Scheduler, policy, scrape_forever};
+use prequal_llm::{Engine, EngineProber, Gossip, Scheduler, policy, scrape_forever};
 use tokio::net::TcpListener;
 use tokio_stream::wrappers::TcpListenerStream;
 use tonic::transport::{Identity, Server, ServerTlsConfig};
@@ -44,6 +44,8 @@ use crate::{
 /// Envoy keeps ext_proc connections open indefinitely; pinging them frees the streams of a peer that vanished.
 const KEEPALIVE_INTERVAL: Duration = Duration::from_secs(30);
 const KEEPALIVE_TIMEOUT: Duration = Duration::from_secs(10);
+/// How often `--gossip-peers` is resolved again, to follow pickers starting and stopping.
+const GOSSIP_PEER_REFRESH: Duration = Duration::from_secs(5);
 
 type BoxError = Box<dyn Error + Send + Sync>;
 
@@ -55,6 +57,17 @@ fn self_signed() -> Result<Identity, rcgen::Error> {
 async fn bind(what: &str, port: u16) -> Result<TcpListener, BoxError> {
     let addr = SocketAddr::from(([0, 0, 0, 0], port));
     TcpListener::bind(addr).await.map_err(|e| format!("cannot listen for {what} on {addr}: {e}").into())
+}
+
+/// Starts placement gossip with the pickers `peers` resolves to (see `prequal_llm::Gossip`).
+async fn gossip(scheduler: Scheduler, peers: String, port: u16) -> Result<Arc<Gossip>, BoxError> {
+    let addr = SocketAddr::from(([0, 0, 0, 0], port));
+    let gossip = Gossip::bind(addr).await.map_err(|e| format!("cannot listen for gossip on {addr}: {e}"))?;
+    let gossip = Arc::new(gossip);
+    let (receiving, following) = (Arc::clone(&gossip), Arc::clone(&gossip));
+    tokio::spawn(async move { receiving.receive(&scheduler).await });
+    tokio::spawn(async move { following.follow(&peers, GOSSIP_PEER_REFRESH).await });
+    Ok(gossip)
 }
 
 #[tokio::main]
@@ -85,7 +98,11 @@ async fn run(args: Args) -> Result<(), BoxError> {
         limit => scheduler.with_admission_limit(limit),
     };
     let scrape_interval = Duration::from_millis(args.scrape_ms);
-    let picker = Arc::new(Picker::new(scheduler.clone(), args.fallbacks, scrape_interval));
+    let picker = Picker::new(scheduler.clone(), args.fallbacks, scrape_interval);
+    let picker = Arc::new(match args.gossip_peers.clone() {
+        Some(peers) => picker.with_gossip(gossip(scheduler.clone(), peers, args.gossip_port).await?),
+        None => picker,
+    });
     let prober = EngineProber::new(args.engine).with_path(&args.metrics_path);
     tokio::spawn(scrape_forever(scheduler, prober, scrape_interval));
     let pool_name = args.pool_name.clone().unwrap_or_default();

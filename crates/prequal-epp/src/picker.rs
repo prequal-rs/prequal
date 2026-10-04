@@ -1,11 +1,14 @@
 use std::{
     collections::BTreeMap,
     net::SocketAddr,
-    sync::atomic::{AtomicBool, Ordering},
+    sync::{
+        Arc,
+        atomic::{AtomicBool, Ordering},
+    },
     time::{Duration, Instant},
 };
 
-use prequal_llm::{Prompt, Scheduler, Ticket};
+use prequal_llm::{Gossip, Prompt, Scheduler, Ticket};
 use rand::seq::SliceRandom;
 
 use crate::{board::Board, metadata::subset_allows, objectives::Objectives, responses::LlmdError};
@@ -45,13 +48,21 @@ pub struct Picker {
     synced: AtomicBool,
     board: Board,
     objectives: Objectives,
+    gossip: Option<Arc<Gossip>>,
 }
 
 impl Picker {
     /// `scrape_interval` is how often the scheduler's replicas are scraped (it sets how stale a scrape may get).
     pub fn new(scheduler: Scheduler, fallbacks: usize, scrape_interval: Duration) -> Self {
         let board = Board::new(scrape_interval);
-        Self { scheduler, fallbacks, synced: AtomicBool::new(false), board, objectives: Objectives::default() }
+        let synced = AtomicBool::new(false);
+        Self { scheduler, fallbacks, synced, board, objectives: Objectives::default(), gossip: None }
+    }
+
+    /// Announces every pick to the other pickers of this pool (`--gossip-peers`).
+    pub fn with_gossip(mut self, gossip: Arc<Gossip>) -> Self {
+        self.gossip = Some(gossip);
+        self
     }
 
     /// Replaces the endpoint set (address to llm-d endpoint name); the picker is ready from the first sync.
@@ -90,6 +101,9 @@ impl Picker {
             return Err(Reject::Saturated);
         }
         let ticket = self.scheduler.acquire(prompt, output_tokens, allowed).await.ok_or(Reject::Unavailable)?;
+        if let Some(gossip) = &self.gossip {
+            gossip.announce(ticket.addr(), prompt);
+        }
         let mut others: Vec<SocketAddr> =
             self.scheduler.addrs().into_iter().filter(|a| *a != ticket.addr() && allowed(a)).collect();
         others.shuffle(&mut rand::rng());

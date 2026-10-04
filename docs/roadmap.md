@@ -218,8 +218,9 @@ eviction-age expiry.
 ## Router-only work alongside
 
 These need no engine features:
-- **Placement gossip between routers.** Simulated only so far; it recovers the hit rate several routers lose
-  ([peer-index](peer-index.md)). To build: peer discovery and the message channel.
+- **Placement gossip between routers.** In simulation it recovers the hit rate several routers lose
+  ([peer-index](peer-index.md)). `prequal-epp --gossip-peers` implements it; still to do: a kind benchmark with two
+  pickers, and the same flag on `prequal-router`.
 - **Benchmark arms:** SGLang's Rust router (event-aware) and llm-d's "sticky until saturated" configuration.
 - **A shared-system-prompt workload in kind.** Keying prompts past the prefix every replica holds is measured only
   on production-trace replays in the simulator so far.

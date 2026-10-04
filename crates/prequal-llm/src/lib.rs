@@ -34,6 +34,7 @@
 
 mod engine;
 mod fleet;
+mod gossip;
 mod heat;
 mod index;
 pub mod metrics;
@@ -46,6 +47,7 @@ mod scrape;
 mod ticket;
 
 pub use engine::{Engine, EngineProber, EngineStats};
+pub use gossip::Gossip;
 pub use index::ExactIndex;
 pub use policy::Policy;
 pub use prompt::{

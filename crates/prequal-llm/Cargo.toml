@@ -18,7 +18,7 @@ prequal-core.workspace = true
 prequal-tower.workspace = true
 futures-util = "0.3.34"
 rand = "0.10.3"
-tokio = { version = "1.53.1", features = ["time", "sync", "macros"] }
+tokio = { version = "1.53.1", features = ["time", "sync", "macros", "net"] }
 
 [dev-dependencies]
 tokio = { version = "1.53.1", features = ["time", "sync", "rt", "macros"] }

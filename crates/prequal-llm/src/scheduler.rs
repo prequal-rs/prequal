@@ -176,6 +176,11 @@ impl Scheduler {
         self.shared.update_replica(addr, |replica, _| replica.record_peer_route(prompt));
     }
 
+    #[cfg(test)]
+    pub(crate) fn matched_blocks(&self, addr: SocketAddr, prompt: &Prompt) -> usize {
+        self.state().replicas.iter().find(|r| r.addr == addr).map_or(0, |r| r.matched_blocks(prompt))
+    }
+
     /// Marks `addr` down until its next good scrape (a failed scrape).
     pub fn mark_down(&self, addr: SocketAddr) {
         self.shared.update_replica(addr, |replica, _| replica.down = true);
