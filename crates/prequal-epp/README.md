@@ -6,7 +6,7 @@ prefix-cache-aware scheduler. It serves `InferencePool` v1 and accepts the flags
 replace their picker image as-is.
 
 ```sh
-cargo install prequal-epp
+cargo install --git https://github.com/prequal-rs/prequal prequal-epp
 prequal-epp --pool-name vllm-pool --pool-namespace inference                     # in-cluster
 prequal-epp --endpoints 127.0.0.1:8001,127.0.0.1:8002 --secure-serving=false    # local testing
 ```

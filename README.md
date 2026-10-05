@@ -64,6 +64,9 @@ Round-robin's hit rate varies from run to run (32–44% across our runs). `RATE`
 (defaults: 10 QPS for 60 s). The settings are in
 [deploy/demo/compose.yaml](deploy/demo/compose.yaml).
 
+The commands below use the images, Helm chart and binaries of the [v0.1.0 release][release], the first one. The
+crates are not on crates.io yet; to build either binary yourself, see [Building from source](#building-from-source).
+
 **Endpoint picker in llm-d.** Point the chart's EPP image at `prequal-epp`. It accepts the chart's existing flags.
 
 ```sh
@@ -79,13 +82,12 @@ verify the switch and how to roll back.
 **Standalone router.** This mode needs no gateway: one binary sits in front of your replicas.
 
 ```sh
-# Prebuilt binary from GitHub Releases (also aarch64-unknown-linux-musl and aarch64-apple-darwin).
-# Replicas are given by address or DNS name; a name with several addresses adds each one.
+# From source. Replicas are given by address or DNS name; a name with several addresses adds each one.
+cargo run --release -p prequal-router -- --listen 0.0.0.0:8000 --engine vllm vllm-0:8000 vllm-1:8000
+
+# Prebuilt binary from the v0.1.0 release (also aarch64-unknown-linux-musl and aarch64-apple-darwin)
 curl -L https://github.com/prequal-rs/prequal/releases/download/v0.1.0/prequal-0.1.0-x86_64-unknown-linux-musl.tar.gz | tar xz
 prequal-0.1.0-x86_64-unknown-linux-musl/prequal-router --listen 0.0.0.0:8000 --engine vllm vllm-0:8000 vllm-1:8000
-
-# From source
-cargo run --release -p prequal-router -- --listen 0.0.0.0:8000 --engine vllm vllm-0:8000 vllm-1:8000
 
 # Kubernetes, discovering ready pods behind a Service
 helm install router oci://ghcr.io/prequal-rs/charts/prequal-router --version 0.1.0 \
@@ -233,3 +235,4 @@ otherwise, any contribution you intentionally submit for inclusion is dual-licen
 [sim]: https://github.com/llm-d/llm-d-inference-sim
 [perf]: https://github.com/kubernetes-sigs/inference-perf
 [paper]: https://www.usenix.org/conference/nsdi24/presentation/wydrowski
+[release]: https://github.com/prequal-rs/prequal/releases/tag/v0.1.0

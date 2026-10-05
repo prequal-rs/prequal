@@ -4,14 +4,14 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the crates follow
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.1.0 - Unreleased
+## 0.1.0 - 2026-10-05
 
 First release.
 
 ### Added
 
-- `prequal-epp`: Gateway API Inference Extension endpoint picker (Envoy `ext_proc`, `InferencePool` v1), a drop-in
-  replacement for llm-d's picker image.
+- `prequal-epp`: Gateway API Inference Extension endpoint picker (Envoy `ext_proc`, `InferencePool` v1), which replaces
+  llm-d's picker image ([what it doesn't implement](docs/migrating-from-llm-d.md#check-what-you-would-lose)).
   - Accepts the flags of llm-d's `llm-d-router-standalone` chart (v0.10, v0.11) and warns about any that ask for
     behaviour it doesn't have.
   - llm-d's `llm_d_epp_*` metrics with llm-d's names, labels and buckets, including per-request, pool and per-endpoint

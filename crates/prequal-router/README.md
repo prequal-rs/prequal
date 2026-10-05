@@ -5,7 +5,7 @@ prompt, routes it with [`prequal-llm`](../prequal-llm)'s load- and prefix-cache-
 Prometheus metrics, and streams responses (including SSE) back unchanged.
 
 ```sh
-cargo install prequal-router
+cargo install --git https://github.com/prequal-rs/prequal prequal-router
 prequal-router --listen 0.0.0.0:8000 --engine vllm 10.0.0.1:8000 10.0.0.2:8000
 # in Kubernetes, discovering ready pods behind a Service (needs RBAC `list` on endpointslices):
 prequal-router --listen 0.0.0.0:8000 --engine vllm --k8s-service inference/vllm --k8s-port http
