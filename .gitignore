@@ -1,3 +1,8 @@
 target/
 /out/
 results/vsim-collapse/*.part
+results/kind/**/.barrier-*
+results/kind/**/.ip-stage-barrier.py
+results/vllm-queue-order-4070/**/run.log
+results/vllm-queue-order-4070/ready.txt
+/research/
