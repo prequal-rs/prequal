@@ -1,7 +1,8 @@
 # Results
 
 Raw data behind the numbers in the [README](../README.md) and [docs/benchmarks.md](../docs/benchmarks.md). All runs
-were on one shared 12-thread Linux host with no GPUs. Section numbers refer to benchmarks.md.
+were on one shared 12-thread Linux host with no GPUs, except `vllm-queue-order-4070/`. Section numbers refer to
+benchmarks.md.
 
 | Directory | Backs | Produced by |
 |---|---|---|
@@ -19,6 +20,7 @@ were on one shared 12-thread Linux host with no GPUs. Section numbers refer to b
 | [`vsim/`](vsim) | The scorecard before the cache-pressure work | `tools/vsim-compete.sh` |
 | [`vsim-collapse/`](vsim-collapse) | Host-slowdown collapse counts before the cache-pressure work | `tools/vsim-collapse.sh` |
 | [`vsim-lean/`](vsim-lean) | [Lean mode](../docs/lean-mode.md) in simulation | `tools/vsim-compete.sh` with `--prefill-signal scrape` |
+| [`vllm-queue-order-4070/`](vllm-queue-order-4070) | Engine queue order on a real vLLM (one RTX 4070 Ti SUPER): `fcfs` against `history+kv@60` | `vllm-queue-order-4070/run-arms.sh`, wrapping `tools/vsim-queue-order.sh` |
 | [`http/`](http) | README, general-purpose load balancing (p99 vs `p2c` + `PeakEwma`, failing servers) | `tools/grid.sh`, `prequal-testbed` |
 | [`conformance/`](conformance) | [docs/conformance.md](../docs/conformance.md): GIE suite reports and per-test summaries, per gateway and picker | `[GATEWAY=istio] tools/gie-conformance.sh run <lwepp\|prequal>` |
 
@@ -56,6 +58,22 @@ re-run of `job1`; those `-top.log` files predate a sampler fix, so §5's resourc
 `*.csv` are `llm-bench --virtual` rows, one per policy, seed and load stage; `scorecard*.md` are the comparisons.
 Runs are deterministic per seed. Commands are in [benchmarks.md §4](../docs/benchmarks.md#4-virtual-time-simulator);
 the production traces are fetched by `tools/fetch-mooncake-traces.sh` and not stored here.
+
+## vllm-queue-order-4070
+
+`llm-bench --direct --queue-order` against vLLM 0.31.0+cu129 serving `Qwen/Qwen2.5-1.5B-Instruct` in WSL2 on an RTX
+4070 Ti SUPER (16 GB), started by `serve.sh` with `--scheduling-policy priority --kv-cache-memory-bytes 4G`. The
+trace is the first 600 lines of Mooncake `toolagent.jsonl` at speed 0.3 (chosen from `calib/`), not the full trace.
+vLLM is restarted before every run and the arm order alternates by seed.
+
+- `toolagent.<speed>.<arm>.<seed>.csv`: one run each; `node tools/queue-order-summary.mjs results/vllm-queue-order-4070`
+  for the comparison, `node results/vllm-queue-order-4070/per-seed.mjs` per run.
+- `engine.tsv`: vLLM's peak KV-cache usage, preemptions and prefix-cache counters per run.
+- `check-priority.mjs`, `check-chat.mjs`: what vLLM does with the `priority` field. The last duplicate key wins, and
+  0.31.0 accepts a non-zero priority without `--scheduling-policy priority`.
+- vLLM's GPU allocations in WSL count against Windows' commit limit, as does the VM's page cache: when the host is
+  near the limit the server fails to start with a spurious CUDA out-of-memory error, so `stop.sh` drops the page
+  cache and `run-arms.sh` retries the start.
 
 ## http
 

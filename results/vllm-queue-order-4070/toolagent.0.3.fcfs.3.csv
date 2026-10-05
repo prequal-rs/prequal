@@ -1,0 +1,6 @@
+trace,speed,policy,routers,engines,load,rps,completed,errors,ttft_p50_ms,ttft_p99_ms,e2e_p50_ms,e2e_p99_ms,tokens_per_s,workload,stage,stage_rate,concurrency,ttft_p90_ms,prefix_hit_rate,ttft_mean_ms,e2e_mean_ms
+toolagent,0.3,direct,0,1,0.032,1.4,83,0,2076,6062,4255,15670,245,trace,1,1.38,0,5683,0.4302,2393,5909
+toolagent,0.3,direct,0,1,0.037,1.6,96,0,2353,7362,3903,16701,252,trace,2,1.60,0,3687,0.4335,2348,5448
+toolagent,0.3,direct,0,1,0.030,1.3,78,0,1278,5035,4276,20310,277,trace,3,1.30,0,3396,0.3965,1625,5545
+toolagent,0.3,direct,0,1,0.043,1.8,111,0,3648,7372,7369,21718,391,trace,4,1.85,0,7008,0.3739,3715,9361
+toolagent,0.3,direct,0,1,0.037,1.6,94,0,2775,9402,5815,23126,297,trace,5,1.57,0,5900,0.3853,3417,7984
