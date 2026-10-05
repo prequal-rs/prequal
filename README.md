@@ -18,8 +18,9 @@
 prequal routes requests across vLLM and SGLang replicas. It sends each request to the replica that already has the
 prompt's prefix cached, unless that replica is busy. It ships as two binaries:
 
-- **`prequal-epp`** is an endpoint picker for the Kubernetes [Gateway API Inference Extension][gie]. It is a drop-in
-  replacement for [llm-d][llmd]'s picker.
+- **`prequal-epp`** is an endpoint picker for the Kubernetes [Gateway API Inference Extension][gie]. It replaces the
+  picker image in [llm-d][llmd]'s chart and accepts the chart's flags, but does not implement every llm-d feature
+  ([what you would lose](docs/migrating-from-llm-d.md#check-what-you-would-lose)).
 - **`prequal-router`** is a standalone OpenAI-compatible proxy. It needs no gateway and no Envoy.
 
 Neither binary needs changes to the engines. Both read the Prometheus metrics that vLLM and SGLang already export.
@@ -34,8 +35,14 @@ Compared with llm-d v0.11's endpoint picker, swapping in `prequal-epp` gives:
 - **Higher prefix-cache hit rate** when the KV cache is under pressure (0.563 vs 0.406 with two pickers)
 
 These were measured on llm-d's own benchmark stack in kind, with [simulated engines][sim] (no GPUs) and
-[inference-perf][perf] for load. Methodology, caveats and the full results are in
-[docs/benchmarks.md](docs/benchmarks.md).
+[inference-perf][perf] for load. Three conditions matter when reading them:
+
+- The two-picker figures run two active llm-d pickers. llm-d's chart turns on leader election with two replicas, so
+  only one would serve.
+- The two-picker hit rates are from one round per arm.
+- The llm-d arm logs at `--v=4`, as llm-d's nightly values do; there is no arm with quieter logging.
+
+Methodology, caveats and the full results are in [docs/benchmarks.md](docs/benchmarks.md).
 
 ## Quick start
 
@@ -124,13 +131,15 @@ rationale for each term, and the alternatives that lost in measurement, are docu
 | `prequal-router` | None: the router is the proxy | ~17 ms total | You don't need a gateway and want the lowest total CPU |
 
 In lean mode, picker and Envoy together use half the CPU of default mode. Precision drops slightly on bursty traffic and
-on hot-prefix traffic. llm-d's own picker can't run in this mode.
+on hot-prefix traffic. llm-d's own picker relies on response bodies, so it can't run this way at the same cost
+([details](docs/lean-mode.md)); we have not tested it in this mode. The CPU figures are from the
+[data-plane harness](docs/benchmarks.md#3-data-plane-cost-harness), which stores no raw data.
 
 ## Compatibility
 
 | Component | Status |
 |---|---|
-| vLLM, SGLang | Supported through their Prometheus metrics. Benchmarked on llm-d-inference-sim v0.10.2 only, not on GPUs |
+| vLLM, SGLang | Read through their Prometheus metrics. Benchmarked on llm-d-inference-sim v0.10.2. Neither binary has run against a real engine yet; SGLang is untested |
 | llm-d `llm-d-router-standalone` chart v0.10, v0.11 | Works. The chart's flags are accepted as they are |
 | agentgateway v1.5.0 | Works. Passes the Inference Extension conformance suite v1.6.2 (Gateway profile, 14/14) |
 | Istio 1.31.1 | Does not work ([details](docs/conformance.md#istio)) |
@@ -147,7 +156,9 @@ Exact versions are in [docs/configuration.md](docs/configuration.md#supported-ve
 - **You need Envoy features with the standalone router.** `prequal-router` has no retries and no TLS termination.
 - **You need engine-assisted caching.** KV events, offloaded KV tiers and prefill/decode disaggregation are on the
   [roadmap](docs/roadmap.md), not yet built.
-- **You need results from real GPUs.** All results so far come from simulated engines.
+- **You need results from real GPUs.** The routing results all come from simulated engines. The one run on a real
+  GPU ([results](results/README.md#vllm-queue-order-4070)) tests an experimental engine queue order with the
+  benchmark harness, not the router.
 
 ## Crates
 
@@ -170,7 +181,10 @@ implement the paper for ordinary request/response services. Their load headers a
 
 On a 20-server HTTP testbed at 0.9 load, these crates cut p99 latency by 28–37% against tower's `p2c` + `PeakEwma`.
 In a second test, 2 of the 20 servers failed instantly while reporting no load. The crates avoided about 85% of the
-failed requests. This project is not affiliated with Google.
+failed requests.
+
+This is an independent project. It is not affiliated with or endorsed by Google, llm-d, vLLM, SGLang or the Gateway
+API Inference Extension project.
 
 ## Benchmarks
 
@@ -193,7 +207,7 @@ prequal is pre-release (0.1).
 - `prequal-epp` passes the Gateway API Inference Extension v1.6.2 conformance suite (Gateway profile, 14/14). It was
   tested behind agentgateway v1.5.0. The suite has no EPP profile yet, so this is not a certification. See
   [docs/conformance.md](docs/conformance.md).
-- It has not yet been benchmarked on real GPUs.
+- Neither binary has been benchmarked on real GPUs yet.
 
 ## Building from source
 

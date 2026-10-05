@@ -1,9 +1,9 @@
 # Benchmarks
 
-All results come from one shared 12-thread Linux host, with no GPUs. Treat absolute numbers as indicative; the
-comparisons are like for like: arms alternate, every run starts from cold caches, and each run logs the host's load.
-Every table names the llm-d release, the number of rounds and anything that differed. Raw data:
-[`results/`](../results/README.md).
+All results on this page come from one shared 12-thread Linux host, with no GPUs. Treat absolute numbers as
+indicative; the comparisons are like for like: arms alternate, every run starts from cold caches, and each run logs
+the host's load. Every table names the llm-d release, the number of rounds and anything that differed. Raw data:
+[`results/`](../results/README.md), which also holds one run of the experimental engine queue order on a real vLLM.
 
 1. [llm-d v0.11 in kind](#1-llm-d-v011-in-kind): llm-d's chart, simulator and load generator, only the picker swapped.
 2. [Cache pressure](#2-cache-pressure): simulator KV caches small enough to evict, where routing decides GPU cost.
