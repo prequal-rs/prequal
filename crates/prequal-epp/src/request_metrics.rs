@@ -10,6 +10,8 @@ use std::{
 
 /// Distinct values kept per label before further ones read `other`, as in llm-d.
 const LABEL_VALUE_LIMIT: usize = 1000;
+/// Bytes kept of a label value: both labels are client-supplied, and every scrape repeats them per series.
+const LABEL_VALUE_BYTES: usize = 256;
 /// The flow a request belongs to (only a metric label here: prequal-epp has no flow control).
 pub const FAIRNESS_HEADERS: [&str; 2] = ["x-llm-d-inference-fairness-id", "x-gateway-inference-fairness-id"];
 pub const DEFAULT_FAIRNESS_ID: &str = "default-flow";
@@ -85,6 +87,8 @@ struct Values(Mutex<HashSet<Arc<str>>>);
 
 impl Values {
     fn get(&self, value: &str) -> Arc<str> {
+        let end = (0..=value.len().min(LABEL_VALUE_BYTES)).rev().find(|&i| value.is_char_boundary(i)).unwrap_or(0);
+        let value = &value[..end];
         let mut values = self.0.lock().unwrap_or_else(|p| p.into_inner());
         if let Some(known) = values.get(value) {
             return Arc::clone(known);
@@ -246,5 +250,13 @@ mod tests {
         }
         assert_eq!(&*values.get("one-too-many"), "other");
         assert_eq!(&*values.get("7"), "7");
+    }
+
+    #[test]
+    fn truncates_long_label_values_on_a_char_boundary() {
+        let values = Values::default();
+        assert_eq!(values.get(&"a".repeat(10 * LABEL_VALUE_BYTES)).len(), LABEL_VALUE_BYTES);
+        let kept = values.get(&format!("{}é", "a".repeat(LABEL_VALUE_BYTES - 1)));
+        assert_eq!(kept.len(), LABEL_VALUE_BYTES - 1, "a split two-byte char is dropped whole");
     }
 }

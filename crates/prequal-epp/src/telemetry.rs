@@ -10,8 +10,12 @@ use std::{
 use tokio::{
     io::{AsyncReadExt, AsyncWriteExt},
     net::TcpListener,
+    sync::Semaphore,
 };
 
+/// `/metrics` connections served at once, and how long one may take from accept to the last byte.
+const MAX_SCRAPES: usize = 32;
+const SCRAPE_TIMEOUT: Duration = Duration::from_secs(10);
 const SCHEDULER_LATENCY: &str = "llm_d_epp_scheduler_e2e_duration_seconds";
 const BUCKETS: [f64; 10] = [0.0001, 0.0002, 0.0005, 0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1];
 
@@ -157,6 +161,7 @@ fn process_metrics() -> String {
 /// dropped; failed accepts (e.g. out of descriptors) back off rather than end it.
 pub async fn serve(listener: TcpListener, render: impl Fn() -> String + Send + Sync + 'static) {
     let render = std::sync::Arc::new(render);
+    let scrapes = std::sync::Arc::new(Semaphore::new(MAX_SCRAPES));
     loop {
         let mut stream = match listener.accept().await {
             Ok((stream, _)) => stream,
@@ -166,17 +171,23 @@ pub async fn serve(listener: TcpListener, render: impl Fn() -> String + Send + S
                 continue;
             }
         };
+        // Over the cap the connection is closed unanswered: the port is unauthenticated.
+        let Ok(permit) = std::sync::Arc::clone(&scrapes).try_acquire_owned() else { continue };
         let render = std::sync::Arc::clone(&render);
         tokio::spawn(async move {
-            let mut request = [0u8; 1024];
-            let _ = stream.read(&mut request).await;
-            let body = render();
-            let head = format!(
-                "HTTP/1.1 200 OK\r\ncontent-type: text/plain; version=0.0.4\r\ncontent-length: {}\r\nconnection: close\r\n\r\n",
-                body.len()
-            );
-            let _ = stream.write_all(head.as_bytes()).await;
-            let _ = stream.write_all(body.as_bytes()).await;
+            let _permit = permit;
+            let _ = tokio::time::timeout(SCRAPE_TIMEOUT, async {
+                let mut request = [0u8; 1024];
+                let _ = stream.read(&mut request).await;
+                let body = render();
+                let head = format!(
+                    "HTTP/1.1 200 OK\r\ncontent-type: text/plain; version=0.0.4\r\ncontent-length: {}\r\nconnection: close\r\n\r\n",
+                    body.len()
+                );
+                let _ = stream.write_all(head.as_bytes()).await;
+                let _ = stream.write_all(body.as_bytes()).await;
+            })
+            .await;
         });
     }
 }

@@ -12,6 +12,8 @@ use tokio::{
 
 const MAX_IDLE_PER_ADDR: usize = 4;
 const MAX_BODY: usize = 4 << 20;
+/// Status line plus headers.
+const MAX_HEAD: u64 = 64 << 10;
 
 /// A parsed `GET` response: status, lower-cased header names, and the body.
 #[derive(Clone, Debug)]
@@ -77,8 +79,10 @@ async fn exchange(conn: &mut BufReader<TcpStream>, addr: SocketAddr, path: &str)
     let request = format!("GET {path} HTTP/1.1\r\nHost: {addr}\r\nUser-Agent: prequal\r\n\r\n");
     conn.get_mut().write_all(request.as_bytes()).await?;
 
+    let too_large = || io::Error::new(io::ErrorKind::InvalidData, "probe response head too large");
+    let mut head = (&mut *conn).take(MAX_HEAD);
     let mut line = String::new();
-    conn.read_line(&mut line).await?;
+    head.read_line(&mut line).await?;
     let status = line
         .split(' ')
         .nth(1)
@@ -87,8 +91,8 @@ async fn exchange(conn: &mut BufReader<TcpStream>, addr: SocketAddr, path: &str)
     let (mut headers, mut body_len, mut reusable) = (Vec::new(), None, true);
     loop {
         line.clear();
-        if conn.read_line(&mut line).await? == 0 {
-            return Err(io::ErrorKind::UnexpectedEof.into());
+        if head.read_line(&mut line).await? == 0 || !line.ends_with('\n') {
+            return Err(if head.limit() == 0 { too_large() } else { io::ErrorKind::UnexpectedEof.into() });
         }
         let header = line.trim_end();
         if header.is_empty() {
