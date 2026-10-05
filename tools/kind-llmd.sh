@@ -153,6 +153,7 @@ run() {
   deploy_sims "$workload"
   k rollout restart deploy/llm-d-sim && k rollout status deploy/llm-d-sim --timeout=5m  # cold caches
   ! helm status router -n bench >/dev/null 2>&1 || helm uninstall router -n bench --wait
+  [ ! -f "$cfg/arm-$arm-extra.yaml" ] || k apply -f "$cfg/arm-$arm-extra.yaml"
   if [ "$arm" = router ]; then
     helm install router "$root/deploy/helm/prequal-router" -n bench -f "$cfg/arm-router.yaml"
   else

@@ -49,6 +49,7 @@ tools/kind-cache.sh teardown
 | `common.yaml` | Chart values shared by all arms, on top of llm-d's `optimized-baseline.yaml` |
 | `arm-prequal.yaml` | Picker image `prequal-epp` |
 | `arm-prequal-lean.yaml` | Lean mode on top of `arm-prequal.yaml` (`--prefill-signal scrape`); the driver also sets Envoy's `response_body_mode: NONE` |
+| `arm-prequal-gossip.yaml` | `arm-prequal.yaml` plus `--gossip-peers`; the driver applies `arm-prequal-gossip-extra.yaml`, the headless Service naming the pickers |
 | `arm-llmd.yaml` | Picker image `llm-d-router-endpoint-picker`, tagged `LLMD_VERSION` by the driver |
 | `arm-llmd-precise.yaml` | llm-d's nightly precise prefix-cache configuration (KV events), adapted to the simulators: tokenizing through their render endpoint and one central event listener |
 | `arm-llmd-precise-ob.yaml` | The same precise index with the optimized-baseline scorers and weights |

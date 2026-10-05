@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Cache-pressure benchmark on tools/kind-llmd.sh's harness: sim KV caches are bounded (KV_BLOCKS blocks of 16 tokens
 # per pod) so they evict, the prefix working set is ~2-3x the fleet's KV capacity with skewed popularity, and the load
-# sweeps up past the fleet's capacity. Arms: prequal, llmd (optimized baseline), llmd-precise (KV-event routing).
+# sweeps up past the fleet's capacity. Arms: prequal, prequal-gossip (pickers share placements, for cache-two-epp),
+# llmd (optimized baseline), llmd-precise (KV-event routing).
 # Usage: tools/kind-cache.sh setup | run <arm> <label> [cache|cache-two-epp] | [ARMS="a b"] suite [workload] [rounds] |
 #        epp-check | host-cpu | teardown     (per-stage analysis: node tools/cache-report.mjs <reports dir> [label])
 # Env: KV_BLOCKS (6000), MAX_SEQS (8), STAGES ("rate:seconds ..." override), BENCH (~/bench-cache), CPUS (0-4,6-10:
@@ -118,5 +119,5 @@ case ${1:-} in
   suite) suite "${@:2}" ;;
   epp-check) epp_check ;;
   teardown) teardown ;;
-  *) sed -n '2,8p' "$0"; exit 2 ;;
+  *) sed -n '2,9p' "$0"; exit 2 ;;
 esac

@@ -1,0 +1,5 @@
+router:
+  epp:
+    image: {registry: local.dev, repository: prequal-epp, tag: dev, pullPolicy: Never}
+    flags: {v: null, enable-pprof: null, tracing: null, policy: prequal, engine: vllm, fallbacks: "0",
+      gossip-peers: "router-epp-peers.bench.svc:9004"}

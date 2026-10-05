@@ -5,9 +5,9 @@ router already warmed somewhere to a cold replica. This page measures how much t
 of the engines' caches would recover (the gate for [roadmap](roadmap.md) project 4, KV events), and whether routers
 telling each other where they sent each prompt recovers the same without any engine feature.
 
-All numbers are from the virtual-time simulator (`llm-bench --virtual`), policy `prequal`, mean of five seeds. Nothing
-here has run on real engines. `prequal-epp` implements the gossip ([below](#using-it)), but that implementation has
-not been benchmarked yet.
+Most numbers are from the virtual-time simulator (`llm-bench --virtual`), policy `prequal`, mean of five seeds.
+`prequal-epp` implements the gossip ([below](#using-it)), and [one benchmark](#real-pickers-in-kind) runs two real
+pickers on simulated engines. Nothing here has run on real engines.
 
 ## Arms
 
@@ -53,6 +53,29 @@ Router 0 restarting mid-run (`cache`, `--router-restart-s 480`), hit rate in the
 one router, today 62.9% and oracle 67.7% (gossip has no peer to learn from); with two, today 61.8%, oracle and gossip
 both 66.4%.
 
+## Real pickers in kind
+
+Two `prequal-epp` replicas behind Envoy on llm-d's chart, 10 llm-d-inference-sim pods with bounded KV caches
+(`tools/kind-cache.sh`, the `cache-two-epp` workload of §2 of [benchmarks](benchmarks.md)), with and without
+`--gossip-peers`. Mean of two rounds each, run 2026-10-04; raw data in
+[`results/kind/gossip`](../results/kind/gossip).
+
+| QPS | Hit rate: today → gossip | TTFT p50 / p90 (ms): today | gossip |
+|---|---|---|---|
+| 8 | 0.599 → 0.634 | 36 / 204 | 35 / 202 |
+| 10 | 0.577 → 0.630 | 43 / 215 | 39 / 215 |
+| 12 | 0.570 → 0.628 | 64 / 251 | 49 / 245 |
+| 14 | 0.549 → 0.615 | 172 / 386 | 128 / 457 |
+| 16 (overloaded) | 0.535 → 0.630 | 3,090 / 7,012 | 4,040 / 6,789 |
+| **Whole run** | **0.567 → 0.623** | | |
+
+- The whole-run hit rate reaches the single-picker figure (0.625), as the simulator predicted, and no longer falls as
+  load rises. At 12 QPS a request recomputes 3,724 prompt tokens instead of 4,304.
+- Time to first token is unchanged up to 12 QPS and mixed above: at 14 QPS the median is lower and the p90 higher.
+  Capacity at a 500 ms p90 is 14 QPS in both arms. These simulators charge little for a miss, so the hit rate does not
+  turn into the latency gain the modelled H100 engines show.
+- Both pickers together use 0.39 cores on average in either arm, and 28 MiB against 25 MiB.
+
 ## Conclusions
 
 - With one router the oracle gains nothing: the router's own placements already say where a prefix is.
@@ -77,7 +100,7 @@ port can steer routing.
 
 ## Not measured
 
-Real engines, reordered messages, routers joining or leaving, more than four routers, a non-LRU engine, and the cost of
+Real engines, more than two real pickers, reordered messages, routers joining or leaving, more than four routers, a non-LRU engine, and the cost of
 the messages themselves (one 8-byte hash per 256 prompt bytes: about 1.4 KB for a 45 KB prompt, per peer).
 
 ## Reproducing
@@ -88,4 +111,8 @@ ARMS="none;--oracle-index events;--gossip-ms 100;--gossip-ms 1000;--gossip-ms 50
 ARMS="none;--oracle-index events;--gossip-ms 100" WORKLOADS=cache ROUTERS="1 2" \
   LLM_BENCH_ARGS="--router-restart-s 480" tools/vsim-peer-index.sh results/vsim-peer-index-restart
 node tools/llm-summary.mjs results/vsim-peer-index
+# The kind run, on a Linux host with docker, kind, kubectl and helm:
+BENCH=~/bench-gossip tools/kind-cache.sh setup
+BENCH=~/bench-gossip ARMS="prequal-gossip prequal" tools/kind-cache.sh suite cache-two-epp 2
+node tools/cache-report.mjs ~/bench-gossip/reports
 ```

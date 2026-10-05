@@ -57,7 +57,8 @@ a `--config-file`'s plugins are not applied (routing is set by `--policy`) or th
   but ignored (active-active). Each replica keeps its own prefix-cache model. Replicas notice each other's load on
   the shared fleet and then place new prefixes by a hash they all share, so they mostly agree. One replica still gets
   the best cache hit rate: in the [cache-pressure benchmark](benchmarks.md#2-cache-pressure), 0.625 with one picker
-  against 0.563 with two. `--gossip-peers` (experimental) is meant to close that gap.
+  against 0.563 with two. `--gossip-peers` (experimental) closes that gap: 0.623 with two pickers
+  ([peer-index](peer-index.md#real-pickers-in-kind)).
 
 ### Request outcomes
 

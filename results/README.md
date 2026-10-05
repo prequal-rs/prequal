@@ -9,6 +9,7 @@ were on one shared 12-thread Linux host with no GPUs. Section numbers refer to b
 | [`kind/router-cache/`](kind/router-cache) | §2 final-build cache runs (one and two pickers), §1 final-build check (`loaded/`) | `tools/kind-cache.sh suite cache 2`, `suite cache-two-epp 1`; `tools/kind-llmd.sh suite loaded 1` |
 | [`kind/cache-fix/`](kind/cache-fix) | §2, the cache-model calibration fix; `regression/`: `loaded` and `two-epp` with that build | as above |
 | [`kind/cache/`](kind/cache) | §2, the first cache runs, llm-d's precise configurations, and the eviction calibration (`calibration.jsonl`) | `ARMS="prequal llmd llmd-precise" tools/kind-cache.sh suite cache 2`, then `llmd-precise-ob` |
+| [`kind/gossip/`](kind/gossip) | [docs/peer-index.md](../docs/peer-index.md): two pickers with and without `--gossip-peers` | `ARMS="prequal-gossip prequal" tools/kind-cache.sh suite cache-two-epp 2` |
 | [`kind/main/`](kind/main) | §5, llm-d v0.10 | `LLMD_VERSION=v0.10.0 tools/kind-llmd.sh suite <workload> 2` |
 | [`kind/lean/`](kind/lean) | Lean vs default prequal-epp on llm-d v0.10 | `ARMS="prequal-lean prequal" TAG=ab tools/kind-llmd.sh suite loaded 2` |
 | [`kind/router/`](kind/router) | §5, standalone router vs Envoy + picker (llm-d v0.10) | `tools/kind-llmd.sh run <router\|prequal\|llmd> <label> loaded` |
