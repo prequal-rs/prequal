@@ -80,9 +80,9 @@ pub struct Args {
     /// long to finish before exit (e.g. `25s`, `1m`). Keep it below the pod's terminationGracePeriodSeconds.
     #[arg(long, default_value = "25s", value_parser = parse_duration)]
     pub drain_timeout: Duration,
-    /// Stamp each request body with a vLLM `priority` so cheap requests run first, overtaking a costlier one only if
-    /// they arrive within this long after it (e.g. `30s`). Every engine must run `--scheduling-policy priority`:
-    /// vLLM rejects a non-zero priority otherwise.
+    /// Experimental. Stamp each request body with a vLLM `priority` so cheap requests run first, overtaking a
+    /// costlier one only if they arrive within this long after it (e.g. `30s`). Every engine must run
+    /// `--scheduling-policy priority`: without it vLLM 0.31 accepts the stamp and ignores it.
     #[arg(long, value_parser = parse_duration)]
     pub engine_priority_handicap: Option<Duration>,
     /// Experimental. `host:port` resolving to every picker of this pool (a headless Service on `--gossip-port`): each

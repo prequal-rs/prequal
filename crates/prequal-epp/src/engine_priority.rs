@@ -1,6 +1,6 @@
 //! `--engine-priority-handicap`: stamps vLLM's `priority` request field so engines started with
-//! `--scheduling-policy priority` run cheap requests first (`prequal_llm::queue_order`). Off by default: vLLM rejects
-//! a non-zero priority from any other policy. Lower runs first, so the stamp is
+//! `--scheduling-policy priority` run cheap requests first (`prequal_llm::queue_order`). Off by default: under any
+//! other policy vLLM 0.31 accepts the field and ignores it. Lower runs first, so the stamp is
 //! `-objective × OBJECTIVE_BAND + unix ms + delay(predicted KV cost)`: InferenceObjective priority dominates, and within
 //! one objective a request is overtaken only by cheaper ones arriving less than the handicap after it.
 
